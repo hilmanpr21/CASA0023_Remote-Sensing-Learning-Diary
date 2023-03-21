@@ -1,6 +1,8 @@
 project:
   type: book
 
+output_dir: docs
+
 book:
   title: "RS_Learning_diary"
   author: "Jane Doe"
