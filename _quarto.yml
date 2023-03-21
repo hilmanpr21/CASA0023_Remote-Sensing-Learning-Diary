@@ -4,7 +4,7 @@ project:
 
 book:
   title: "RS_Learning_diary"
-  author: "Jane Doe"
+  author: "Hilman Prakoso"
   date: "21/03/2023"
   chapters:
     - index.qmd
@@ -16,6 +16,7 @@ book:
     - week06.qmd
     - week07.qmd
     - week08.qmd
+    - week09.qmd
     - intro.qmd
     - summary.qmd
     - references.qmd
