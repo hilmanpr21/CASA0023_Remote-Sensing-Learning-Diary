@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.115">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>RS_Learning_diary - 1&nbsp; week 01 - Remote Sensing Introduction</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./week02.html" rel="next">
+<link href="./index.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">week 01 - Remote Sensing Introduction</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">RS_Learning_diary</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Welcome to my learning diaries</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week01.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">week 01 - Remote Sensing Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week02.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">week02</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week03.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">week03</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week04.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">week04</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week05.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">week09</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week06.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">week05</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week07.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week07</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week08.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">week08</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Summary</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">1.1</span>  Summary</a>
+  <ul class="collapse">
+  <li><a href="#types-of-sensor" id="toc-types-of-sensor" class="nav-link" data-scroll-target="#types-of-sensor"><span class="toc-section-number">1.1.1</span>  Types of Sensor</a></li>
+  <li><a href="#electro-magnetic-waves" id="toc-electro-magnetic-waves" class="nav-link" data-scroll-target="#electro-magnetic-waves"><span class="toc-section-number">1.1.2</span>  Electro Magnetic waves</a></li>
+  <li><a href="#types-of-orbit" id="toc-types-of-orbit" class="nav-link" data-scroll-target="#types-of-orbit"><span class="toc-section-number">1.1.3</span>  Types of orbit</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data"><span class="toc-section-number">1.1.4</span>  Data</a></li>
+  </ul></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="toc-section-number">1.2</span>  Application</a>
+  <ul class="collapse">
+  <li><a href="#active-sensor-1" id="toc-active-sensor-1" class="nav-link" data-scroll-target="#active-sensor-1"><span class="toc-section-number">1.2.1</span>  Active Sensor</a></li>
+  <li><a href="#passive-sensor-1" id="toc-passive-sensor-1" class="nav-link" data-scroll-target="#passive-sensor-1"><span class="toc-section-number">1.2.2</span>  Passive Sensor</a></li>
+  </ul></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">1.3</span>  Reflection</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">week 01 - Remote Sensing Introduction</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="summary" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">1.1</span> Summary</h2>
+<p>Remote sensing is acquiring data or information from a distance. In this module, context we use remote sensing for <strong>Earth Observation (EO).</strong> This can be done by using sensor mounted on satelite.</p>
+<p>In this week we will talk general topic about sensor and satellite on on earth observation. It can be seen in the mind map that there will be 4 subtopics to make us easier understanding Sensor, which are:</p>
+<ol type="1">
+<li><p>Types of Sensor</p>
+<ol type="1">
+<li><p>Passive Sensor</p></li>
+<li><p>Active Sensor</p></li>
+</ol></li>
+<li><p>Electromagnetic waves or radiation (EMR)</p>
+<ol type="1">
+<li><p>EMR interaction with atmosphere before hitting sensor</p></li>
+<li><p>EMR interaction with earth surface before hitting sensor</p></li>
+</ol></li>
+<li><p>Type or satellite orbit</p>
+<ol type="1">
+<li><p>Geosynchronous Orbit</p></li>
+<li><p>Geostationary Orbit</p></li>
+</ol></li>
+<li><p>Data produced by sensor</p>
+<ol type="1">
+<li><p>Raster Data Format</p></li>
+<li><p>Resolution</p>
+<ol type="1">
+<li><p>Spectral</p></li>
+<li><p>Spatial</p></li>
+<li><p>Temporal</p></li>
+<li><p>Radiometric</p></li>
+</ol></li>
+</ol></li>
+</ol>
+<p>Check the mind map to understand the outline of this week’s topic</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week_01_files/mediabag/mindmap.jpeg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Mind map</figcaption><p></p>
+</figure>
+</div>
+<section id="types-of-sensor" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="types-of-sensor"><span class="header-section-number">1.1.1</span> Types of Sensor</h3>
+<section id="passive-sensor" class="level4" data-number="1.1.1.1">
+<h4 data-number="1.1.1.1" class="anchored" data-anchor-id="passive-sensor"><span class="header-section-number">1.1.1.1</span> Passive Sensor</h4>
+<ul>
+<li>Use electromagnetic waves from sun-ray as source of energy.</li>
+<li>Detect reflected energy from the sun that has different wavelength to detect different colour spectrum</li>
+<li>Such as:
+<ul>
+<li>sentinel</li>
+<li>landsat <img src="week_01_files/mediabag/Passive sensor.png" class="img-fluid" alt="Passive Sensor"></li>
+</ul></li>
+</ul>
+</section>
+<section id="active-sensor" class="level4" data-number="1.1.1.2">
+<h4 data-number="1.1.1.2" class="anchored" data-anchor-id="active-sensor"><span class="header-section-number">1.1.1.2</span> Active Sensor</h4>
+<ul>
+<li>Have an energy source for Illumination</li>
+<li>Actively emits electromagnetics wave and then wait to rceive</li>
+<li>Such as:
+<ul>
+<li>Synthetic-aperture Radar (SAR),</li>
+<li>X-ray,</li>
+<li>LiDAR</li>
+</ul>
+<img src="week_01_files/mediabag/active sensor.png" title="fig:" class="img-fluid" alt="Active Sensor"></li>
+</ul>
+</section>
+</section>
+<section id="electro-magnetic-waves" class="level3" data-number="1.1.2">
+<h3 data-number="1.1.2" class="anchored" data-anchor-id="electro-magnetic-waves"><span class="header-section-number">1.1.2</span> Electro Magnetic waves</h3>
+<ul>
+<li>is waves that have both eletric and magentic field, produce by vibration of particles</li>
+<li>EM waves move in vacuum</li>
+<li>Perpendicular electric and magnetic field</li>
+<li>different wavelength causes different colour spectrum. That’s why we can see colourful image</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week_01_files/mediabag/electromagnetive wave.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Electromagnetive Wave</figcaption><p></p>
+</figure>
+</div>
+<section id="terms" class="level4" data-number="1.1.2.1">
+<h4 data-number="1.1.2.1" class="anchored" data-anchor-id="terms"><span class="header-section-number">1.1.2.1</span> Terms</h4>
+<ul>
+<li>Electromagnetic radiation (EMR) = Waves of an electromagnetic field, travel through space and carry radiant energy</li>
+<li>Radiant Energy = energy carried by EMR Waves</li>
+<li>Radian flux = Energy per unit of time</li>
+<li>Exitance emittance (per unit time</li>
+<li>flux) = energy leaving a surface per unit area per unit time - Flux = time</li>
+</ul>
+</section>
+<section id="electromagnetric-radiaton-emr-interaction" class="level4" data-number="1.1.2.2">
+<h4 data-number="1.1.2.2" class="anchored" data-anchor-id="electromagnetric-radiaton-emr-interaction"><span class="header-section-number">1.1.2.2</span> Electromagnetric Radiaton (EMR) interaction</h4>
+<ul>
+<li>Before hitting hitting the sensor, energy from electromagnetic radiation will interacting with:
+<ul>
+<li>atmosphere
+<ul>
+<li>scattered by atmosphere particle</li>
+</ul></li>
+<li>earth’s surface
+<ul>
+<li>absorbed</li>
+<li>transmitted</li>
+</ul></li>
+</ul></li>
+</ul>
+<section id="atmospheric-scattering" class="level5" data-number="1.1.2.2.1">
+<h5 data-number="1.1.2.2.1" class="anchored" data-anchor-id="atmospheric-scattering"><span class="header-section-number">1.1.2.2.1</span> Atmospheric Scattering</h5>
+<ul>
+<li><p>Electromagnetic waves are scatters by particles on the atmosphere <img src="week_01_files/mediabag/wavelength reflection.png" class="img-fluid" alt="Electromagnetive Wave"></p></li>
+<li><p>Smaller wavelengths scatter easier</p></li>
+<li><p>Blue has the smallest wavelength <img src="week_01_files/mediabag/wavelength.png" class="img-fluid" alt="RGB Wavelength"></p></li>
+<li><p>type of scattering:</p>
+<ul>
+<li><strong>Rayleigh</strong> is when particles are <strong>very small</strong> compared to the wavelength.
+<ul>
+<li>eg: sky looks blue because sunray scattered by particles. in sunset or sunrise is much more atmosphere to pass throught so more scattered. When sun’s angle change the blue light scatter does not reach our eyes as the distance is increased, so longer wavelength like red and orange reach us</li>
+</ul></li>
+<li><strong>Mie</strong> is when particles are <strong>same size</strong> compared to the wavelength</li>
+<li><strong>Non Selective</strong> is when particles are <strong>much larger</strong> compared to the wavelength</li>
+</ul></li>
+<li><p>drawback of <strong>passive sensor</strong> is that it <strong>could not pass through cloud</strong></p></li>
+</ul>
+</section>
+<section id="bidirectional-documented-surface-interaction-bdrf" class="level5" data-number="1.1.2.2.2">
+<h5 data-number="1.1.2.2.2" class="anchored" data-anchor-id="bidirectional-documented-surface-interaction-bdrf"><span class="header-section-number">1.1.2.2.2</span> Bidirectional Documented Surface Interaction (BDRF)</h5>
+<ul>
+<li>happens because sensor and illumination (sun) angles can change.</li>
+<li>It can cause
+<ul>
+<li><strong>backscattering</strong> (left): sun behind the sensor, bright region at sensor and sun side</li>
+<li><strong>forwards scattering</strong> (right): sun opposite satelite, shadow region at sensor side</li>
+</ul>
+<img src="week_01_files/mediabag/scattering.png" title="fig:" class="img-fluid" alt="Back Scattering and Forward Scattering"></li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>“There are many interaction that influence the data being created because it’s not merely say that energy from sun is reflected by earth to sensor (but there are may factor such as scattering and interaction with surface)”</strong></p>
+</blockquote>
+</section>
+</section>
+</section>
+<section id="types-of-orbit" class="level3" data-number="1.1.3">
+<h3 data-number="1.1.3" class="anchored" data-anchor-id="types-of-orbit"><span class="header-section-number">1.1.3</span> Types of orbit</h3>
+<ul>
+<li><strong>Geosynchronous Orbit (GSO)</strong>
+<ul>
+<li>satelite matches the earth’s rotation, usually for sensor</li>
+</ul></li>
+<li><strong>Geostationary Orbit</strong>
+<ul>
+<li>satelite holds same position, usually only for communication</li>
+</ul>
+<img src="week_01_files/mediabag/orbit_type.png" title="fig:" class="img-fluid" alt="Orbit type"></li>
+</ul>
+</section>
+<section id="data" class="level3" data-number="1.1.4">
+<h3 data-number="1.1.4" class="anchored" data-anchor-id="data"><span class="header-section-number">1.1.4</span> Data</h3>
+<section id="raster-format" class="level4" data-number="1.1.4.1">
+<h4 data-number="1.1.4.1" class="anchored" data-anchor-id="raster-format"><span class="header-section-number">1.1.4.1</span> Raster Format</h4>
+<ul>
+<li>Satellite sensor produces <strong>raster imagery data</strong>. Raster image is a graphic repesented as a rectangular matrix or grid of square pixels.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week_01_files/mediabag/raster image.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Raster Grid</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="four-data-resolution" class="level4" data-number="1.1.4.2">
+<h4 data-number="1.1.4.2" class="anchored" data-anchor-id="four-data-resolution"><span class="header-section-number">1.1.4.2</span> Four Data Resolution</h4>
+<section id="spatial" class="level5" data-number="1.1.4.2.1">
+<h5 data-number="1.1.4.2.1" class="anchored" data-anchor-id="spatial"><span class="header-section-number">1.1.4.2.1</span> Spatial</h5>
+<ul>
+<li>Spatial resolution is the size of the raster grid per pixel. The smaller the grid means the higher the resolution be so the clearer the image be
+<ul>
+<li>smallest grid is 10cm</li>
+</ul></li>
+</ul>
+</section>
+<section id="temporal" class="level5" data-number="1.1.4.2.2">
+<h5 data-number="1.1.4.2.2" class="anchored" data-anchor-id="temporal"><span class="header-section-number">1.1.4.2.2</span> Temporal</h5>
+<ul>
+<li>Temporal resolution is showing how often the data being updated</li>
+</ul>
+</section>
+<section id="radiometric" class="level5" data-number="1.1.4.2.3">
+<h5 data-number="1.1.4.2.3" class="anchored" data-anchor-id="radiometric"><span class="header-section-number">1.1.4.2.3</span> Radiometric</h5>
+<ul>
+<li><strong>Radiometric</strong> is identified differences in light or reflectance, in practice this is the range of possible values. or the ability od a sensor to identify and show small difference in energy.</li>
+<li>The higher the bit, the more sensitive and the more information</li>
+<li>however, the lower the radiometric resolution, the higher possibility to differentiate features</li>
+</ul>
+</section>
+<section id="spectral" class="level5" data-number="1.1.4.2.4">
+<h5 data-number="1.1.4.2.4" class="anchored" data-anchor-id="spectral"><span class="header-section-number">1.1.4.2.4</span> Spectral</h5>
+<ul>
+<li>this concept similar to pixel concept in digital camera where different colour (called band) is stacked together so it makes a new colour combination.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week_01_files/mediabag/pixel band system.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<p></p><figcaption class="figure-caption">pixel band system</figcaption><p></p>
+</figure>
+</div>
+<p>source: <a href="https://www.spectroscopyeurope.com/article/hype-spectral-imaging">The hype in spectral imaging | Spectroscopy Europe/World</a></p>
+<ul>
+<li>spectral resolution based on number of bands being observed</li>
+</ul>
+<p><img src="week_01_files/mediabag/band list.png" class="img-fluid" alt="band list"> - We can take values for each wavelength (or a band of several wavelengths) across the electromagnetic spectrum to create a&nbsp;<strong>spectral signature</strong>. different feature on earth has different spectral signature, it will be used to identify different object. <strong>spectral signature</strong> can be <strong>discrete</strong> (eg. multispectral) or <strong>continuous</strong> (eg. hyperspectral) <img src="week_01_files/mediabag/spectral.png" class="img-fluid" alt="Spectral Signature"> - This spectral signature are used to differentiate object in the image. In earth observation we use this for identifying land cover in earth surface using <strong>Normalized Difference Vegetation Index (NDVI), Normalized Difference Building Index (NDBI)</strong> - for example in this week practical we identify the landcover by making scatter plot with band 4 (red, vegetation absorb) and band 8 (Near-Infrared, NIR, that vegetation strongly reflect). high values of NIR and low values of red represents dense vegetation. Meanwhile low values of red and NIR represent dense vegetation <img src="week_01_files/mediabag/scatter plot.png" class="img-fluid" alt="Scatter Plot band 4 and band 8"></p>
+</section>
+</section>
+</section>
+</section>
+<section id="application" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="application"><span class="header-section-number">1.2</span> Application</h2>
+<p>The increasing satellite remote sensing data on earth observation in the last two decades, allows new approaches on understanding urban setting <span class="citation" data-cites="miller_cities_2003">(<a href="references.html#ref-miller_cities_2003" role="doc-biblioref">Miller and Small, 2003</a>)</span>. Satellite remote sensing data offers some advantages, such as: - broader spatial coverage, - ability for routine update, - consistent measurement</p>
+<p>Combination of remote sensing data with census data or other government data can provide us useful information such as, urban growth, urban heat island, and socioeconomic activities. We will discuss some application examples of remote sensing data, classified based on sensor type.</p>
+<section id="active-sensor-1" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="active-sensor-1"><span class="header-section-number">1.2.1</span> Active Sensor</h3>
+<section id="population-size-estimation-using-synthetic-aperture-radar-sar" class="level4" data-number="1.2.1.1">
+<h4 data-number="1.2.1.1" class="anchored" data-anchor-id="population-size-estimation-using-synthetic-aperture-radar-sar"><span class="header-section-number">1.2.1.1</span> Population Size estimation using Synthetic Aperture Radar (SAR)</h4>
+<p>Different from passive sensor, Synthetic Aperture Radar (SAR) is an active sensor that can see through cloud and the backscatter radar wave can determine physical properties such as density and surface texture <span class="citation" data-cites="henderson_sar_1997">(<a href="references.html#ref-henderson_sar_1997" role="doc-biblioref">Henderson and Zong-Guo Xia, 1997</a>)</span>. The ability of SAR to detect horizontal and vertical structure allows to detect settlement based on texture, materials geometry and density. The result of settlement detection can be used for estimating city population by multiplying with number of occupants per dwelling. Harris <span class="citation" data-cites="harris_sir-imagery_1985">(<a href="references.html#ref-harris_sir-imagery_1985" role="doc-biblioref">1985</a>)</span> used this methods for estimating population in Tunisia.</p>
+<p>This methods is beneficial for developing countries because they have more informal types of dwellings. Radar Data is really helpful because population census happens only once in 10 years <span class="citation" data-cites="henderson_sar_1997">(<a href="references.html#ref-henderson_sar_1997" role="doc-biblioref">Henderson and Zong-Guo Xia, 1997</a>)</span> which could not keep up the rapid urban growth.</p>
+</section>
+</section>
+<section id="passive-sensor-1" class="level3" data-number="1.2.2">
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="passive-sensor-1"><span class="header-section-number">1.2.2</span> Passive Sensor</h3>
+<section id="evaluating-poverty-using-nighttime-light-ntl-satellite" class="level4" data-number="1.2.2.1">
+<h4 data-number="1.2.2.1" class="anchored" data-anchor-id="evaluating-poverty-using-nighttime-light-ntl-satellite"><span class="header-section-number">1.2.2.1</span> Evaluating Poverty using Nighttime Light (NTL) Satellite</h4>
+<p>Nighttime Light Satellite is a passive sensor launched by nasa to collect data of night light emission <span class="citation" data-cites="earth_science_data_systems_nighttime_2021">(<a href="references.html#ref-earth_science_data_systems_nighttime_2021" role="doc-biblioref">Earth Science Data Systems, 2021</a>)</span>. The data from this satellite provide unique perspective that can be beneficial for detecting global conflict, human night behaviour, ecological impact of artificial night light and so on.</p>
+<p>One of the benefit of nighttime light data is to track socioeconomic inequality and poverty. Yu <span class="citation" data-cites="yu_poverty_2015">(<a href="references.html#ref-yu_poverty_2015" role="doc-biblioref">2015</a>)</span> evaluated poverty rate in 2856 counties in china. The research compare the average light index from Visible Infrared day-night band with integrated poverty index. It used linear regression and comparison of class to check how accurate the remote sensing data to evaluate poverty. The result shows that day-night band data can be useful to evaluate poverty in china</p>
+</section>
+</section>
+</section>
+<section id="reflection" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">1.3</span> Reflection</h2>
+<ul>
+<li><p>The increase of remote sensing data on earth observation helps researcher, policy makers, and local government to understand the urban context better. Special characteristic of remote sensing data allows us to have broader perspectives and collect spatial improvement from time to time which could not be provided by tradisional population census data.</p></li>
+<li><p>In the application we can combine the remote sensing data with census data to have more robust analysis.</p></li>
+<li><p>Although, using remote sensing data looks more fancy, in some cases and context we can get the similar data that are more efficient and cost effective from governmental source [miller_cities_2003]. For example we can use building permission data rather than satellite data to identify land use.</p></li>
+<li><p>Moreover, managing remote sensing data require higher skill than traditional data. It can be an obstacle for cities that has limited resources</p></li>
+</ul>
+
+
+<div id="refs" class="references csl-bib-body" role="doc-bibliography" style="display: none">
+<div id="ref-earth_science_data_systems_nighttime_2021" class="csl-entry" role="doc-biblioentry">
+Earth Science Data Systems, N. (2021) <span>“Nighttime <span>Lights</span>,”</span> <em>Earthdata</em>. Available at: <a href="https://www.earthdata.nasa.gov/learn/backgrounders/nighttime-lights">https://www.earthdata.nasa.gov/learn/backgrounders/nighttime-lights</a> (Accessed: February 15, 2023).
+</div>
+<div id="ref-harris_sir-imagery_1985" class="csl-entry" role="doc-biblioentry">
+Harris, R. (1985) <span>“<span>SIR</span>-<span>A</span> imagery of <span>Tunisia</span> and its potential for population estimation,”</span> <em>International Journal of Remote Sensing</em>, 6(7), pp. 975–978. doi: <a href="https://doi.org/10.1080/01431168508948260">10.1080/01431168508948260</a>.
+</div>
+<div id="ref-henderson_sar_1997" class="csl-entry" role="doc-biblioentry">
+Henderson, F. M. and Zong-Guo Xia (1997) <span>“<span>SAR</span> applications in human settlement detection, population estimation and urban land use pattern analysis: A status report,”</span> <em>IEEE Transactions on Geoscience and Remote Sensing</em>, 35(1), pp. 79–85. doi: <a href="https://doi.org/10.1109/36.551936">10.1109/36.551936</a>.
+</div>
+<div id="ref-miller_cities_2003" class="csl-entry" role="doc-biblioentry">
+Miller, R. B. and Small, C. (2003) <span>“Cities from space: Potential applications of remote sensing in urban environmental research and policy,”</span> <em>Environmental Science &amp; Policy</em>, 6(2), pp. 129–137. doi: <a href="https://doi.org/10.1016/S1462-9011(03)00002-9">10.1016/S1462-9011(03)00002-9</a>.
+</div>
+<div id="ref-yu_poverty_2015" class="csl-entry" role="doc-biblioentry">
+Yu, B. <em>et al.</em> (2015) <span>“Poverty <span>Evaluation</span> <span>Using</span> <span>NPP</span>-<span>VIIRS</span> <span>Nighttime</span> <span>Light</span> <span>Composite</span> <span>Data</span> at the <span>County</span> <span>Level</span> in <span>China</span>,”</span> <em>IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing</em>, 8(3), pp. 1217–1229. doi: <a href="https://doi.org/10.1109/JSTARS.2015.2399416">10.1109/JSTARS.2015.2399416</a>.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Welcome to my learning diaries</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./week02.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">week02</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

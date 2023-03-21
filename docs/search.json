@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "week01.html#summary",
+    "href": "week01.html#summary",
+    "title": "1  week 01 - Remote Sensing Introduction",
+    "section": "1.1 Summary",
+    "text": "1.1 Summary\nRemote sensing is acquiring data or information from a distance. In this module, context we use remote sensing for Earth Observation (EO). This can be done by using sensor mounted on satelite.\nIn this week we will talk general topic about sensor and satellite on on earth observation. It can be seen in the mind map that there will be 4 subtopics to make us easier understanding Sensor, which are:\n\nTypes of Sensor\n\nPassive Sensor\nActive Sensor\n\nElectromagnetic waves or radiation (EMR)\n\nEMR interaction with atmosphere before hitting sensor\nEMR interaction with earth surface before hitting sensor\n\nType or satellite orbit\n\nGeosynchronous Orbit\nGeostationary Orbit\n\nData produced by sensor\n\nRaster Data Format\nResolution\n\nSpectral\nSpatial\nTemporal\nRadiometric\n\n\n\nCheck the mind map to understand the outline of this week’s topic\n\n\n\nMind map\n\n\n\n1.1.1 Types of Sensor\n\n1.1.1.1 Passive Sensor\n\nUse electromagnetic waves from sun-ray as source of energy.\nDetect reflected energy from the sun that has different wavelength to detect different colour spectrum\nSuch as:\n\nsentinel\nlandsat \n\n\n\n\n1.1.1.2 Active Sensor\n\nHave an energy source for Illumination\nActively emits electromagnetics wave and then wait to rceive\nSuch as:\n\nSynthetic-aperture Radar (SAR),\nX-ray,\nLiDAR\n\n\n\n\n\n\n1.1.2 Electro Magnetic waves\n\nis waves that have both eletric and magentic field, produce by vibration of particles\nEM waves move in vacuum\nPerpendicular electric and magnetic field\ndifferent wavelength causes different colour spectrum. That’s why we can see colourful image\n\n\n\n\nElectromagnetive Wave\n\n\n\n1.1.2.1 Terms\n\nElectromagnetic radiation (EMR) = Waves of an electromagnetic field, travel through space and carry radiant energy\nRadiant Energy = energy carried by EMR Waves\nRadian flux = Energy per unit of time\nExitance emittance (per unit time\nflux) = energy leaving a surface per unit area per unit time - Flux = time\n\n\n\n1.1.2.2 Electromagnetric Radiaton (EMR) interaction\n\nBefore hitting hitting the sensor, energy from electromagnetic radiation will interacting with:\n\natmosphere\n\nscattered by atmosphere particle\n\nearth’s surface\n\nabsorbed\ntransmitted\n\n\n\n\n1.1.2.2.1 Atmospheric Scattering\n\nElectromagnetic waves are scatters by particles on the atmosphere \nSmaller wavelengths scatter easier\nBlue has the smallest wavelength \ntype of scattering:\n\nRayleigh is when particles are very small compared to the wavelength.\n\neg: sky looks blue because sunray scattered by particles. in sunset or sunrise is much more atmosphere to pass throught so more scattered. When sun’s angle change the blue light scatter does not reach our eyes as the distance is increased, so longer wavelength like red and orange reach us\n\nMie is when particles are same size compared to the wavelength\nNon Selective is when particles are much larger compared to the wavelength\n\ndrawback of passive sensor is that it could not pass through cloud\n\n\n\n1.1.2.2.2 Bidirectional Documented Surface Interaction (BDRF)\n\nhappens because sensor and illumination (sun) angles can change.\nIt can cause\n\nbackscattering (left): sun behind the sensor, bright region at sensor and sun side\nforwards scattering (right): sun opposite satelite, shadow region at sensor side\n\n\n\n\n“There are many interaction that influence the data being created because it’s not merely say that energy from sun is reflected by earth to sensor (but there are may factor such as scattering and interaction with surface)”\n\n\n\n\n\n1.1.3 Types of orbit\n\nGeosynchronous Orbit (GSO)\n\nsatelite matches the earth’s rotation, usually for sensor\n\nGeostationary Orbit\n\nsatelite holds same position, usually only for communication\n\n\n\n\n\n1.1.4 Data\n\n1.1.4.1 Raster Format\n\nSatellite sensor produces raster imagery data. Raster image is a graphic repesented as a rectangular matrix or grid of square pixels.\n\n\n\n\nRaster Grid\n\n\n\n\n1.1.4.2 Four Data Resolution\n\n1.1.4.2.1 Spatial\n\nSpatial resolution is the size of the raster grid per pixel. The smaller the grid means the higher the resolution be so the clearer the image be\n\nsmallest grid is 10cm\n\n\n\n\n1.1.4.2.2 Temporal\n\nTemporal resolution is showing how often the data being updated\n\n\n\n1.1.4.2.3 Radiometric\n\nRadiometric is identified differences in light or reflectance, in practice this is the range of possible values. or the ability od a sensor to identify and show small difference in energy.\nThe higher the bit, the more sensitive and the more information\nhowever, the lower the radiometric resolution, the higher possibility to differentiate features\n\n\n\n1.1.4.2.4 Spectral\n\nthis concept similar to pixel concept in digital camera where different colour (called band) is stacked together so it makes a new colour combination.\n\n\n\n\npixel band system\n\n\nsource: The hype in spectral imaging | Spectroscopy Europe/World\n\nspectral resolution based on number of bands being observed\n\n - We can take values for each wavelength (or a band of several wavelengths) across the electromagnetic spectrum to create a spectral signature. different feature on earth has different spectral signature, it will be used to identify different object. spectral signature can be discrete (eg. multispectral) or continuous (eg. hyperspectral)  - This spectral signature are used to differentiate object in the image. In earth observation we use this for identifying land cover in earth surface using Normalized Difference Vegetation Index (NDVI), Normalized Difference Building Index (NDBI) - for example in this week practical we identify the landcover by making scatter plot with band 4 (red, vegetation absorb) and band 8 (Near-Infrared, NIR, that vegetation strongly reflect). high values of NIR and low values of red represents dense vegetation. Meanwhile low values of red and NIR represent dense vegetation"
+  },
+  {
+    "objectID": "week01.html#application",
+    "href": "week01.html#application",
+    "title": "1  week 01 - Remote Sensing Introduction",
+    "section": "1.2 Application",
+    "text": "1.2 Application\nThe increasing satellite remote sensing data on earth observation in the last two decades, allows new approaches on understanding urban setting (Miller and Small, 2003). Satellite remote sensing data offers some advantages, such as: - broader spatial coverage, - ability for routine update, - consistent measurement\nCombination of remote sensing data with census data or other government data can provide us useful information such as, urban growth, urban heat island, and socioeconomic activities. We will discuss some application examples of remote sensing data, classified based on sensor type.\n\n1.2.1 Active Sensor\n\n1.2.1.1 Population Size estimation using Synthetic Aperture Radar (SAR)\nDifferent from passive sensor, Synthetic Aperture Radar (SAR) is an active sensor that can see through cloud and the backscatter radar wave can determine physical properties such as density and surface texture (Henderson and Zong-Guo Xia, 1997). The ability of SAR to detect horizontal and vertical structure allows to detect settlement based on texture, materials geometry and density. The result of settlement detection can be used for estimating city population by multiplying with number of occupants per dwelling. Harris (1985) used this methods for estimating population in Tunisia.\nThis methods is beneficial for developing countries because they have more informal types of dwellings. Radar Data is really helpful because population census happens only once in 10 years (Henderson and Zong-Guo Xia, 1997) which could not keep up the rapid urban growth.\n\n\n\n1.2.2 Passive Sensor\n\n1.2.2.1 Evaluating Poverty using Nighttime Light (NTL) Satellite\nNighttime Light Satellite is a passive sensor launched by nasa to collect data of night light emission (Earth Science Data Systems, 2021). The data from this satellite provide unique perspective that can be beneficial for detecting global conflict, human night behaviour, ecological impact of artificial night light and so on.\nOne of the benefit of nighttime light data is to track socioeconomic inequality and poverty. Yu (2015) evaluated poverty rate in 2856 counties in china. The research compare the average light index from Visible Infrared day-night band with integrated poverty index. It used linear regression and comparison of class to check how accurate the remote sensing data to evaluate poverty. The result shows that day-night band data can be useful to evaluate poverty in china"
+  },
+  {
+    "objectID": "week01.html#reflection",
+    "href": "week01.html#reflection",
+    "title": "1  week 01 - Remote Sensing Introduction",
+    "section": "1.3 Reflection",
+    "text": "1.3 Reflection\n\nThe increase of remote sensing data on earth observation helps researcher, policy makers, and local government to understand the urban context better. Special characteristic of remote sensing data allows us to have broader perspectives and collect spatial improvement from time to time which could not be provided by tradisional population census data.\nIn the application we can combine the remote sensing data with census data to have more robust analysis.\nAlthough, using remote sensing data looks more fancy, in some cases and context we can get the similar data that are more efficient and cost effective from governmental source [miller_cities_2003]. For example we can use building permission data rather than satellite data to identify land use.\nMoreover, managing remote sensing data require higher skill than traditional data. It can be an obstacle for cities that has limited resources\n\n\n\n\n\nEarth Science Data Systems, N. (2021) “Nighttime Lights,” Earthdata. Available at: https://www.earthdata.nasa.gov/learn/backgrounders/nighttime-lights (Accessed: February 15, 2023).\n\n\nHarris, R. (1985) “SIR-A imagery of Tunisia and its potential for population estimation,” International Journal of Remote Sensing, 6(7), pp. 975–978. doi: 10.1080/01431168508948260.\n\n\nHenderson, F. M. and Zong-Guo Xia (1997) “SAR applications in human settlement detection, population estimation and urban land use pattern analysis: A status report,” IEEE Transactions on Geoscience and Remote Sensing, 35(1), pp. 79–85. doi: 10.1109/36.551936.\n\n\nMiller, R. B. and Small, C. (2003) “Cities from space: Potential applications of remote sensing in urban environmental research and policy,” Environmental Science & Policy, 6(2), pp. 129–137. doi: 10.1016/S1462-9011(03)00002-9.\n\n\nYu, B. et al. (2015) “Poverty Evaluation Using NPP-VIIRS Nighttime Light Composite Data at the County Level in China,” IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 8(3), pp. 1217–1229. doi: 10.1109/JSTARS.2015.2399416."
+  },
+  {
+    "objectID": "week05.html",
+    "href": "week05.html",
+    "title": "5  week09",
+    "section": "",
+    "text": "Hai lalalala"
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "9  Introduction",
+    "section": "",
+    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "10  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "RS_Learning_diary",
+    "section": "",
+    "text": "Welcome to my learning diaries\nHi, welcome to my portfolio. It’s my weekly learning diaries that hopefully can help me recalling what I have learn in CASA0023 Remotely Sensing Cities and Environments module"
+  },
+  {
+    "objectID": "index.html#introduction",
+    "href": "index.html#introduction",
+    "title": "RS_Learning_diary",
+    "section": "Introduction",
+    "text": "Introduction\nShort introduction about me.\nI am Hilman Prakoso, an Indonesian living in London. Currently I am a Master of Science candidate in Urban Spatial Science Program in University College London. In my undergaduate, I studied architecture in a four-year program at Institute Technology Bandung.\nMy interest are related to socio-spatial analysis, spatial data visualisation, and informal settlement mapping. Along with 2 other friends, I built an urban data centre platrform for my hometown, Surabaya, called Suroboyo Ngalor Ngidul. This platform aims to collect and spread data about Surabaya, especially in urban mobilities, social, and economy."
+  },
+  {
+    "objectID": "index.html#about-this-learning-diaries",
+    "href": "index.html#about-this-learning-diaries",
+    "title": "RS_Learning_diary",
+    "section": "About this Learning Diaries",
+    "text": "About this Learning Diaries\nEvery chapter discusses different topics which generally structured into 3 segments, summary, application, and reflection. Some topics will have different structure due to specific question to answer.\nRunning through this learning diaries will help me and you to understand what remote sensing is and has broad ideas of what we can do with earth observation in city planning"
+  }
+]
