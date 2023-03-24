@@ -1,6 +1,5 @@
 # Summary
 
-
 To wrap up, this learning diary was made with aims if in the future I come across remote sensing project, I can simply open this learning Diary.
 
 Learn about remote sensing is really beneficial and fun because other than we learn about methodologies, we also learn about it's application on real world context.
