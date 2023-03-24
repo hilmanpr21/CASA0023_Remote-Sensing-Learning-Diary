@@ -1,3 +1,15 @@
 ---
 title: "week02"
 ---
+
+In this week we learn about one of the sensor. But instead of having it in normal diary format, we want to try idfferent format, Xaringan presentation.
+
+```{r, echo = FALSE, out.width='40%'}
+xaringanExtra::embed_xaringan(
+  url = "https://hilmanpr21.github.io/CASA0023_RS-sensor-presentation/",
+  ratio = "16:9")
+```
+
+
+
+To view this presentation full-screen, [click here](https://hilmanpr21.github.io/CASA0023_RS-sensor-presentation/).
