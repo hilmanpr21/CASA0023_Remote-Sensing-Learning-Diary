@@ -17,6 +17,8 @@ Interface of Google Earth Engine will look like this:
 
 ![GEE Interface](week_05_files/GEE Interface.png){width="100%"}
 
+source: [GEE](https://developers.google.com/earth-engine/guides/playground)
+
 - **Assets** is where we upload our data- **Documentation** is documantation 
 - **Code editor** is where we put our script
 - **Tools** is tools helping navigating maps
@@ -69,6 +71,7 @@ The case to use this technic is if we have lots of collection images but we only
 
 ![Reduce by median Step](week_05_files/Reduce by median.png){width="100%"}
 
+
 Although this methods commonly used (even by the lecturer, Andy), *(Citation Hansen)* argue to this methods of image reduction because if we only take median value it is possible to loss a lot of information. Thus, instead of using meding, he suggest to use decile.
 
 #### Reduce by Region
@@ -83,6 +86,8 @@ Reduce by region can be done for one study area or many study area (many polygon
 Instead of using region boundary, we can use Kernel neighbourhood to reduce the image. In this reducing methods is kind of similar to filtering and texture enhancement that we learnt in Chapter 3. Basically, the methods is we ask GEE to summarize the image by calculating either mean, median, min, or max value of the neighbour. Neighbourhood means, window pixels surround the central pixel. Thus, to get a value of a pixel, GEE will calculate window pixels surround it like shown in the image below. The function for reducing by neighbourhood is `.reduceNeighbourhood()`
 
 ![Reduce by neirbourhood](week_05_files/Reducer Neighbourhood.png){width="100%"}
+
+source: [GEE] (https://developers.google.com/earth-engine/guides/reducers_reduce_neighborhood)
 
 GEE will compose a new image from the calculation result. The Image on the left is the previous  satellite image and image on the right is the composite image after reducing by neighbourhood.
 
