@@ -1,7 +1,8 @@
 # Summary
 
-In summary, this book has no content whatsoever.
 
-```{r}
-1 + 1
-```
+To wrap up, this learning diary was made with aims if in the future I come across remote sensing project, I can simply open this learning Diary.
+
+Learn about remote sensing is really beneficial and fun because other than we learn about methodologies, we also learn about it's application on real world context.
+
+The most interesting part is on the group project assignment because we have to change our academic oriented perspective to more client-facing perspective.
