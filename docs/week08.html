@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>RS_Learning_diary - 8&nbsp; week08</title>
+<title>RS_Learning_diary - 8&nbsp; week_08 - Temperature and Policy</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,25 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
 }
 </style>
 
@@ -70,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">week08</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">week_08 - Temperature and Policy</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -110,32 +129,32 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week03.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">week03</span></a>
+  <a href="./week03.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">week03 - Remote Sensing Data</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week04.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">week04</span></a>
+  <a href="./week04.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">week04 - Policy</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week05.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">week09</span></a>
+  <a href="./week05.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">week_05 - Google Earth Engine</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week06.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">week05</span></a>
+  <a href="./week06.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">week_06 - Classification</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week07.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week07</span></a>
+  <a href="./week07.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week_07</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week08.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">week08</span></a>
+  <a href="./week08.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">week_08 - Temperature and Policy</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -158,14 +177,26 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">8.1</span>  Summary</a>
+  <ul class="collapse">
+  <li><a href="#global-policy" id="toc-global-policy" class="nav-link" data-scroll-target="#global-policy"><span class="toc-section-number">8.1.1</span>  Global Policy</a></li>
+  <li><a href="#utilising-eo-data" id="toc-utilising-eo-data" class="nav-link" data-scroll-target="#utilising-eo-data"><span class="toc-section-number">8.1.2</span>  Utilising EO data</a></li>
+  </ul></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="toc-section-number">8.2</span>  Application</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">8.3</span>  Reflection</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">week08</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">week_08 - Temperature and Policy</span></h1>
 </div>
 
 
@@ -180,8 +211,74 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="summary" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">8.1</span> Summary</h2>
+<p>In this week we will discuss about Urban heat Island and how city handle this issue. A phenomena when urban area is significantly hotter than rural area on its surrounding is called Urban Heat Island (UHI) <span class="citation" data-cites="takebayashiChapterBackgroundPurpose2020">(<a href="references.html#ref-takebayashiChapterBackgroundPurpose2020" role="doc-biblioref">Takebayashi and Moriyama, 2020</a>)</span>. [[Pasted image 20230322235111.png]] source: <a href="https://earth.org/data_visualization/urban-heat-islands/">Earth.Org</a></p>
+<p>Urban heat island are caused by many factors: - Limited vegetation or natural landscape - Urban material absorb and emit solar heat - Building dimensions and configuration trap wind flow that absorb and release heat - Human activities, such as, vehicle and AC usage - Weather and geography Generally, <strong>highly concentrated man-made material and limited natural landscape</strong> is the major factors of UHI <span class="citation" data-cites="usepaLearnHeatIslands2014">(<a href="references.html#ref-usepaLearnHeatIslands2014" role="doc-biblioref">US EPA, 2014</a>)</span>.</p>
+<p>Urban Heat Island bring a lot of negative impact on social, economy and environmental globally. For example, heatwave in 1998 in Shanghai increase the mortality rate in urban area up to 27.3/100.000, compared to 7/100.000 in rural area []. Heatwaves in 2003, killed 35.000 lives in europe with 15.000 fatalities in France alone <span class="citation" data-cites="tanUrbanHeatIsland2010">(<a href="references.html#ref-tanUrbanHeatIsland2010" role="doc-biblioref">Tan <em>et al.</em>, 2010</a>)</span>. Santamouris <span class="citation" data-cites="santamourisImpactUrbanHeat2015">(<a href="references.html#ref-santamourisImpactUrbanHeat2015" role="doc-biblioref">2015</a>)</span>, stated that one degree increase of temperature, potentially increase of electrical demand between 0.5%-8.5%.</p>
+<section id="global-policy" class="level3" data-number="8.1.1">
+<h3 data-number="8.1.1" class="anchored" data-anchor-id="global-policy"><span class="header-section-number">8.1.1</span> Global Policy</h3>
+<p>Urban Heat Island happens globally. A lot of global policy has implicitly and explicitly put this issue into an account. One of the target in goal number 11 of Sustainable Development Goals mention:</p>
+<blockquote class="blockquote">
+<p><strong>Cleaner, greener cities</strong> - Investing in parks and green spaces in urban areas will help to amelioratethe urban heat island effect and improve air quality in urban spaces.</p>
+</blockquote>
+<section id="beat-the-heat-handbook" class="level4" data-number="8.1.1.1">
+<h4 data-number="8.1.1.1" class="anchored" data-anchor-id="beat-the-heat-handbook"><span class="header-section-number">8.1.1.1</span> Beat the heat handbook</h4>
+<p>Moreover, United Nation Environment Program has released <strong>Beat the Heat handbook</strong>. The hand book gives guideline and framework for planner to help cooling their cities. it gives systemic approach to address urban cooling.</p>
+<p>[[Pasted image 20230323010332.png]]</p>
+<p>source: <a href="https://www.unep.org/ndc/resources/report/beating-heat-sustainable-cooling-handbook-cities">Beating the Heat: A Sustainable Cooling Handbook for Cities | NDC Action Project (unep.org)</a></p>
+<p>It also has matrix of city interventions for sustainable urban cooling like shown in the image below</p>
+<p>[[Pasted image 20230323010142.png]] Source: [Beating the Heat: A Sustainable Cooling Handbook for Cities (https://www.unep.org/resources/report/beating-heat-sustainable-cooling-handbook-cities)</p>
+<p>Although this handbook presents various intervention alternative with over 20 cities as case study and examples, it is not easy for local government to follow because different cities has different heat temperature and different context. As mentioned earlier that geography can cause different heat in urban context. Dissimilar context and issue should have different policy and planning to solve Urban Heat Island issue. Therefore, assessment on existing environmetal condition has to be done with right method and right approach to uderstand specific solution that the city needs.</p>
+</section>
+</section>
+<section id="utilising-eo-data" class="level3" data-number="8.1.2">
+<h3 data-number="8.1.2" class="anchored" data-anchor-id="utilising-eo-data"><span class="header-section-number">8.1.2</span> Utilising EO data</h3>
+<p>to assess heat in the city we can utilise earth observation data, like what Fremantle did in their Urban Forest Plan. However, if we are not critical in using EO data for assessing heat, it will fail telling the pain point comprehansively like Fremantle. In fremantle’s assessment process, they only use one temperature image and aggregated the data. Moreover, it is not reproducable and not clear on what kind of assumption they made in their assessment process.</p>
+<p>Thus, in the application part we will discuss some previous research that have utilised EO data and linked with policies to tackle UHI</p>
+</section>
+</section>
+<section id="application" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="application"><span class="header-section-number">8.2</span> Application</h2>
+<p>To help decision makers and cityplanners mitigating UHI phenomena, a reliable UHI vulnerability map is required. UHI vulnerability maps tells us which area in the city that are at risk of UHI. Sidiqui, <span class="citation" data-cites="sidiquiUrbanHeatIsland2022">(<a href="references.html#ref-sidiquiUrbanHeatIsland2022" role="doc-biblioref">2022</a>)</span> used high-resolution spatial data, advanced geospatial tools, and socio-demographic data to make UHI vulnerabilty map ofthe City of Greater Geelong, Australia. It utilise airborne thermal data from Landsat and aerial imagery data to make UHI index maps which then indicated significant hotspot on high building density, inductrial areas, and constructed sites. The UHI index maps, then combined with 20 input indicators of heat exposure, population sensitity, and mobility/adaptive capacity to make Urban Heat Vulnerability (UHV) maps.</p>
+<p>[[Pasted image 20230323032502.png]]</p>
+<p>source: <span class="citation" data-cites="sidiquiUrbanHeatIsland2022">(<a href="references.html#ref-sidiquiUrbanHeatIsland2022" role="doc-biblioref">Sidiqui <em>et al.</em>, 2022</a>)</span></p>
+<p>High vulnerability maps are shown with red (warmer) colour which concentrated on high building density and high population density areas.</p>
+<p>This proposed methodology show comprehensive approach by considering multitemporal input data. The landsat scene data were taken from hotest days of summer in 2016 and 2017. <span class="citation" data-cites="techerUrbanHeatIsland2023">(<a href="references.html#ref-techerUrbanHeatIsland2023" role="doc-biblioref">Técher, Ait Haddou and Aguejdad, 2023</a>)</span> has done the similar methodolgy to assess UHI in # Montpellier Méditerranée, France but with 15 indicators. It indicates that this methodology is reproducible.</p>
+<p><a href="https://www.sciencedirect.com/science/article/pii/S1618866713000642">Mitigating surface urban heat island by a tree protection policy: A case study of The Woodland, Texas, USA - ScienceDirect</a></p>
+</section>
+<section id="reflection" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">8.3</span> Reflection</h2>
+<ul>
+<li>from this week we have learnt that Urban heat Island is a global phenomena that has to be mitigated immidiately. Some of global policy has take this issue into an accout. United Environment program has release <strong>Beat the Heat Handbook</strong> as a guideline for planner to help cooling their cities. Although the handbook suggested a lot of intervention and example from cities around the world. Local government might having difficulties to follow the guideline because it has a lot of pages and different urban context might require different intervention.</li>
+<li>Thus, EO data can be utilised to assess UHI vulnerability in a city like it was done by <span class="citation" data-cites="sidiquiUrbanHeatIsland2022">(<a href="references.html#ref-sidiquiUrbanHeatIsland2022" role="doc-biblioref">Sidiqui <em>et al.</em>, 2022</a>)</span></li>
+<li>Sidiqui <span class="citation" data-cites="sidiquiUrbanHeatIsland2022">(<a href="references.html#ref-sidiquiUrbanHeatIsland2022" role="doc-biblioref">2022</a>)</span>, application are really helpful to assess the city temperature context and it shown that it is reproducible. What local government can do is adjusting 20 indicators of this methods to adapt with their city context.</li>
+<li>Moreover, data that being used in making <strong>UH vulnerability maps is free</strong> so <strong>developing countries</strong> who usually has limited budget <strong>can replicate this method</strong></li>
+<li>however, making vulnerability maps might not solve the problem right away but it can bring a really beneficial information. Thus, local government can make a specific action plan based on vulnerability and urgency degree.</li>
+</ul>
 
 
+<div id="refs" class="references csl-bib-body" role="doc-bibliography" style="display: none">
+<div id="ref-santamourisImpactUrbanHeat2015" class="csl-entry" role="doc-biblioentry">
+Santamouris, M. <em>et al.</em> (2015) <span>“On the impact of urban heat island and global warming on the power demand and electricity consumption of buildings—<span>A</span> review,”</span> <em>Energy and Buildings</em>, 98, pp. 119–124. doi: <a href="https://doi.org/10.1016/j.enbuild.2014.09.052">10.1016/j.enbuild.2014.09.052</a>.
+</div>
+<div id="ref-sidiquiUrbanHeatIsland2022" class="csl-entry" role="doc-biblioentry">
+Sidiqui, P. <em>et al.</em> (2022) <span>“Urban <span>Heat Island</span> vulnerability mapping using advanced <span>GIS</span> data and tools,”</span> <em>Journal of Earth System Science</em>, 131(4), p. 266. doi: <a href="https://doi.org/10.1007/s12040-022-02005-w">10.1007/s12040-022-02005-w</a>.
+</div>
+<div id="ref-takebayashiChapterBackgroundPurpose2020" class="csl-entry" role="doc-biblioentry">
+Takebayashi, H. and Moriyama, M. (2020) <span>“Chapter 1 - <span>Background</span> and purpose,”</span> in Takebayashi, H. and Moriyama, M. (eds.) <em>Adaptation <span>Measures</span> for <span>Urban Heat Islands</span></em>. <span>Academic Press</span>, pp. 1–8. doi: <a href="https://doi.org/10.1016/B978-0-12-817624-5.00001-4">10.1016/B978-0-12-817624-5.00001-4</a>.
+</div>
+<div id="ref-tanUrbanHeatIsland2010" class="csl-entry" role="doc-biblioentry">
+Tan, J. <em>et al.</em> (2010) <span>“The urban heat island and its impact on heat waves and human health in <span>Shanghai</span>,”</span> <em>International Journal of Biometeorology</em>, 54(1), pp. 75–84. doi: <a href="https://doi.org/10.1007/s00484-009-0256-x">10.1007/s00484-009-0256-x</a>.
+</div>
+<div id="ref-techerUrbanHeatIsland2023" class="csl-entry" role="doc-biblioentry">
+Técher, M., Ait Haddou, H. and Aguejdad, R. (2023) <span>“Urban <span>Heat Island</span>’s <span>Vulnerability Assessment</span> by <span>Integrating Urban Planning Policies</span>: <span>A Case Study</span> of <span>Montpellier Méditerranée Metropolitan Area</span>, <span>France</span>,”</span> <em>Sustainability</em>, 15(3, 3), p. 1820. doi: <a href="https://doi.org/10.3390/su15031820">10.3390/su15031820</a>.
+</div>
+<div id="ref-usepaLearnHeatIslands2014" class="csl-entry" role="doc-biblioentry">
+US EPA, O. (2014) <em>Learn <span>About Heat Islands</span></em>. Available at: <a href="https://www.epa.gov/heatislands/learn-about-heat-islands">https://www.epa.gov/heatislands/learn-about-heat-islands</a> (Accessed: March 23, 2023).
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -406,7 +503,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./week07.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week07</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week_07</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

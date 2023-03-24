@@ -1,5 +1,5 @@
 ---
-title: "week04"
+title: "week04 - Policy"
 bibliography: Remote Sensing References/Remote Sensing References.bib
 csl: Remote Sensing References/harvard-cite-them-right.csl
 ---

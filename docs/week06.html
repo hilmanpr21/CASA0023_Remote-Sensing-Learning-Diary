@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>RS_Learning_diary - 6&nbsp; week05</title>
+<title>RS_Learning_diary - 6&nbsp; week_06 - Classification</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,25 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
 }
 </style>
 
@@ -70,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">week05</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">week_06 - Classification</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -110,32 +129,32 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week03.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">week03</span></a>
+  <a href="./week03.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">week03 - Remote Sensing Data</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week04.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">week04</span></a>
+  <a href="./week04.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">week04 - Policy</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week05.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">week09</span></a>
+  <a href="./week05.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">week_05 - Google Earth Engine</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week06.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">week05</span></a>
+  <a href="./week06.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">week_06 - Classification</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week07.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week07</span></a>
+  <a href="./week07.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week_07 - Classification Continue</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week08.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">week08</span></a>
+  <a href="./week08.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">week_08 - Temperature and Policy</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -158,14 +177,30 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">6.1</span>  Summary</a>
+  <ul class="collapse">
+  <li><a href="#unsupervised-learning" id="toc-unsupervised-learning" class="nav-link" data-scroll-target="#unsupervised-learning"><span class="toc-section-number">6.1.1</span>  Unsupervised Learning</a></li>
+  <li><a href="#supervised-learning" id="toc-supervised-learning" class="nav-link" data-scroll-target="#supervised-learning"><span class="toc-section-number">6.1.2</span>  Supervised Learning</a></li>
+  <li><a href="#be-aware" id="toc-be-aware" class="nav-link" data-scroll-target="#be-aware"><span class="toc-section-number">6.1.3</span>  Be Aware</a></li>
+  </ul></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="toc-section-number">6.2</span>  Application</a>
+  <ul class="collapse">
+  <li><a href="#natural-disaster-vulnerability-map-using-support-vector-machine-svm" id="toc-natural-disaster-vulnerability-map-using-support-vector-machine-svm" class="nav-link" data-scroll-target="#natural-disaster-vulnerability-map-using-support-vector-machine-svm"><span class="toc-section-number">6.2.1</span>  Natural Disaster Vulnerability map using Support Vector Machine (SVM)</a></li>
+  </ul></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">6.3</span>  Reflection</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">week05</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">week_06 - Classification</span></h1>
 </div>
 
 
@@ -180,8 +215,118 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="summary" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">6.1</span> Summary</h2>
+<p>In this week we learn about Classification, this week topic is related to module CASA0006 Data Science for Spatial System. As we know remote sensing collect imagery satellite data, but what we can do to identify information in the imagery data? how to identify what happening in the image? What is land use and land cover of the given image? is it forest are or urban are?</p>
+<p>We can identify the information using <strong>Image classification methods</strong>. The image classifiation is done computationally. If we see an imagery data we can identify or classify the object within the image by judging based on our experience or called <strong>Inductive Learning</strong>. Using that idea, now we train the computer system to have human knowledge to solve problem called <strong>Machine Learning</strong>. We can train computer system to learn on how to identifying satellite imagery data using <strong>classification methods</strong>.</p>
+<p>in Statistic, <strong>classification</strong> ideas is basically <strong>assigning our data into certain categories</strong>. Image Classification is basically turn every pixel on the image into one categorical classification. for example our pixel can be identified as forest or residential, high or low level forest combustion and so on. There are 2 types of image classification which are Supervised and unsupervised. Image classification has been being used since 1970. It was started with unsupervised in 1970s, to supervised classification in 1975s and now mostly we have been using Object-Based Image Analysis since 1995s. But what is supervised and unsupervised classification? Check this table for general idea of those 2 classification. But I will tell futher in the explanation later.</p>
+<table class="table">
+<colgroup>
+<col style="width: 61%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Unsupervised</th>
+<th>Supervised</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>We give certain data. After that we ask for certain mount of classes and the computer (machine) will return with that amount of classes we asked</td>
+<td>we give training dataset and the model. After that we ask to classify the rest of the data or image</td>
+</tr>
+<tr class="even">
+<td>No labelled data</td>
+<td>Some training data has been labelled</td>
+</tr>
+</tbody>
+</table>
+<p>Now, we will discuss one by one.</p>
+<section id="unsupervised-learning" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="unsupervised-learning"><span class="header-section-number">6.1.1</span> Unsupervised Learning</h3>
+<p><a href="https://www.ibm.com/uk-en/topics/unsupervised-learning#:~:text=Pak%20for%20Data-,What%20is%20unsupervised%20learning%3F,the%20need%20for%20human%20intervention.">Unsupervised Learning</a> is using machine to analyse or cluster our data. So what usually will happen is we give our data, then we ask it to be cluster the dat into certain number of cluster. The machine will return with cluster of data ask we requested. In the context of imagery satellite data, the given data is value of band for each pixel.</p>
+<p>Unsupervised learning usually refered to <strong>clustering/k-means</strong>. In clustering, we have spectral feature space by plotting 2 or more bands value against each other. If we only have 2 bands values, the pixel value will be plotted in 2 dimension feature space. As we add more band value, the dimension will be added as well. After we give our data, we have to set some rules to tell the machine how the data should be clustered. The machine then will start random center point of cluster with radius that has been set. Pixels value within same radius are in the same cluster. machine will start moving it’s center point until all pixels has been alocated to a cluster.</p>
+<p>Detail steps of clustering: 1. Give data 2. Then set series of rules, such as: - the radius in spectral feature to define where new cluster started - spectral distance measure - number of pixels to be considered before merging - max number of cluster 3. It will repeat until no pixel alocated again [[Pasted image 20230321014355.png]] source: citation <strong>Evolutionary Computation Theory for Remote Sensing Image Clustering: A Survey</strong></p>
+<p>Other methods of unsuervised learning is <strong>ISODATA</strong>. This methods is specifically for earth observation data. This methods is similar to K-means clustering but with some additional rules, which are: - Any clusters have so few pixels = meaningless - Clusters are so close they can be merged - Clusters can be split - elongated clusters in feature space</p>
+<p>Although learning using <strong>ISODATA</strong> is beneficial because it’s sepcifically used for EO data, this methods has a drawback which is can create a lots of clusters and difficult to assign meaning. For example it can cause two types of landcover in a pixel. To tackle this drawbacks we can do <strong>Cluster busting</strong> which is basically mask cluster that incorrect and label to new one. [[Pasted image 20230321162157.png]]</p>
+</section>
+<section id="supervised-learning" class="level3" data-number="6.1.2">
+<h3 data-number="6.1.2" class="anchored" data-anchor-id="supervised-learning"><span class="header-section-number">6.1.2</span> Supervised Learning</h3>
+<p>Different from unsupervised learning, supervised learning <strong>uses labelled training data</strong>. Training data is dataset that being used to train the model, so the model can classify the data for us. Other than training data, we have testing data. Testing data is dataset that being used to assess our model. Training and testing data has to be mutually exclusive.</p>
+<p>Generally <strong>steps of supervised learning</strong> are: 1. Class Definition 2. Pre-processing 3. Training 4. Pixel Assignment 5. Accuracy assignment</p>
+<p>Methods on supervised learning are categorized into 2: 1. <strong>Parametric</strong> - parametric use data that are normally distributed - Methods in parametric: - Maximum likelihood 1. <strong>Non-parametric</strong> - Non-parametric use data that are not normally distributed - Methods in parametric: - Density slicing - Parallelpiped - Minimum distance to mean - Nearest neighbor - Neural networks - Machine learning / expert systems* (eg. Support Vector Machine, Neural Networks)</p>
+<p>It is quiet rare to have normally distributed data in earth observation image. Moreover, recently most works uses machine learning/expert systems or spectral mixture analysis.</p>
+</section>
+<section id="be-aware" class="level3" data-number="6.1.3">
+<h3 data-number="6.1.3" class="anchored" data-anchor-id="be-aware"><span class="header-section-number">6.1.3</span> Be Aware</h3>
+<p>Even though, image classifiction will be done by machine, as researcher or the one who assign the machine we have to be aware of several things:</p>
+<section id="hard-classification-or-fuzzy-classification" class="level4" data-number="6.1.3.1">
+<h4 data-number="6.1.3.1" class="anchored" data-anchor-id="hard-classification-or-fuzzy-classification"><span class="header-section-number">6.1.3.1</span> Hard Classification or Fuzzy Classification?</h4>
+<p>First we have to be aware, are we going to do hard classification or fuzzy classification. Hard classification means there will be a define catergory like water or land in our image. Fuzzy classification means we have to classify into fuzzy continuous value. [[Pasted image 20230321171655.png]]</p>
+</section>
+<section id="hows-the-pixel-content" class="level4" data-number="6.1.3.2">
+<h4 data-number="6.1.3.2" class="anchored" data-anchor-id="hows-the-pixel-content"><span class="header-section-number">6.1.3.2</span> How’s the pixel content?</h4>
+<p>second, we have to be careful whether we are going to see sub pixel value, whole general pixel value, or some pixel value. It is important te be a concern because it’s quiet rare to have a completely homogenous pixel. Sometimes we have to find the majority value of the pixel.</p>
+<p>[[Pasted image 20230321171932.png]]</p>
+<p>source: Fisher <span class="citation" data-cites="fisherPixelSnareDelusion1997">(<a href="references.html#ref-fisherPixelSnareDelusion1997" role="doc-biblioref">1997</a>)</span></p>
+</section>
+<section id="pixel-or-object" class="level4" data-number="6.1.3.3">
+<h4 data-number="6.1.3.3" class="anchored" data-anchor-id="pixel-or-object"><span class="header-section-number">6.1.3.3</span> Pixel or Object?</h4>
+<p>Last, we have to consider are we going to look at pixel or object on the image data. Example of pixel are shon in image on the left, while example of object shown on the right image. It is important because our data observation will be different between pixel or object. [[Pasted image 20230321195605.png]] source: <a href="https://jakubnowosad.com/supercells/articles/rgb_vars.html">Superpixels supercells</a></p>
+<p>It is important to define this constraint before we do classificatio because we are the one who will select the propriate methods and ask the machine.</p>
+<p>After considering those constrain we should select the propriate methods for our classification. Working with machine, make us temped to work with complicated model. However, not every condition are required complicated methods. <strong>Complicated methods might have higher accuracy but it will be harder to interprate</strong>. I present this illustration to show the trade off between accuracy and interpretability.</p>
+<p>[[Pasted image 20230321200314.png]]</p>
+<p>source: <a href="https://www.researchgate.net/publication/344437400_Support_Vector_Machine_vs_Random_Forest_for_Remote_Sensing_Image_Classification_A_Meta-analysis_and_systematic_review">(PDF) Support Vector Machine vs.&nbsp;Random Forest for Remote Sensing Image Classification: A Meta-analysis and systematic review (researchgate.net)</a></p>
+<p>Please choose classification methods wisely.</p>
+</section>
+</section>
+</section>
+<section id="application" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="application"><span class="header-section-number">6.2</span> Application</h2>
+<section id="natural-disaster-vulnerability-map-using-support-vector-machine-svm" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="natural-disaster-vulnerability-map-using-support-vector-machine-svm"><span class="header-section-number">6.2.1</span> Natural Disaster Vulnerability map using Support Vector Machine (SVM)</h3>
+<section id="flood" class="level4" data-number="6.2.1.1">
+<h4 data-number="6.2.1.1" class="anchored" data-anchor-id="flood"><span class="header-section-number">6.2.1.1</span> Flood</h4>
+<p>Natural disaster can cause devastating impact on economy, social, and environment. Flood is one of the most destructive disaster that happen frequently in some areas in the world. It force local community and government to manage the disaster and be resilience towards it. Therefore, recognizing flood-prone areas is essential initial step in planning flood management and resilience strategy. Flood is a dynamic and complex disaster that is caused by a lot of factors. To assessing flood vlunerable area, we have to put many things into account such as, rainfall data, land cover, topography, and so on. One of supervised learning’s benefit is effective in high dimension <span class="citation" data-cites="SupportVectorMachines">(<a href="references.html#ref-SupportVectorMachines" role="doc-biblioref"><em>1.4. <span>Support Vector Machines</span></em>, no date</a>)</span>. Youssef <span class="citation" data-cites="youssefFloodVulnerabilityMapping2023a">(<a href="references.html#ref-youssefFloodVulnerabilityMapping2023a" role="doc-biblioref">2023</a>)</span> used this advantage to assess flood phenomena in Taif in Saudi Arabia. The study showed combination 13 parameters, including remote sensing data, and Support Vector Machine (SVM), can make a vulnerability maps like shown in the image below. [[Pasted image 20230324010018.png]] This vulnerability map can be used by policy maker to pointed action plan to prevent and mitigate flooding. Different class in this vulnerabiliity map guides planner to understand which area are highly effected by flood.</p>
+<p>Other than SVM, this study has tried to use bivariate and multivariate methods. Apparently, SVM model performed best with 96.2% accuracy. Earlier, Mojaddadi <span class="citation" data-cites="mojaddadiEnsembleMachinelearningbasedGeospatial2017">(<a href="references.html#ref-mojaddadiEnsembleMachinelearningbasedGeospatial2017" role="doc-biblioref">2017</a>)</span> made flood vulnerability map using SVM as well for Damansara, Malaysia. The result also indicates high classification accuracy with 84.07%. Although in the summary SVM were shown has low interpretability, this study show that using the right data and combination of methods we can get high accuracy and easy to understand result.</p>
+</section>
+<section id="drought" class="level4" data-number="6.2.1.2">
+<h4 data-number="6.2.1.2" class="anchored" data-anchor-id="drought"><span class="header-section-number">6.2.1.2</span> Drought</h4>
+<p>not only for flood, supervised classification also had been used to assess other natural disaster. Ghasempour <span class="citation" data-cites="ghasempourDroughtVulnerabilityAssessment2022">(<a href="references.html#ref-ghasempourDroughtVulnerabilityAssessment2022" role="doc-biblioref">2022</a>)</span> made Drought vulnerability maps northwest part of Iran. The study used SVM on 17 geo-environmental parameters including temperature and soil condition which are not included by Mojaddadi <span class="citation" data-cites="mojaddadiEnsembleMachinelearningbasedGeospatial2017">(<a href="references.html#ref-mojaddadiEnsembleMachinelearningbasedGeospatial2017" role="doc-biblioref">2017</a>)</span> and Youssef <span class="citation" data-cites="youssefFloodVulnerabilityMapping2023a">(<a href="references.html#ref-youssefFloodVulnerabilityMapping2023a" role="doc-biblioref">2023</a>)</span> in their researches.</p>
+<p>[[Pasted image 20230324014809.png]]</p>
+<p>source: Youssef<span class="citation" data-cites="ghasempourDroughtVulnerabilityAssessment2022">(<a href="references.html#ref-ghasempourDroughtVulnerabilityAssessment2022" role="doc-biblioref">2022</a>)</span> Drought Vulnerability Map of Northwest Iran</p>
+</section>
+</section>
+</section>
+<section id="reflection" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">6.3</span> Reflection</h2>
+<ul>
+<li>Image classification help us to identify information on imagery satellite data. It can be beneficial to learn about image classification because it can handle multiple parameter or data.</li>
+<li>Although applications of image classification are really benefiicial, there are some drawbacks on pixel-based classification. Per pixel classification does not consider similar pixel that located close ot each other. Moreover, it’s difficult to find homogeneous pixel, but in image classification, pixel value tend to be generalise<br>
+</li>
+<li>There are a lot of different methods on supervised and unsupervised image classification. We have to be really careful to choose the analysis methods because working with machine tempts to go with more complex model or methods. It might be true that more complex our models is, the higher accuracy we get. However, there is trade off between accuracy and interpretability, althought in the application we find that high accuracy model can also be easily understood. The takeaways is we have to aware of what kind of classification we are going to do, how is the pixel we are going to assess, and are we going to classify object or pixel. Please choos appropriate methods for your analysis.</li>
+</ul>
 
 
+<div id="refs" class="references csl-bib-body" role="doc-bibliography" style="display: none">
+<div id="ref-SupportVectorMachines" class="csl-entry" role="doc-biblioentry">
+<em>1.4. <span>Support Vector Machines</span></em> (no date). <span>scikit-learn</span>. Available at: <a href="https://scikit-learn/stable/modules/svm.html">https://scikit-learn/stable/modules/svm.html</a> (Accessed: March 24, 2023).
+</div>
+<div id="ref-fisherPixelSnareDelusion1997" class="csl-entry" role="doc-biblioentry">
+Fisher, P. (1997) <span>“The pixel: <span>A</span> snare and a delusion,”</span> <em>International Journal of Remote Sensing</em>, 18(3), pp. 679–685. doi: <a href="https://doi.org/10.1080/014311697219015">10.1080/014311697219015</a>.
+</div>
+<div id="ref-ghasempourDroughtVulnerabilityAssessment2022" class="csl-entry" role="doc-biblioentry">
+Ghasempour, R., Aalami, M. T. and Roushangar, K. (2022) <span>“Drought <span>Vulnerability Assessment Based</span> on a <span class="nocase">Multi-criteria Integrated Approach</span> and <span>Application</span> of <span class="nocase">Satellite-based Datasets</span>,”</span> <em>Water Resources Management</em>, 36(10), pp. 3839–3858. doi: <a href="https://doi.org/10.1007/s11269-022-03239-5">10.1007/s11269-022-03239-5</a>.
+</div>
+<div id="ref-mojaddadiEnsembleMachinelearningbasedGeospatial2017" class="csl-entry" role="doc-biblioentry">
+Mojaddadi, H. <em>et al.</em> (2017) <span>“Ensemble machine-learning-based geospatial approach for flood risk assessment using multi-sensor remote-sensing data and <span>GIS</span>,”</span> <em>Geomatics, Natural Hazards and Risk</em>, 8(2), pp. 1080–1102. doi: <a href="https://doi.org/10.1080/19475705.2017.1294113">10.1080/19475705.2017.1294113</a>.
+</div>
+<div id="ref-youssefFloodVulnerabilityMapping2023a" class="csl-entry" role="doc-biblioentry">
+Youssef, A. M. <em>et al.</em> (2023) <span>“Flood vulnerability mapping and urban sprawl suitability using <span>FR</span>, <span>LR</span>, and <span>SVM</span> models,”</span> <em>Environmental Science and Pollution Research</em>, 30(6), pp. 16081–16105. doi: <a href="https://doi.org/10.1007/s11356-022-23140-3">10.1007/s11356-022-23140-3</a>.
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -406,12 +551,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./week05.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">week09</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">week_05 - Google Earth Engine</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./week07.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week07</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week_07 - Classification Continue</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

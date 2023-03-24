@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>RS_Learning_diary - 7&nbsp; week07</title>
+<title>RS_Learning_diary - 7&nbsp; week_07 - Classification Continue</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,25 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
 }
 </style>
 
@@ -70,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week07</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week_07 - Classification Continue</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -110,32 +129,32 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week03.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">week03</span></a>
+  <a href="./week03.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">week03 - Remote Sensing Data</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week04.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">week04</span></a>
+  <a href="./week04.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">week04 - Policy</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week05.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">week09</span></a>
+  <a href="./week05.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">week_05 - Google Earth Engine</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week06.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">week05</span></a>
+  <a href="./week06.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">week_06 - Classification</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week07.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week07</span></a>
+  <a href="./week07.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week_07 - Classification Continue</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week08.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">week08</span></a>
+  <a href="./week08.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">week_08 - Temperature and Policy</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -158,14 +177,29 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">7.1</span>  Summary</a>
+  <ul class="collapse">
+  <li><a href="#object-based-image-analysis-obia" id="toc-object-based-image-analysis-obia" class="nav-link" data-scroll-target="#object-based-image-analysis-obia"><span class="toc-section-number">7.1.1</span>  Object Based Image Analysis (OBIA)</a></li>
+  <li><a href="#sub-pixel-analysis" id="toc-sub-pixel-analysis" class="nav-link" data-scroll-target="#sub-pixel-analysis"><span class="toc-section-number">7.1.2</span>  Sub-pixel Analysis</a></li>
+  </ul></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="toc-section-number">7.2</span>  Application</a>
+  <ul class="collapse">
+  <li><a href="#sub-pixel-analysis-application" id="toc-sub-pixel-analysis-application" class="nav-link" data-scroll-target="#sub-pixel-analysis-application"><span class="toc-section-number">7.2.1</span>  Sub-pixel Analysis Application</a></li>
+  </ul></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">7.3</span>  Reflection</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week07</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week_07 - Classification Continue</span></h1>
 </div>
 
 
@@ -180,8 +214,85 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="summary" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">7.1</span> Summary</h2>
+<p>In the previous week we have discussed about image classification that operated per pixel. However there are some drawbacks of this method which we are neglacting adjacency aspect meanwhile in geographic law, anything is related and near things are more related. Moreover, it is rare to have pure homogeneous pixel which mean in a single pixel it can consist of various land cover. Recalling a little bit from last week learning diary, at the end of summary I have mention some consideration before we classify EO image. One of the consideration is whether we are going to classify object or pixel or even sub pixel. In this week we still going to discuss about image classification methods, we are going to discuss about other image classifications which are not operate on pixel base. Instead of discusing classification in pixel based, we are going to discuss <strong>Object based Image Analysis (OBIA)</strong> and <strong>sub-pixel Analysis</strong>.</p>
+<section id="object-based-image-analysis-obia" class="level3" data-number="7.1.1">
+<h3 data-number="7.1.1" class="anchored" data-anchor-id="object-based-image-analysis-obia"><span class="header-section-number">7.1.1</span> Object Based Image Analysis (OBIA)</h3>
+<p>As we discuss above, per pixel classification just take individual pixel into account, it is not considering adjacency and similarity. <strong>Object based analysis</strong> comes as an alternative that instead of operating classification per pixel, it is better to make it as per object. Objects or <strong>Superpixels</strong> or <strong>Supercells</strong> is shape on the image that grouped together based on the similarity (homogeneity) of adjacent pixels. Ultimately, the idea of OBIA is turn image into smaller objects, calculate mean value of each objects and classify the object.</p>
+<p>However. How to turn our image into objects or superpixels? one of the most common method is <strong>SLIC (Simple Linear Iterative Clustering)</strong>. Here is steps of superpixels generation using SLIC:</p>
+<ol type="1">
+<li>Given an image</li>
+<li>Place number of points in the image</li>
+<li>check on parameter which are distance and similarity. Those points will become centroid to:
+<ul>
+<li>Look at the distance of two pixels</li>
+<li>Look at the similarity (homogeneity) of near pixels</li>
+</ul></li>
+<li>If these 2 parameters are accomplished, then a boundaries will be drawn to identify as one object</li>
+<li>Iteration by changing the distance and similarity parameters</li>
+</ol>
+<p>The hyperparameter or what we can set for this object generation iteration are: - <strong>distance between 2 points (<em>s</em>)</strong> - <strong>compactness (<em>m</em>)</strong> or balance between pixel distance and colour</p>
+<p>The <strong>output is objectified image</strong> like shown below.</p>
+<p>[[Pasted image 20230321230720.png]]</p>
+<p>source: <a href="https://segoptim.bitbucket.io/docs/">SegOptim performing object-based image classification</a></p>
+<p>This is not the final output of our classification but it will be the <strong>input for classification</strong> method. After generating this image we can calculate the average value of each object and use those value to do classification as we learn last week.</p>
+</section>
+<section id="sub-pixel-analysis" class="level3" data-number="7.1.2">
+<h3 data-number="7.1.2" class="anchored" data-anchor-id="sub-pixel-analysis"><span class="header-section-number">7.1.2</span> Sub-pixel Analysis</h3>
+<p>In EO imagery, it is difficult to have homogeneous pixel. A pixel can contain many different information or land cover type. Thus, it will be beneficial to learn about Sub Pixel Analysis because we can see percentage of different land cover type on a pixel.</p>
+<p>Sub pixel analysis is also known as sub pixel classification, spectral mixture analysis (SMA), or linear spectral unmixing. We treat pixels as combination of land cover fractions. In this analysis, ultimately, we take an individual pixel and estimate fraction (percentage) that make up that pixels. for example we will estimate how many percent vegetation, water, and bare soil in the pixel we have. the image below is the example that a pixel is a mixing of 70% vegetation, 20% water, and 10% bare soil</p>
+<p>[[Pasted image 20230321234011.png]]</p>
+<p>The way we calculate percentage of fraction is by taking <strong>Spectrally Pure Endmember</strong>. Spectrally Pure Endmember is pixel that has homogeneous land cover or the purest pixel that has nothing else within it. However, it is difficult to have pure endmember. Thus, sometimes we use <strong>spectral library</strong> as the pure endmember. The pixel we have is a combination of various endmember.</p>
+<p>Although machine will do the calculation for us, it will be better to understand whats going on to calculate sub pixel analysis. What we are going to find is percentage of each endmember. So here is the step (to make the ): 1. the basic formula is our band value equals to endmember’s band value multiply with fraction proportion. - [[Pasted image 20230322004431.png]] - <em>pλ</em> is our pixel band value - <em>piλ</em> is band value of endmember - <em>fi</em> is percentage of fraction 2. To make the explanation easier we will use band 3 and 4 from our pixel and endmember. Since we use 2 bands we then turn the formula into a matrix which will look like this - [[Pasted image 20230322004457.png]] 3. Since we want to know the <em>f</em> value for each fraction of endmember, we have to invers the matrix. Thus, the equation will look like this. (ps. we already put the band value) 4. the calculation will give us the <strong>percentage of each end member</strong></p>
+<p>The output is percentage of each endmember. Using the given percentage we can make a map that has fractions. It will be usefull because we can analyse fraction of each endmember on particular area. We can use the result for analysis with other aspect, such as air pollution, public health, etc.</p>
+<p>There are various ways to identify combination of endmember fraction. One of the common ways is using <strong>V-I-S model</strong>. VIS model means <strong>Vegetation-Impervious surface-Soil (V-I-S) fractions</strong>. it is shown in the triangle diagram below. We can identify pixel’s land cover based on this VIS triangle. [[Pasted image 20230322005535.png]]</p>
+</section>
+</section>
+<section id="application" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="application"><span class="header-section-number">7.2</span> Application</h2>
+<p>Learning about further image classification based on object and sub-pixel are really interesting because we can develop our analysis further. I will discuss examples of OBIA and sub-pixel analysis.</p>
+<section id="sub-pixel-analysis-application" class="level3" data-number="7.2.1">
+<h3 data-number="7.2.1" class="anchored" data-anchor-id="sub-pixel-analysis-application"><span class="header-section-number">7.2.1</span> Sub-pixel Analysis Application</h3>
+<section id="multiple-endmember-spectral-mixture-analysis-mesma" class="level4" data-number="7.2.1.1">
+<h4 data-number="7.2.1.1" class="anchored" data-anchor-id="multiple-endmember-spectral-mixture-analysis-mesma"><span class="header-section-number">7.2.1.1</span> Multiple endmember spectral mixture analysis (MESMA)</h4>
+<p>Real advantage of sub-pixel analysis is we can see the fraction of a pixel. We can utilise this benefit by classifying spectrum of a pixel so instead of having binary classification we can have more continuous value. eckmann <span class="citation" data-cites="eckmannEstimatingSubpixelFire2009">(<a href="references.html#ref-eckmannEstimatingSubpixelFire2009" role="doc-biblioref">2009</a>)</span>, utilise the benefit of sub-pixel analysis to develop a new method on estimating size and tempertarute of forest fire. Previously, Advanced Spaceborne Thermal Emission and Reflection Radiometer (ASTER) were utilised to detect binary whether there is fire or no fire. Proposed methods used Multiple endmember spectral mixture analysis (MESMA) to estimate subpixels, fires sizes, and temperatures of forest fire that happend in California on 14 September 2006.</p>
+<p>The methods applied MESMA on ASTER night-time image on 15 September 2006. Simillar to Spectral Mixture Analysis (SMA), MESMA analyse sub-pixel or fraction of pixel, but this methods can do analysis using more then 2 bands. Thus, MESMA can utilise the advantage of ASTER which is has more than 2 band by involving band 4, 5, 6, 7, 8, and 9.</p>
+<p>[[Pasted image 20230323201143.png]] source:</p>
+<p>The output of this analysis is maps of fire size (image a) and temperature (image b). However, this research assumes only one single fire temperature per pixel. Estimating fire temperature will lead to another research because fire temperature influence gas and aerosol emission, ecological impact, and spreading rates. MESMA methods can be beneficial for countries that has a lot of peatland like Indonesia and Malaysia, because it is prone to combustion. Country governement can use this methods on near-real time dataset to handle fire combustion.</p>
+</section>
+<section id="urban-surface-emissivity" class="level4" data-number="7.2.1.2">
+<h4 data-number="7.2.1.2" class="anchored" data-anchor-id="urban-surface-emissivity"><span class="header-section-number">7.2.1.2</span> Urban Surface Emissivity</h4>
+<p>Similar methods on using sub-pixel analysis to estimate temperature also done by Mitraka <span class="citation" data-cites="mitrakaImprovingEstimationUrban2012">(<a href="references.html#ref-mitrakaImprovingEstimationUrban2012" role="doc-biblioref">2012</a>)</span>, in mapping urban surface emissivity in Crete, Grece. However, this research only needed to use ASTER image band 13. Thus, instead of using MESMA, it only use SMA. Surface emissivity (or temperature) is really depend on the surface type and physical condition so it is good use sub-pixel analysis. The benefit of using this method is ability to hadle mixed pixel so we can capture various biophysical parameter in a pixel.</p>
+<p>[[Pasted image 20230323215521.png]] source: Mitraka <span class="citation" data-cites="mitrakaImprovingEstimationUrban2012">(<a href="references.html#ref-mitrakaImprovingEstimationUrban2012" role="doc-biblioref">2012</a>)</span></p>
+<p>Learning about sub-pixel analysis on surface emissivity is really beneficial because high earth temperature is a global issue that being faced by every country. Surface temperature increase can caused the increase of energy consumption up to 8.5% and affecting citizen health and well being <span class="citation" data-cites="santamourisImpactUrbanHeat2015a">(<a href="references.html#ref-santamourisImpactUrbanHeat2015a" role="doc-biblioref">Santamouris <em>et al.</em>, 2015</a>)</span>. Making surface emissivity map helps city planner and decision maker finding the right solution to cool down the earth. Although, this study present a really beneficial methods, it used only one date image. Meanwhile in assessing heat in a city we might need maximum temperature value. Further study has to be done to check whether this methodology robust or not. Therefore, in the further study of this methods we have to use dataset various date to have a better result.</p>
+</section>
+</section>
+</section>
+<section id="reflection" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">7.3</span> Reflection</h2>
+<ul>
+<li>Learning about OBIA and sub pixel analysis are really beneficial because there are some cases that per pixel image classification is the best fit.</li>
+<li>Object based Image Analysis we are considering pixel simmilarity and adjacency, so it will be better to have object classification</li>
+<li>Learning about sub pixel analysis is really beneficial because in a single pixel mostly it always contain various land cover. Using sub pixel analysis we can specify mixing of various land cover in a pixel. It gives us continuos value, instead of binary category like shown in the fire detection.</li>
+<li>Understanding fire temperature estimation using MESMA are really beneficial for tropical country that has a big forest or peatland are. Local government can utilize this to mitigate forect combustion.</li>
+<li>Overheatting earth surface is global issue that affecting social, economy and environmental aspects. Thus, every countries government try to cool down their land. However, to take a right decision, local government has to assess the temperature based on their surface type and physical condition. SMA methods is really beneficial here because it can helps local governement estimating their surface temperature</li>
+<li>We have to be critical on the research or paper we see because an innovative methods is not always a robust replicable one. We have to check did this methods have been studied in the right manner and do this methods appropriate for our problem.</li>
+</ul>
 
 
+<div id="refs" class="references csl-bib-body" role="doc-bibliography" style="display: none">
+<div id="ref-eckmannEstimatingSubpixelFire2009" class="csl-entry" role="doc-biblioentry">
+Eckmann, T. C., Roberts, D. A. and Still, C. J. (2009) <span>“Estimating subpixel fire sizes and temperatures from <span>ASTER</span> using multiple endmember spectral mixture analysis,”</span> <em>International Journal of Remote Sensing</em>, 30(22), pp. 5851–5864. doi: <a href="https://doi.org/10.1080/01431160902748531">10.1080/01431160902748531</a>.
+</div>
+<div id="ref-mitrakaImprovingEstimationUrban2012" class="csl-entry" role="doc-biblioentry">
+Mitraka, Z. <em>et al.</em> (2012) <span>“Improving the estimation of urban surface emissivity based on sub-pixel classification of high resolution satellite imagery,”</span> <em>Remote Sensing of Environment</em>, 117, pp. 125–134. doi: <a href="https://doi.org/10.1016/j.rse.2011.06.025">10.1016/j.rse.2011.06.025</a>.
+</div>
+<div id="ref-santamourisImpactUrbanHeat2015a" class="csl-entry" role="doc-biblioentry">
+Santamouris, M. <em>et al.</em> (2015) <span>“On the impact of urban heat island and global warming on the power demand and electricity consumption of buildings—<span>A</span> review,”</span> <em>Energy and Buildings</em>, 98, pp. 119–124. doi: <a href="https://doi.org/10.1016/j.enbuild.2014.09.052">10.1016/j.enbuild.2014.09.052</a>.
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -406,12 +517,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./week06.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">week05</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">week_06 - Classification</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./week08.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">week08</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">week_08 - Temperature and Policy</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
