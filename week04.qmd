@@ -1,6 +1,6 @@
 ---
 title: "week04 - Policy"
-bibliography: Remote Sensing References/Remote Sensing References.bib
+bibliography: references.bib
 csl: Remote Sensing References/harvard-cite-them-right.csl
 ---
 
@@ -10,7 +10,7 @@ In this topic, we will discuss how earth observation can help local governments 
 
 ### Annual Natural Disaster in Semarang
 
-Semarang is the largest and capital city of Central Java. Due to its location next to Java sea, it becomes main port of Central Java and hold crucial role for food supply. In some area of Semarang, especially coastal area, drinking water is not accessible. Limited water resources forces residents to extract groundwater which cause land subsidence approximatelly 10cm per year. Thus make them suffer from tidal flooding every year. On the other hand, Semarang has fault geological structure that makes it prone to landslide [@faizana_jurnal_2015]. Local government should anticipate the risk of natural disaster to ensures the continuity of the availability resources for local community [@noauthor_city_nodate].
+Semarang is the largest and capital city of Central Java. Due to its location next to Java sea, it becomes main port of Central Java and hold crucial role for food supply. In some area of Semarang, especially coastal area, drinking water is not accessible. Limited water resources forces residents to extract groundwater which cause land subsidence approximatelly 10cm per year. Thus make them suffer from tidal flooding every year. On the other hand, Semarang has fault geological structure that makes it prone to landslide [@faizanaJurnalGeodesiUndip2015]. Local government should anticipate the risk of natural disaster to ensures the continuity of the availability resources for local community [@CityResilienceIndex2015].
 
 ![Flood in Semarang](week_04_files/Semarang Flood.png){width="80%"}
 
@@ -62,7 +62,7 @@ Here are further explanation of each indicators that can be tackled using remote
 
 ## Application (Question 02)
 
-To be resilience in natural disaster, a city needs comprehensive understanding of which are vulnerable to hazard (indicator 7.1). It can be done by mapping potential natural disaster based on previous flooding and clustering map. Making flooding map can be gained by regressing SAR flooding area data, rainfall data, sea level data (from satellite data), and topography data from Shuttle Radar Mission DEM [@lin_review_2016]. To make Landslide map we can comparing historic topography data from Shuttle Radar Mission DEM which movement of geological structure [@dewan_evaluating_2007]. Combining these 2 maps, Semarang government will can have natural disaster risk map that can be guideline for city planning to focus on areas with high risk.
+To be resilience in natural disaster, a city needs comprehensive understanding of which are vulnerable to hazard (indicator 7.1). It can be done by mapping potential natural disaster based on previous flooding and clustering map. Making flooding map can be gained by regressing SAR flooding area data, rainfall data, sea level data (from satellite data), and topography data from Shuttle Radar Mission DEM [@linReviewRemoteSensing2016]. To make Landslide map we can comparing historic topography data from Shuttle Radar Mission DEM which movement of geological structure [@dewanEvaluatingFloodHazard2007]. Combining these 2 maps, Semarang government will can have natural disaster risk map that can be guideline for city planning to focus on areas with high risk.
 
 Natural disaster can cause some residential areas be isolated. Thus, emergency access are required for massive evacuation and supply daily needs which also the indicator in goals number 9 in City Resilience Index. City government need to map crucial acces and alternative acces on disaster. In order to do that, mapping or clustered residential area are required which can be obtain from classifying landsat imagery data using NDBI. By assessing residential map dan natural disaster risk map, government can make crucial emergency transportation plan. It also can be enhance with agent-based modelling to simulate evacuation and basic needs supply. Hence, government can focusing their policy and city planning in building or improving emergency transportation access.
 
@@ -70,4 +70,4 @@ Natural disaster can cause some residential areas be isolated. Thus, emergency a
 
 ## Reflection (question 03)
 
-International policy help local government, that sometimes does not have a robust policy, to build and develop a resilience city. In order to achieve International policy's target, earth observation data can be a helpful resources for decision making and city planning. Satellite imagery data allows government to have macro and micro scale observation of their historic or existing city condition. It can be beneficial to detect existing urban fabrics and potential urban network. Imagery data are also beneficial to record pre-during-post condition of an event or disaster. Thus in the future local government can prevent or protect their citizen better especially for city with periodic disaster like Semarang or Greater Dhaka [@dewan_evaluating_2007]. Remote Sensing data allows Semarang government to achieve not only one but five indicators of ARUP City Resilience Index.
+International policy help local government, that sometimes does not have a robust policy, to build and develop a resilience city. In order to achieve International policy's target, earth observation data can be a helpful resources for decision making and city planning. Satellite imagery data allows government to have macro and micro scale observation of their historic or existing city condition. It can be beneficial to detect existing urban fabrics and potential urban network. Imagery data are also beneficial to record pre-during-post condition of an event or disaster. Thus in the future local government can prevent or protect their citizen better especially for city with periodic disaster like Semarang or Greater Dhaka [@dewanEvaluatingFloodHazard2007]. Remote Sensing data allows Semarang government to achieve not only one but five indicators of ARUP City Resilience Index.

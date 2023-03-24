@@ -220,8 +220,8 @@ div.csl-indent {
 <p>in Statistic, <strong>classification</strong> ideas is basically <strong>assigning our data into certain categories</strong>. Image Classification is basically turn every pixel on the image into one categorical classification. for example our pixel can be identified as forest or residential, high or low level forest combustion and so on. There are 2 types of image classification which are Supervised and unsupervised. Image classification has been being used since 1970. It was started with unsupervised in 1970s, to supervised classification in 1975s and now mostly we have been using Object-Based Image Analysis since 1995s. But what is supervised and unsupervised classification? Check this table for general idea of those 2 classification. But I will tell further in the explanation later.</p>
 <table class="table">
 <colgroup>
-<col style="width: 59%">
-<col style="width: 40%">
+<col style="width: 61%">
+<col style="width: 38%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -302,6 +302,7 @@ div.csl-indent {
 <p></p><figcaption class="figure-caption">Hard and Fuzzy Classification</figcaption><p></p>
 </figure>
 </div>
+<p>source: Jensen, page 413</p>
 </section>
 <section id="hows-the-pixel-content" class="level4" data-number="6.1.3.2">
 <h4 data-number="6.1.3.2" class="anchored" data-anchor-id="hows-the-pixel-content"><span class="header-section-number">6.1.3.2</span> How’s the pixel content?</h4>
@@ -332,8 +333,10 @@ div.csl-indent {
 <p></p><figcaption class="figure-caption">Trade off accuracy and interpretability</figcaption><p></p>
 </figure>
 </div>
-<p>source: <a href="https://www.researchgate.net/publication/344437400_Support_Vector_Machine_vs_Random_Forest_for_Remote_Sensing_Image_Classification_A_Meta-analysis_and_systematic_review">(PDF) Support Vector Machine vs.&nbsp;Random Forest for Remote Sensing Image Classification: A Meta-analysis and systematic review (researchgate.net)</a></p>
-<p>Please choose classification methods wisely.</p>
+<p>source: <span class="citation" data-cites="sheykhmousaSupportVectorMachine2020">Sheykhmousa and Mahdianpari (<a href="references.html#ref-sheykhmousaSupportVectorMachine2020" role="doc-biblioref">2020</a>)</span></p>
+<blockquote class="blockquote">
+<p><strong>Please choose classification methods wisely!</strong></p>
+</blockquote>
 </section>
 </section>
 </section>
@@ -343,26 +346,27 @@ div.csl-indent {
 <h3 data-number="6.2.1" class="anchored" data-anchor-id="natural-disaster-vulnerability-map-using-support-vector-machine-svm"><span class="header-section-number">6.2.1</span> Natural Disaster Vulnerability map using Support Vector Machine (SVM)</h3>
 <section id="flood" class="level4" data-number="6.2.1.1">
 <h4 data-number="6.2.1.1" class="anchored" data-anchor-id="flood"><span class="header-section-number">6.2.1.1</span> Flood</h4>
-<p>Natural disaster can cause devastating impact on economy, social, and environment. Flood is one of the most destructive disaster that happen frequently in some areas in the world. It force local community and government to manage the disaster and be resilience towards it. Therefore, recognizing flood-prone areas is essential initial step in planning flood management and resilience strategy. Flood is a dynamic and complex disaster that is caused by a lot of factors. To assessing flood vulnerable area, we have to put many things into account such as, rainfall data, land cover, topography, and so on. One of supervised learning’s benefit is effective in high dimension <span class="citation" data-cites="SupportVectorMachines">(<a href="references.html#ref-SupportVectorMachines" role="doc-biblioref"><em>1.4. <span>Support Vector Machines</span></em>, no date</a>)</span>. Youssef <span class="citation" data-cites="youssefFloodVulnerabilityMapping2023a">(<a href="references.html#ref-youssefFloodVulnerabilityMapping2023a" role="doc-biblioref">2023</a>)</span> used this advantage to assess flood phenomena in Taif in Saudi Arabia. The study showed combination 13 parameters, including remote sensing data, and Support Vector Machine (SVM), can make a vulnerability maps like shown in the image below.</p>
+<p>Natural disaster can cause devastating impact on economy, social, and environment. Flood is one of the most destructive disaster that happen frequently in some areas in the world. It force local community and government to manage the disaster and be resilience towards it. Therefore, recognizing flood-prone areas is essential initial step in planning flood management and resilience strategy. Flood is a dynamic and complex disaster that is caused by a lot of factors. To assessing flood vulnerable area, we have to put many things into account such as, rainfall data, land cover, topography, and so on. One of supervised learning’s benefit is effective in high dimension <span class="citation" data-cites="SupportVectorMachines">(<a href="references.html#ref-SupportVectorMachines" role="doc-biblioref"><em>1.4. <span>Support Vector Machines</span></em>, no date</a>)</span>. <span class="citation" data-cites="youssefFloodVulnerabilityMapping2023a">Youssef <em>et al.</em> (<a href="references.html#ref-youssefFloodVulnerabilityMapping2023a" role="doc-biblioref">2023</a>)</span> used this advantage to assess flood phenomena in Taif in Saudi Arabia. The study showed combination 13 parameters, including remote sensing data, and Support Vector Machine (SVM), can make a vulnerability maps like shown in the image below.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="week_06_files/flood vulnerable map.png" class="img-fluid figure-img" style="width:100.0%"></p>
 <p></p><figcaption class="figure-caption">Flood vulnerable map</figcaption><p></p>
 </figure>
 </div>
+<p>source: <span class="citation" data-cites="youssefFloodVulnerabilityMapping2023a">Youssef <em>et al.</em> (<a href="references.html#ref-youssefFloodVulnerabilityMapping2023a" role="doc-biblioref">2023</a>)</span></p>
 <p>This vulnerability map can be used by policy maker to pointed action plan to prevent and mitigate flooding. Different class in this vulnerability map guides planner to understand which area are highly effected by flood.</p>
-<p>Other than SVM, this study has tried to use bivariate and multivariate methods. Apparently, SVM model performed best with 96.2% accuracy. Earlier, Mojaddadi <span class="citation" data-cites="mojaddadiEnsembleMachinelearningbasedGeospatial2017">(<a href="references.html#ref-mojaddadiEnsembleMachinelearningbasedGeospatial2017" role="doc-biblioref">2017</a>)</span> made flood vulnerability map using SVM as well for Damansara, Malaysia. The result also indicates high classification accuracy with 84.07%. Although in the summary SVM were shown has low interpretability, this study show that using the right data and combination of methods we can get high accuracy and easy to understand result.</p>
+<p>Other than SVM, this study has tried to use bivariate and multivariate methods. Apparently, SVM model performed best with 96.2% accuracy. Earlier, <span class="citation" data-cites="mojaddadiEnsembleMachinelearningbasedGeospatial2017">Mojaddadi <em>et al.</em> (<a href="references.html#ref-mojaddadiEnsembleMachinelearningbasedGeospatial2017" role="doc-biblioref">2017</a>)</span> made flood vulnerability map using SVM as well for Damansara, Malaysia. The result also indicates high classification accuracy with 84.07%. Although in the summary SVM were shown has low interpretability, this study show that using the right data and combination of methods we can get high accuracy and easy to understand result.</p>
 </section>
 <section id="drought" class="level4" data-number="6.2.1.2">
 <h4 data-number="6.2.1.2" class="anchored" data-anchor-id="drought"><span class="header-section-number">6.2.1.2</span> Drought</h4>
-<p>not only for flood, supervised classification also had been used to assess other natural disaster. Ghasempour <span class="citation" data-cites="ghasempourDroughtVulnerabilityAssessment2022">(<a href="references.html#ref-ghasempourDroughtVulnerabilityAssessment2022" role="doc-biblioref">2022</a>)</span> made Drought vulnerability maps northwest part of Iran. The study used SVM on 17 geo-environmental parameters including temperature and soil condition which are not included by Mojaddadi <span class="citation" data-cites="mojaddadiEnsembleMachinelearningbasedGeospatial2017">(<a href="references.html#ref-mojaddadiEnsembleMachinelearningbasedGeospatial2017" role="doc-biblioref">2017</a>)</span> and Youssef <span class="citation" data-cites="youssefFloodVulnerabilityMapping2023a">(<a href="references.html#ref-youssefFloodVulnerabilityMapping2023a" role="doc-biblioref">2023</a>)</span> in their researches.</p>
+<p>not only for flood, supervised classification also had been used to assess other natural disaster. <span class="citation" data-cites="ghasempourDroughtVulnerabilityAssessment2022">Ghasempour, Aalami and Roushangar (<a href="references.html#ref-ghasempourDroughtVulnerabilityAssessment2022" role="doc-biblioref">2022</a>)</span> made Drought vulnerability maps northwest part of Iran. The study used SVM on 17 geo-environmental parameters including temperature and soil condition which are not included by <span class="citation" data-cites="mojaddadiEnsembleMachinelearningbasedGeospatial2017">Mojaddadi <em>et al.</em> (<a href="references.html#ref-mojaddadiEnsembleMachinelearningbasedGeospatial2017" role="doc-biblioref">2017</a>)</span> and <span class="citation" data-cites="youssefFloodVulnerabilityMapping2023a">Youssef <em>et al.</em> (<a href="references.html#ref-youssefFloodVulnerabilityMapping2023a" role="doc-biblioref">2023</a>)</span> in their researches.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="week_06_files/Drought.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<p></p><figcaption class="figure-caption">Drought vulnerable map</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Drought Vulnerability Map of Northwest Iran</figcaption><p></p>
 </figure>
 </div>
-<p>source: Youssef<span class="citation" data-cites="ghasempourDroughtVulnerabilityAssessment2022">(<a href="references.html#ref-ghasempourDroughtVulnerabilityAssessment2022" role="doc-biblioref">2022</a>)</span> Drought Vulnerability Map of Northwest Iran</p>
+<p>source: <span class="citation" data-cites="ghasempourDroughtVulnerabilityAssessment2022">Ghasempour, Aalami and Roushangar (<a href="references.html#ref-ghasempourDroughtVulnerabilityAssessment2022" role="doc-biblioref">2022</a>)</span></p>
 </section>
 </section>
 </section>
@@ -370,8 +374,7 @@ div.csl-indent {
 <h2 data-number="6.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">6.3</span> Reflection</h2>
 <ul>
 <li>Image classification help us to identify information on imagery satellite data. It can be beneficial to learn about image classification because it can handle multiple parameter or data.</li>
-<li>Although applications of image classification are really benefiicial, there are some drawbacks on pixel-based classification. Per pixel classification does not consider similar pixel that located close ot each other. Moreover, it’s difficult to find homogeneous pixel, but in image classification, pixel value tend to be generalise<br>
-</li>
+<li>Although applications of image classification are really benefiicial, there are some drawbacks on pixel-based classification. Per pixel classification does not consider similar pixel that located close ot each other. Moreover, it’s difficult to find homogeneous pixel, but in image classification, pixel value tend to be generalise</li>
 <li>There are a lot of different methods on supervised and unsupervised image classification. We have to be really careful to choose the analysis methods because working with machine tempts to go with more complex model or methods. It might be true that more complex our models is, the higher accuracy we get. However, there is trade off between accuracy and interpretability, althought in the application we find that high accuracy model can also be easily understood. The takeaways is we have to aware of what kind of classification we are going to do, how is the pixel we are going to assess, and are we going to classify object or pixel. Please choos appropriate methods for your analysis.</li>
 </ul>
 
@@ -388,6 +391,9 @@ Ghasempour, R., Aalami, M. T. and Roushangar, K. (2022) <span>“Drought <span>V
 </div>
 <div id="ref-mojaddadiEnsembleMachinelearningbasedGeospatial2017" class="csl-entry" role="doc-biblioentry">
 Mojaddadi, H. <em>et al.</em> (2017) <span>“Ensemble machine-learning-based geospatial approach for flood risk assessment using multi-sensor remote-sensing data and <span>GIS</span>,”</span> <em>Geomatics, Natural Hazards and Risk</em>, 8(2), pp. 1080–1102. doi: <a href="https://doi.org/10.1080/19475705.2017.1294113">10.1080/19475705.2017.1294113</a>.
+</div>
+<div id="ref-sheykhmousaSupportVectorMachine2020" class="csl-entry" role="doc-biblioentry">
+Sheykhmousa, M. and Mahdianpari, M. (2020) <span>“Support <span>Vector Machine</span> vs. <span>Random Forest</span> for <span>Remote Sensing Image Classification</span>: <span class="nocase">A Meta-analysis</span> and systematic review,”</span> <em>IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing</em>. doi: <a href="https://doi.org/10.1109/JSTARS.2020.3026724">10.1109/JSTARS.2020.3026724</a>.
 </div>
 <div id="ref-wanEvolutionaryComputationTheory2017" class="csl-entry" role="doc-biblioentry">
 Wan, Y. <em>et al.</em> (2017) <span>“Evolutionary <span>Computation Theory</span> for <span>Remote Sensing Image Clustering</span>: <span>A Survey</span>,”</span> in, pp. 528–539. doi: <a href="https://doi.org/10.1007/978-3-319-68759-9_43">10.1007/978-3-319-68759-9_43</a>.

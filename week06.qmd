@@ -1,6 +1,6 @@
 ---
 title: "week_06 - Classification"
-bibliography: Remote Sensing References/Week_06 Learning Diary.bib
+bibliography: references.bib
 csl: Remote Sensing References/harvard-cite-them-right.csl
 ---
 
@@ -10,12 +10,14 @@ In this week we learn about Classification, this week topic is related to module
 
 We can identify the information using **Image classification methods**. The image classifiation is done computationally. If we see an imagery data we can identify or classify the object within the image by judging based on our experience or called **Inductive Learning**. Using that idea, now we train the computer system to have human knowledge to solve problem called **Machine Learning**. We can train computer system to learn on how to identifying satellite imagery data using **classification methods**.
 
+
 > In this week, actually we also learn about Classification and Regression Tree (CART). However, it has been covered in module CASA0006 - Data Science for Spatial System. Thus, instead of discussing about it, I will discuss something new that I learnt which are **Supervised** and **Unsupervised Learning**
+
 
 in Statistic, **classification** ideas is basically **assigning our data into certain categories**. Image Classification is basically turn every pixel on the image into one categorical classification. for example our pixel can be identified as forest or residential, high or low level forest combustion and so on. There are 2 types of image classification which are Supervised and unsupervised. Image classification has been being used since 1970. It was started with unsupervised in 1970s, to supervised classification in 1975s and now mostly we have been using Object-Based Image Analysis since 1995s. But what is supervised and unsupervised classification? Check this table for general idea of those 2 classification. But I will tell further in the explanation later.
 
 | Unsupervised                                                                                                                                     | Supervised                                                                                          |
-|--------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+|--------------------------------------------|----------------------------|
 | We give certain data. After that we ask for certain mount of classes and the computer (machine) will return with that amount of classes we asked | we give training dataset and the model. After that we ask to classify the rest of the data or image |
 | No labelled data                                                                                                                                 | Some training data has been labelled                                                                |
 
@@ -71,6 +73,8 @@ First we have to be aware, are we going to do hard classification or fuzzy class
 
 ![Hard and Fuzzy Classification](week_06_files/fuzzy%20vs%20hard.png){width="100%"}
 
+source: Jensen, page 413
+
 #### How's the pixel content?
 
 second, we have to be careful whether we are going to see sub pixel value, whole general pixel value, or some pixel value. It is important te be a concern because it's quiet rare to have a completely homogeneous pixel. Sometimes we have to find the majority value of the pixel.
@@ -93,9 +97,9 @@ After considering those constrain we should select the appropriate methods for o
 
 ![Trade off accuracy and interpretability](week_06_files/trade%20off%20accuracy%20and%20interpretability.png){width="100%"}
 
-source: [(PDF) Support Vector Machine vs. Random Forest for Remote Sensing Image Classification: A Meta-analysis and systematic review (researchgate.net)](https://www.researchgate.net/publication/344437400_Support_Vector_Machine_vs_Random_Forest_for_Remote_Sensing_Image_Classification_A_Meta-analysis_and_systematic_review)
+source: @sheykhmousaSupportVectorMachine2020
 
-Please choose classification methods wisely.
+> **Please choose classification methods wisely!**
 
 ## Application
 
@@ -103,24 +107,26 @@ Please choose classification methods wisely.
 
 #### Flood
 
-Natural disaster can cause devastating impact on economy, social, and environment. Flood is one of the most destructive disaster that happen frequently in some areas in the world. It force local community and government to manage the disaster and be resilience towards it. Therefore, recognizing flood-prone areas is essential initial step in planning flood management and resilience strategy. Flood is a dynamic and complex disaster that is caused by a lot of factors. To assessing flood vulnerable area, we have to put many things into account such as, rainfall data, land cover, topography, and so on. One of supervised learning's benefit is effective in high dimension [@SupportVectorMachines]. Youssef [-@youssefFloodVulnerabilityMapping2023a] used this advantage to assess flood phenomena in Taif in Saudi Arabia. The study showed combination 13 parameters, including remote sensing data, and Support Vector Machine (SVM), can make a vulnerability maps like shown in the image below.
+Natural disaster can cause devastating impact on economy, social, and environment. Flood is one of the most destructive disaster that happen frequently in some areas in the world. It force local community and government to manage the disaster and be resilience towards it. Therefore, recognizing flood-prone areas is essential initial step in planning flood management and resilience strategy. Flood is a dynamic and complex disaster that is caused by a lot of factors. To assessing flood vulnerable area, we have to put many things into account such as, rainfall data, land cover, topography, and so on. One of supervised learning's benefit is effective in high dimension [@SupportVectorMachines]. @youssefFloodVulnerabilityMapping2023a used this advantage to assess flood phenomena in Taif in Saudi Arabia. The study showed combination 13 parameters, including remote sensing data, and Support Vector Machine (SVM), can make a vulnerability maps like shown in the image below.
 
 ![Flood vulnerable map](week_06_files/flood%20vulnerable%20map.png){width="100%"}
 
+source: @youssefFloodVulnerabilityMapping2023a
+
 This vulnerability map can be used by policy maker to pointed action plan to prevent and mitigate flooding. Different class in this vulnerability map guides planner to understand which area are highly effected by flood.
 
-Other than SVM, this study has tried to use bivariate and multivariate methods. Apparently, SVM model performed best with 96.2% accuracy. Earlier, Mojaddadi [-@mojaddadiEnsembleMachinelearningbasedGeospatial2017] made flood vulnerability map using SVM as well for Damansara, Malaysia. The result also indicates high classification accuracy with 84.07%. Although in the summary SVM were shown has low interpretability, this study show that using the right data and combination of methods we can get high accuracy and easy to understand result.
+Other than SVM, this study has tried to use bivariate and multivariate methods. Apparently, SVM model performed best with 96.2% accuracy. Earlier, @mojaddadiEnsembleMachinelearningbasedGeospatial2017 made flood vulnerability map using SVM as well for Damansara, Malaysia. The result also indicates high classification accuracy with 84.07%. Although in the summary SVM were shown has low interpretability, this study show that using the right data and combination of methods we can get high accuracy and easy to understand result.
 
 #### Drought
 
-not only for flood, supervised classification also had been used to assess other natural disaster. Ghasempour [-@ghasempourDroughtVulnerabilityAssessment2022] made Drought vulnerability maps northwest part of Iran. The study used SVM on 17 geo-environmental parameters including temperature and soil condition which are not included by Mojaddadi [-@mojaddadiEnsembleMachinelearningbasedGeospatial2017] and Youssef [-@youssefFloodVulnerabilityMapping2023a] in their researches.
+not only for flood, supervised classification also had been used to assess other natural disaster. @ghasempourDroughtVulnerabilityAssessment2022 made Drought vulnerability maps northwest part of Iran. The study used SVM on 17 geo-environmental parameters including temperature and soil condition which are not included by @mojaddadiEnsembleMachinelearningbasedGeospatial2017 and @youssefFloodVulnerabilityMapping2023a in their researches.
 
-![Drought vulnerable map](week_06_files/Drought.png){width="100%"}
+![Drought Vulnerability Map of Northwest Iran](week_06_files/Drought.png){width="100%"}
 
-source: Youssef[-@ghasempourDroughtVulnerabilityAssessment2022] Drought Vulnerability Map of Northwest Iran
+source: @ghasempourDroughtVulnerabilityAssessment2022 
 
 ## Reflection
 
 -   Image classification help us to identify information on imagery satellite data. It can be beneficial to learn about image classification because it can handle multiple parameter or data.
--   Although applications of image classification are really benefiicial, there are some drawbacks on pixel-based classification. Per pixel classification does not consider similar pixel that located close ot each other. Moreover, it's difficult to find homogeneous pixel, but in image classification, pixel value tend to be generalise\
+-   Although applications of image classification are really benefiicial, there are some drawbacks on pixel-based classification. Per pixel classification does not consider similar pixel that located close ot each other. Moreover, it's difficult to find homogeneous pixel, but in image classification, pixel value tend to be generalise
 -   There are a lot of different methods on supervised and unsupervised image classification. We have to be really careful to choose the analysis methods because working with machine tempts to go with more complex model or methods. It might be true that more complex our models is, the higher accuracy we get. However, there is trade off between accuracy and interpretability, althought in the application we find that high accuracy model can also be easily understood. The takeaways is we have to aware of what kind of classification we are going to do, how is the pixel we are going to assess, and are we going to classify object or pixel. Please choos appropriate methods for your analysis.

@@ -159,12 +159,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Introduction</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Summary</span></a>
+  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Summary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -305,6 +300,7 @@ div.csl-indent {
 <p></p><figcaption class="figure-caption">Linear Regression Mapping</figcaption><p></p>
 </figure>
 </div>
+<p>source: <a href="https://developers.google.com/earth-engine/guides/reducers_regression">GEE</a></p>
 <p>Other then single linear regression, GEE can also do do <strong>Multivariate Multiple Linear Regression</strong> (MMLR) that using multiple dependent variables and independent variables. <strong>Multivariate Multiple Linear Regression</strong> is&nbsp;a statistical test used for <strong>more than one outcome variables</strong> using <strong>one or more independent variables</strong> <span class="citation" data-cites="MultivariateMultipleLinear">(<a href="references.html#ref-MultivariateMultipleLinear" role="doc-biblioref"><em>Multivariate <span>Multiple Linear Regression</span></em>, no date</a>)</span>. The methods is similar to single linear regression that it will run pixel by pixel but for all dependent variables. The only difference is MMLR will calculate covariance matrix.</p>
 <p>The case using MMLR in GEE is usually we want to calculate 2 bands for dependent variable (outcome variables). For example, we want to model pecipitation and temperature with constant variable (or control variable) and time. Each dependent variable doing its own regression pixel by pixel then it will calculate covariance matrix. Covariance is to find the value that indicates how these two variables vary together. Covariance is like variance but using 2 variables. Covariance matrix represent covariance values of each pair of variables in multivariate data <em>(citation: 5 Things You Should Know About Covariance)</em>.</p>
 <p>That was all the summary of this week material about Google Earth Engine and one of the process we can do in GEE, reduce image. There are benefits and drawbacks from using this methods. To understand better about this concept, we will see some application of this process.</p>
@@ -322,18 +318,18 @@ div.csl-indent {
 <p></p><figcaption class="figure-caption">LSWT analysis flowchart</figcaption><p></p>
 </figure>
 </div>
-<p>This is the analysis flowchart. source: Albarqouni <span class="citation" data-cites="albarqouniAssessmentSpatioTemporalChanges2022">(<a href="references.html#ref-albarqouniAssessmentSpatioTemporalChanges2022" role="doc-biblioref">2022</a>)</span></p>
+<p>source: <span class="citation" data-cites="albarqouniAssessmentSpatioTemporalChanges2022">Albarqouni <em>et al.</em> (<a href="references.html#ref-albarqouniAssessmentSpatioTemporalChanges2022" role="doc-biblioref">2022</a>)</span></p>
 </section>
 <section id="forest-canopy-closure" class="level3" data-number="5.2.2">
 <h3 data-number="5.2.2" class="anchored" data-anchor-id="forest-canopy-closure"><span class="header-section-number">5.2.2</span> Forest Canopy Closure</h3>
-<p><span class="citation" data-cites="xieImprovedForestCanopy2022">(<a href="references.html#ref-xieImprovedForestCanopy2022" role="doc-biblioref">2022</a>)</span> takes advantages of GEE to monitoring forest changes. This study determining vegetation and bare soil endmember the normalized differences vegetation index (NDVI), modified bare soil index (MBSI), and bare soil index (BSI). This study also utilising GEE’s abilities of conducting massive analysis and providing data from various satellite. To help handle big dataset, this studyproduce image composite by reducing topographic-corrected cloudless using median reducer to pick median value in each band, in each pixel, overtime. Using image composite helps the analysis process becase it summarise the image collection into 1 image composite. This study tested the proposed methods using Landsat 8 and Sentinel-2 data. The result show that the proposed method is robust and reproducible using different sensor but with similar wavebands.</p>
+<p><span class="citation" data-cites="xieImprovedForestCanopy2022">Xie <em>et al.</em> (<a href="references.html#ref-xieImprovedForestCanopy2022" role="doc-biblioref">2022</a>)</span> takes advantages of GEE to monitoring forest changes. This study determining vegetation and bare soil endmember the normalized differences vegetation index (NDVI), modified bare soil index (MBSI), and bare soil index (BSI). This study also utilising GEE’s abilities of conducting massive analysis and providing data from various satellite. To help handle big dataset, this studyproduce image composite by reducing topographic-corrected cloudless using median reducer to pick median value in each band, in each pixel, overtime. Using image composite helps the analysis process becase it summarise the image collection into 1 image composite. This study tested the proposed methods using Landsat 8 and Sentinel-2 data. The result show that the proposed method is robust and reproducible using different sensor but with similar wavebands.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="week_05_files/forest canopy closure.png" class="img-fluid figure-img" style="width:100.0%"></p>
 <p></p><figcaption class="figure-caption">Forest Canopy Closure Change</figcaption><p></p>
 </figure>
 </div>
-<p>source: Albarqouni <span class="citation" data-cites="albarqouniAssessmentSpatioTemporalChanges2022">(<a href="references.html#ref-albarqouniAssessmentSpatioTemporalChanges2022" role="doc-biblioref">2022</a>)</span></p>
+<p>source: <span class="citation" data-cites="xieImprovedForestCanopy2022">Xie <em>et al.</em> (<a href="references.html#ref-xieImprovedForestCanopy2022" role="doc-biblioref">2022</a>)</span></p>
 <p>What we can learn from this application is, various satellite data given by GEE can be combined into one analysis like what we see in LSWT research. Also, it can be treated as different input to compare the model like what we see in Forest Canopy Closure. in GEE it will be easy to access data from different tima and sensor. Although we can get image collection easily, we have to be critical to image that we get. For example, do our images require atmospheric correction? Especially regarding this example, estevezGaussianProcessesRetrieval2022, succesfully avoided atmospheric correction by assessing top-of-atmspher (TOA)</p>
 </section>
 </section>

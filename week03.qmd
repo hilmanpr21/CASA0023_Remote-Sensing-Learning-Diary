@@ -1,6 +1,6 @@
 ---
 title: "week03 - Remote Sensing Data"
-bibliography: Remote Sensing References/Week_03 Learning Diary.bib
+bibliography: references.bib
 csl: Remote Sensing References/harvard-cite-them-right.csl
 ---
 

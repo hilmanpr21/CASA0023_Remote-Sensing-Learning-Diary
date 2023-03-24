@@ -124,7 +124,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week02.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">week02</span></a>
+  <a href="./week02.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">week02 - Sensor Satellite Presentation</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -159,12 +159,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Introduction</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Summary</span></a>
+  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Summary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -304,6 +299,7 @@ div.csl-indent {
 <p></p><figcaption class="figure-caption">Electromagnetive Wave</figcaption><p></p>
 </figure>
 </div>
+<p>source: <a href="http://www.wamis.org/agm/pubs/agm8/Paper-2.pdf">Principle of Remote Sensing</a></p>
 <section id="terms" class="level4" data-number="1.1.2.1">
 <h4 data-number="1.1.2.1" class="anchored" data-anchor-id="terms"><span class="header-section-number">1.1.2.1</span> Terms</h4>
 <ul>
@@ -333,9 +329,26 @@ div.csl-indent {
 <section id="atmospheric-scattering" class="level5" data-number="1.1.2.2.1">
 <h5 data-number="1.1.2.2.1" class="anchored" data-anchor-id="atmospheric-scattering"><span class="header-section-number">1.1.2.2.1</span> Atmospheric Scattering</h5>
 <ul>
-<li><p>Electromagnetic waves are scatters by particles on the atmosphere <img src="week_01_files/mediabag/wavelength reflection.png" class="img-fluid" alt="Electromagnetive Wave"></p></li>
+<li>Electromagnetic waves are scatters by particles on the atmosphere</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week_01_files/mediabag/wavelength reflection.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Electromagnetive Wave</figcaption><p></p>
+</figure>
+</div>
+<p>source: <a href="https://wordsinmocean.com/2015/10/21/if-water-is-clear-why-is-the-ocean-blue/">Word is inMocean</a></p>
+<ul>
 <li><p>Smaller wavelengths scatter easier</p></li>
-<li><p>Blue has the smallest wavelength <img src="week_01_files/mediabag/wavelength.png" class="img-fluid" alt="RGB Wavelength"></p></li>
+<li><p>Blue has the smallest wavelength</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week_01_files/mediabag/wavelength.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">RGB Wavelength</figcaption><p></p>
+</figure>
+</div>
+<ul>
 <li><p>type of scattering:</p>
 <ul>
 <li><strong>Rayleigh</strong> is when particles are <strong>very small</strong> compared to the wavelength.
@@ -362,7 +375,8 @@ div.csl-indent {
 <p><img src="week_01_files/mediabag/scattering.png" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">Back Scattering and Forward Scattering</figcaption><p></p>
 </figure>
-</div></li>
+</div>
+<p>source: <a href="https://www.umb.edu/spectralmass/terra_aqua_modis/modis">Professor Crystal Schaaf’s Lab</a></p></li>
 </ul>
 <blockquote class="blockquote">
 <p><strong>“There are many interaction that influence the data being created because it’s not merely say that energy from sun is reflected by earth to sensor (but there are may factor such as scattering and interaction with surface)”</strong></p>
@@ -386,7 +400,8 @@ div.csl-indent {
 <p><img src="week_01_files/mediabag/orbit_type.png" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">Orbit type</figcaption><p></p>
 </figure>
-</div></li>
+</div>
+<p>source: <a href="https://www.americanscientist.org/article/fifty-years-of-earth-observation-satellites">American Scientist</a></p></li>
 </ul>
 </section>
 <section id="data" class="level3" data-number="1.1.4">
@@ -402,6 +417,7 @@ div.csl-indent {
 <p></p><figcaption class="figure-caption">Raster Grid</figcaption><p></p>
 </figure>
 </div>
+<p>source: <a href="https://docs.qgis.org/2.18/en/docs/gentle_gis_introduction/raster_data.html">QGIS</a></p>
 </section>
 <section id="four-data-resolution" class="level4" data-number="1.1.4.2">
 <h4 data-number="1.1.4.2" class="anchored" data-anchor-id="four-data-resolution"><span class="header-section-number">1.1.4.2</span> Four Data Resolution</h4>
@@ -443,7 +459,32 @@ div.csl-indent {
 <ul>
 <li>spectral resolution based on number of bands being observed</li>
 </ul>
-<p><img src="week_01_files/mediabag/band list.png" class="img-fluid" alt="band list"> - We can take values for each wavelength (or a band of several wavelengths) across the electromagnetic spectrum to create a&nbsp;<strong>spectral signature</strong>. different feature on earth has different spectral signature, it will be used to identify different object. <strong>spectral signature</strong> can be <strong>discrete</strong> (eg. multispectral) or <strong>continuous</strong> (eg. hyperspectral) <img src="week_01_files/mediabag/spectral.png" class="img-fluid" alt="Spectral Signature"> - This spectral signature are used to differentiate object in the image. In earth observation we use this for identifying land cover in earth surface using <strong>Normalized Difference Vegetation Index (NDVI), Normalized Difference Building Index (NDBI)</strong> - for example in this week practical we identify the landcover by making scatter plot with band 4 (red, vegetation absorb) and band 8 (Near-Infrared, NIR, that vegetation strongly reflect). high values of NIR and low values of red represents dense vegetation. Meanwhile low values of red and NIR represent dense vegetation <img src="week_01_files/mediabag/scatter plot.png" class="img-fluid" alt="Scatter Plot band 4 and band 8"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week_01_files/mediabag/band list.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">band list</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>We can take values for each wavelength (or a band of several wavelengths) across the electromagnetic spectrum to create a&nbsp;<strong>spectral signature</strong>. different feature on earth has different spectral signature, it will be used to identify different object. <strong>spectral signature</strong> can be <strong>discrete</strong> (eg. multispectral) or <strong>continuous</strong> (eg. hyperspectral)</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week_01_files/mediabag/spectral.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Spectral Signature</figcaption><p></p>
+</figure>
+</div>
+<p>source: <a href="https://www.nireos.com/hyperspectral-imaging/">Nireos</a></p>
+<ul>
+<li><p>This spectral signature are used to differentiate object in the image. In earth observation we use this for identifying land cover in earth surface using <strong>Normalized Difference Vegetation Index (NDVI), Normalized Difference Building Index (NDBI)</strong></p></li>
+<li><p>for example in this week practical we identify the landcover by making scatter plot with band 4 (red, vegetation absorb) and band 8 (Near-Infrared, NIR, that vegetation strongly reflect). high values of NIR and low values of red represents dense vegetation. Meanwhile low values of red and NIR represent dense vegetation</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week_01_files/mediabag/scatter plot.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Scatter Plot band 4 and band 8</figcaption><p></p>
+</figure>
+</div>
 </section>
 </section>
 </section>
@@ -456,8 +497,8 @@ div.csl-indent {
 <h3 data-number="1.2.1" class="anchored" data-anchor-id="active-sensor-1"><span class="header-section-number">1.2.1</span> Active Sensor</h3>
 <section id="population-size-estimation-using-synthetic-aperture-radar-sar" class="level4" data-number="1.2.1.1">
 <h4 data-number="1.2.1.1" class="anchored" data-anchor-id="population-size-estimation-using-synthetic-aperture-radar-sar"><span class="header-section-number">1.2.1.1</span> Population Size estimation using Synthetic Aperture Radar (SAR)</h4>
-<p>Different from passive sensor, Synthetic Aperture Radar (SAR) is an active sensor that can see through cloud and the backscatter radar wave can determine physical properties such as density and surface texture <span class="citation" data-cites="hendersonSARApplicationsHuman1997">(<a href="references.html#ref-hendersonSARApplicationsHuman1997" role="doc-biblioref">Henderson and Zong-Guo Xia, Jan./1997</a>)</span>. The ability of SAR to detect horizontal and vertical structure allows to detect settlement based on texture, materials geometry and density. The result of settlement detection can be used for estimating city population by multiplying with number of occupants per dwelling. Harris <span class="citation" data-cites="harrisSIRAImageryTunisia1985">(<a href="references.html#ref-harrisSIRAImageryTunisia1985" role="doc-biblioref">1985</a>)</span> used this methods for estimating population in Tunisia.</p>
-<p>This methods is beneficial for developing countries because they have more informal types of dwellings. Radar Data is really helpful because population census happens only once in 10 years <span class="citation" data-cites="hendersonSARApplicationsHuman1997">(<a href="references.html#ref-hendersonSARApplicationsHuman1997" role="doc-biblioref">Henderson and Zong-Guo Xia, Jan./1997</a>)</span> which could not keep up the rapid urban growth.</p>
+<p>Different from passive sensor, Synthetic Aperture Radar (SAR) is an active sensor that can see through cloud and the backscatter radar wave can determine physical properties such as density and surface texture <span class="citation" data-cites="hendersonSARApplicationsHuman1997">(<a href="references.html#ref-hendersonSARApplicationsHuman1997" role="doc-biblioref">Henderson and Zong-Guo Xia, Jan./1997</a>)</span>. The ability of SAR to detect horizontal and vertical structure allows to detect settlement based on texture, materials geometry and density. The result of settlement detection can be used for estimating city population by multiplying with number of occupants per dwelling. Harris <span class="citation" data-cites="harrisSIRAImageryTunisia1985">Harris (<a href="references.html#ref-harrisSIRAImageryTunisia1985" role="doc-biblioref">1985</a>)</span> used this methods for estimating population in Tunisia.</p>
+<p>This methods is beneficial for developing countries because they have more informal types of dwellings. Radar Data is really helpful because population census happens only once in 10 years <span class="citation" data-cites="hendersonSARApplicationsHuman1997">Henderson and Zong-Guo Xia (<a href="references.html#ref-hendersonSARApplicationsHuman1997" role="doc-biblioref">Jan./1997</a>)</span> which could not keep up the rapid urban growth.</p>
 </section>
 </section>
 <section id="passive-sensor-1" class="level3" data-number="1.2.2">
@@ -465,7 +506,7 @@ div.csl-indent {
 <section id="evaluating-poverty-using-nighttime-light-ntl-satellite" class="level4" data-number="1.2.2.1">
 <h4 data-number="1.2.2.1" class="anchored" data-anchor-id="evaluating-poverty-using-nighttime-light-ntl-satellite"><span class="header-section-number">1.2.2.1</span> Evaluating Poverty using Nighttime Light (NTL) Satellite</h4>
 <p>Nighttime Light Satellite is a passive sensor launched by nasa to collect data of night light emission <span class="citation" data-cites="earthsciencedatasystemsNighttimeLights2021">(<a href="references.html#ref-earthsciencedatasystemsNighttimeLights2021" role="doc-biblioref">Earth Science Data Systems, 2021</a>)</span>. The data from this satellite provide unique perspective that can be beneficial for detecting global conflict, human night behaviour, ecological impact of artificial night light and so on.</p>
-<p>One of the benefit of nighttime light data is to track socioeconomic inequality and poverty. Yu <span class="citation" data-cites="yuPovertyEvaluationUsing2015">(<a href="references.html#ref-yuPovertyEvaluationUsing2015" role="doc-biblioref">2015</a>)</span> evaluated poverty rate in 2856 counties in china. The research compare the average light index from Visible Infrared day-night band with integrated poverty index. It used linear regression and comparison of class to check how accurate the remote sensing data to evaluate poverty. The result shows that day-night band data can be useful to evaluate poverty in china</p>
+<p>One of the benefit of nighttime light data is to track socioeconomic inequality and poverty. <span class="citation" data-cites="yuPovertyEvaluationUsing2015">Yu <em>et al.</em> (<a href="references.html#ref-yuPovertyEvaluationUsing2015" role="doc-biblioref">2015</a>)</span> evaluated poverty rate in 2856 counties in china. The research compare the average light index from Visible Infrared day-night band with integrated poverty index. It used linear regression and comparison of class to check how accurate the remote sensing data to evaluate poverty. The result shows that day-night band data can be useful to evaluate poverty in china</p>
 </section>
 </section>
 </section>
@@ -726,7 +767,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./week02.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">week02</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">week02 - Sensor Satellite Presentation</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

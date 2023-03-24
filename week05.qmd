@@ -1,6 +1,6 @@
 ---
 title: "week_05 - Google Earth Engine"
-bibliography: Remote Sensing References/Week_05 Learning Diary.bib
+bibliography: references.bib
 csl: Remote Sensing References/harvard-cite-them-right.csl
 ---
 
@@ -96,6 +96,8 @@ Biggest benefit of GEE is we can look out data from different time so we can see
 
 ![Linear Regression Mapping](week_05_files/Linear Regression Map.png){width="100%"}
 
+source: [GEE](https://developers.google.com/earth-engine/guides/reducers_regression)
+
 Other then single linear regression, GEE can also do do **Multivariate Multiple Linear Regression** (MMLR) that using multiple dependent variables and independent variables.  **Multivariate Multiple Linear Regression** is a statistical test used for **more than one outcome variables** using **one or more independent variables** [@MultivariateMultipleLinear]. The methods is similar to single linear regression that it will run pixel by pixel but for all dependent variables. The only difference is MMLR will calculate covariance matrix. 
 
 The case using MMLR in GEE is usually we want to calculate 2 bands for dependent variable (outcome variables). For example, we want to model pecipitation and temperature with constant variable (or control variable) and time. Each dependent variable doing its own regression pixel by pixel then it will calculate covariance matrix. Covariance is to find the value that indicates how these two variables vary together. Covariance is like variance but using 2 variables. Covariance matrix represent covariance values of each pair of variables in multivariate data *(citation: 5 Things You Should Know About Covariance)*.
@@ -110,16 +112,16 @@ Cloud-based storage system of GEE allow us to do massive analysis with hundreds 
 
 ![LSWT analysis flowchart](week_05_files/LSWT analysis flowchart.png){width="100%"}
 
-This is the analysis flowchart. source: Albarqouni [-@albarqouniAssessmentSpatioTemporalChanges2022] 
+source: @albarqouniAssessmentSpatioTemporalChanges2022
 
 
 ### Forest Canopy Closure
 
-[-@xieImprovedForestCanopy2022] takes advantages of GEE to monitoring forest changes. This study determining vegetation and bare soil endmember the normalized differences vegetation index (NDVI), modified bare soil index (MBSI), and bare soil index (BSI). This study also utilising GEE's abilities of conducting massive analysis and providing data from various satellite. To help handle big dataset, this studyproduce image composite  by reducing topographic-corrected cloudless using median reducer to pick median value in each band, in each pixel, overtime. Using image composite helps the analysis process becase it summarise the image collection into 1 image composite. This study tested the proposed methods using Landsat 8 and Sentinel-2 data. The result show  that the proposed method is robust and reproducible using different sensor but with similar wavebands. 
+@xieImprovedForestCanopy2022 takes advantages of GEE to monitoring forest changes. This study determining vegetation and bare soil endmember the normalized differences vegetation index (NDVI), modified bare soil index (MBSI), and bare soil index (BSI). This study also utilising GEE's abilities of conducting massive analysis and providing data from various satellite. To help handle big dataset, this studyproduce image composite  by reducing topographic-corrected cloudless using median reducer to pick median value in each band, in each pixel, overtime. Using image composite helps the analysis process becase it summarise the image collection into 1 image composite. This study tested the proposed methods using Landsat 8 and Sentinel-2 data. The result show  that the proposed method is robust and reproducible using different sensor but with similar wavebands. 
 
 ![Forest Canopy Closure Change](week_05_files/forest canopy closure.png){width="100%"}
 
-source: Albarqouni [-@albarqouniAssessmentSpatioTemporalChanges2022]
+source: @xieImprovedForestCanopy2022
 
 What we can learn from this application is, various satellite data given by GEE can be combined into one analysis like what we see in LSWT research. Also, it can be treated as different input to compare the model like what we see in Forest Canopy Closure. in GEE it will be easy to access data from different tima and sensor. Although we can get image collection easily, we have to be critical to image that we get. For example, do our images require atmospheric correction? Especially regarding this example,  estevezGaussianProcessesRetrieval2022, succesfully avoided atmospheric correction by assessing top-of-atmspher (TOA)
 
