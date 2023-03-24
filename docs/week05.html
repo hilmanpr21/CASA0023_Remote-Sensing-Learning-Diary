@@ -124,7 +124,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week02.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">week02</span></a>
+  <a href="./week02.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">week02 - Sensor Satellite Presentation</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -149,12 +149,12 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week07.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week_07</span></a>
+  <a href="./week07.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week_07 - Classification Continue</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week08.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">week_08</span></a>
+  <a href="./week08.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">week_08 - Temperature and Policy</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -226,12 +226,31 @@ div.csl-indent {
 </section>
 <section id="google-earth-engine-interface" class="level3" data-number="5.1.2">
 <h3 data-number="5.1.2" class="anchored" data-anchor-id="google-earth-engine-interface"><span class="header-section-number">5.1.2</span> Google Earth Engine Interface</h3>
-<p>Interface of Google Earth Engine will look like this: [[Pasted image 20230318152345.png]] - <strong>Assets</strong> is where we upload our data- <strong>Documentation</strong> is documantation - <strong>Code editor</strong> is where we put our script - <strong>Tools</strong> is tools helping navigating maps - <strong>inspector</strong> quiery the map itself and get some information</p>
+<p>Interface of Google Earth Engine will look like this:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week_05_files/GEE Interface.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">GEE Interface</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li><strong>Assets</strong> is where we upload our data- <strong>Documentation</strong> is documantation</li>
+<li><strong>Code editor</strong> is where we put our script</li>
+<li><strong>Tools</strong> is tools helping navigating maps</li>
+<li><strong>inspector</strong> quiery the map itself and get some information</li>
+</ul>
 </section>
 <section id="how-google-earth-engine-works" class="level3" data-number="5.1.3">
 <h3 data-number="5.1.3" class="anchored" data-anchor-id="how-google-earth-engine-works"><span class="header-section-number">5.1.3</span> How Google Earth Engine works</h3>
 <p>Before we go further to talk about any processes we can do in Google Earth Engine, it’s better to know how GEE works. Unlike previous week and term when we use R and python, GEE is using <strong>javascript</strong>. Thus, we can not do looping like what we usually do, instead in javascript we use <strong>mapping</strong>. Mapping is making function and save it into an variable (or object) and applied to the entire collection. But, what is variable and object? in Javascript variables are container of data value written as <code>var</code>. Object is also variables but can contain many data values. Go check <a href="https://www.w3schools.com/js/js_objects.asp#:~:text=You%20have%20already%20learned%20that%20JavaScript%20variables%20are%20containers%20for%20data%20values.&amp;text=Objects%20are%20variables%20too.,objects%20can%20contain%20many%20values.&amp;text=The%20values%20are%20written%20as,value%20separated%20by%20a%20colon">w3schools</a> explanation on object and variable.</p>
-<p>In GEE, there are 9 types or classes of objects which are shown in the image below: [[Pasted image 20230319003026.png]] source: <a href="https://developers.google.com/earth-engine/guides/objects_methods_overview">Objects in Google Earth Engine</a></p>
+<p>In GEE, there are 9 types or classes of objects which are shown in the image below:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week_05_files/GEE object class.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">GEE object class</figcaption><p></p>
+</figure>
+</div>
+<p>source: <a href="https://developers.google.com/earth-engine/guides/objects_methods_overview">Objects in Google Earth Engine</a></p>
 <p>It’s good to be familiar with object terminology in GEE because in the next section and next week we will use these terminology a lot. individual Landsat or satellite scene, which is a raster, is known as <strong>Image</strong>. - <strong>Image</strong> is raster data or individual satellite imagery scene - <strong>Geometry</strong> is vector or we know it as polygon - <strong>Feature</strong> is vector data with attributes (table or metadata) - <strong>Collection</strong> is stack data means that we have more than 1 (plural) data. So collection can be: - <strong>FeatureCollection</strong> which is stack or collection of vector data with attribute - <strong>ImageCollection</strong> which is stack or collection of raster image data</p>
 <p>These 9 class of object also cover data manipulation which are: - <strong>Array</strong> is for multi-dimensional analysis - <strong>join</strong> is to join 2 or more dataset, and it also can be used to join imagery collection together from different sensor (such as: Landsat and sentinel) into one massive stack - <strong>Reduce</strong> is taking lots of data andsummarise into 1 point (it similar to filter or texture measure) - <strong>Reducer</strong> we will discuss this in the next section</p>
 <p>Each class of object has specific GEE function. The function is name of the object class with additional <code>ee.</code> in front of it, so for example it will look like this: - for Image use <code>ee.Image</code> - for image collection use <code>ee.ImageCollection</code></p>
@@ -245,7 +264,14 @@ div.csl-indent {
 <p>We will discuss this methods one by one</p>
 <section id="reduce-by-median" class="level4" data-number="5.1.4.1">
 <h4 data-number="5.1.4.1" class="anchored" data-anchor-id="reduce-by-median"><span class="header-section-number">5.1.4.1</span> Reduce by Median</h4>
-<p>The case to use this technic is if we have lots of collection images but we only want to classify 1 <strong>image composite</strong>. Typically what GEE will do is take the <strong>median value</strong> of each pixel to make an Image composite. For instance, we want to analyse a study area in january 2023, we have image collection from several dates in January. GEE will check value of each pixel from different date and find the middle value. Afterwards, GEE will compose a new image from those median value. The median value of composed image might come from different date. [[Screenshot 2023-03-19 at 12.32.24 (1).png]] Although this methods commonly used (even by the lecturer, Andy), <em>(Citation Hansen)</em> argue to this methods of image reduction because if we only take median value it is possible to loss a lot of information. Thus, instead of using meding, he suggest to use decile.</p>
+<p>The case to use this technic is if we have lots of collection images but we only want to classify 1 <strong>image composite</strong>. Typically what GEE will do is take the <strong>median value</strong> of each pixel to make an Image composite. For instance, we want to analyse a study area in january 2023, we have image collection from several dates in January. GEE will check value of each pixel from different date and find the middle value. Afterwards, GEE will compose a new image from those median value. The median value of composed image might come from different date.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week_05_files/Reduce by median.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Reduce by median Step</figcaption><p></p>
+</figure>
+</div>
+<p>Although this methods commonly used (even by the lecturer, Andy), <em>(Citation Hansen)</em> argue to this methods of image reduction because if we only take median value it is possible to loss a lot of information. Thus, instead of using meding, he suggest to use decile.</p>
 </section>
 <section id="reduce-by-region" class="level4" data-number="5.1.4.2">
 <h4 data-number="5.1.4.2" class="anchored" data-anchor-id="reduce-by-region"><span class="header-section-number">5.1.4.2</span> Reduce by Region</h4>
@@ -254,12 +280,31 @@ div.csl-indent {
 </section>
 <section id="reduce-by-neigbourhood" class="level4" data-number="5.1.4.3">
 <h4 data-number="5.1.4.3" class="anchored" data-anchor-id="reduce-by-neigbourhood"><span class="header-section-number">5.1.4.3</span> Reduce by Neigbourhood</h4>
-<p>Instead of using region boundary, we can use Kernel neighbourhood to reduce the image. In this reducing methods is kind of similar to filtering and texture enhancement that we learnt in Chapter 3. Basically, the methods is we ask GEE to summarize the image by calculating either mean, median, min, or max value of the neighbour. Neighbourhood means, window pixels surround the central pixel. Thus, to get a value of a pixel, GEE will calculate window pixels surround it like shown in the image below. The function for reducing by neighbourhood is <code>.reduceNeighbourhood()</code> [[Pasted image 20230318174849.png]]</p>
-<p>GEE will compose a new image from the calculation result. The Image on the left is the previous satellite image and image on the right is the composite image after reducing by neighbourhood. [[Pasted image 20230318175307.png]] source: <a href="https://developers.google.com/earth-engine/guides/reducers_reduce_region">GEE&nbsp;|&nbsp; Google Earth Engine &nbsp;|&nbsp; Google Developers</a></p>
+<p>Instead of using region boundary, we can use Kernel neighbourhood to reduce the image. In this reducing methods is kind of similar to filtering and texture enhancement that we learnt in Chapter 3. Basically, the methods is we ask GEE to summarize the image by calculating either mean, median, min, or max value of the neighbour. Neighbourhood means, window pixels surround the central pixel. Thus, to get a value of a pixel, GEE will calculate window pixels surround it like shown in the image below. The function for reducing by neighbourhood is <code>.reduceNeighbourhood()</code></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week_05_files/Reducer Neighbourhood.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Reduce by neirbourhood</figcaption><p></p>
+</figure>
+</div>
+<p>GEE will compose a new image from the calculation result. The Image on the left is the previous satellite image and image on the right is the composite image after reducing by neighbourhood.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week_05_files/result reduce by neighbour.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Reduce by neirbour Result Example</figcaption><p></p>
+</figure>
+</div>
+<p>source: <a href="https://developers.google.com/earth-engine/guides/reducers_reduce_region">GEE&nbsp;|&nbsp; Google Earth Engine &nbsp;|&nbsp; Google Developers</a></p>
 </section>
 <section id="reduce-using-linear-regression" class="level4" data-number="5.1.4.4">
 <h4 data-number="5.1.4.4" class="anchored" data-anchor-id="reduce-using-linear-regression"><span class="header-section-number">5.1.4.4</span> Reduce using Linear Regression</h4>
-<p>Biggest benefit of GEE is we can look out data from different time so we can see how pixel values change overtime. in GEE, we can do <strong>single linear regression</strong> by using <code>linearFit()</code> function if we want to see the change overtime in pixel values. the function takes 2 bands which is one for dependent variable and the other is the independent variable. <strong><em>The observation is often time.</em></strong> For example, we have an image collection in January and going to see temperature change overtime. The GEE will run regression pixel by pixel with time and give us output value of the regression slope. The continues values of the slope will be mapped into new image composite. therefore, this regression technic also considered as a reduce image methods because we are reducing all the stacked data into an images. The image below is the result of linear regression. The blue color show positive slope which means the band value increase overtime. Meanwhile, the red colour show negative slope that means the value decrease overtime. [[Pasted image 20230318195410.png]]</p>
+<p>Biggest benefit of GEE is we can look out data from different time so we can see how pixel values change overtime. in GEE, we can do <strong>single linear regression</strong> by using <code>linearFit()</code> function if we want to see the change overtime in pixel values. the function takes 2 bands which is one for dependent variable and the other is the independent variable. <strong><em>The observation is often time.</em></strong> For example, we have an image collection in January and going to see temperature change overtime. The GEE will run regression pixel by pixel with time and give us output value of the regression slope. The continues values of the slope will be mapped into new image composite. therefore, this regression technic also considered as a reduce image methods because we are reducing all the stacked data into an images. The image below is the result of linear regression. The blue color show positive slope which means the band value increase overtime. Meanwhile, the red colour show negative slope that means the value decrease overtime.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week_05_files/Linear Regression Map.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Linear Regression Mapping</figcaption><p></p>
+</figure>
+</div>
 <p>Other then single linear regression, GEE can also do do <strong>Multivariate Multiple Linear Regression</strong> (MMLR) that using multiple dependent variables and independent variables. <strong>Multivariate Multiple Linear Regression</strong> is&nbsp;a statistical test used for <strong>more than one outcome variables</strong> using <strong>one or more independent variables</strong> <span class="citation" data-cites="MultivariateMultipleLinear">(<a href="references.html#ref-MultivariateMultipleLinear" role="doc-biblioref"><em>Multivariate <span>Multiple Linear Regression</span></em>, no date</a>)</span>. The methods is similar to single linear regression that it will run pixel by pixel but for all dependent variables. The only difference is MMLR will calculate covariance matrix.</p>
 <p>The case using MMLR in GEE is usually we want to calculate 2 bands for dependent variable (outcome variables). For example, we want to model pecipitation and temperature with constant variable (or control variable) and time. Each dependent variable doing its own regression pixel by pixel then it will calculate covariance matrix. Covariance is to find the value that indicates how these two variables vary together. Covariance is like variance but using 2 variables. Covariance matrix represent covariance values of each pair of variables in multivariate data <em>(citation: 5 Things You Should Know About Covariance)</em>.</p>
 <p>That was all the summary of this week material about Google Earth Engine and one of the process we can do in GEE, reduce image. There are benefits and drawbacks from using this methods. To understand better about this concept, we will see some application of this process.</p>
@@ -270,12 +315,25 @@ div.csl-indent {
 <h2 data-number="5.2" class="anchored" data-anchor-id="application"><span class="header-section-number">5.2</span> Application</h2>
 <section id="spatio-temporal-changes-of-lake-surface-water-temperature" class="level3" data-number="5.2.1">
 <h3 data-number="5.2.1" class="anchored" data-anchor-id="spatio-temporal-changes-of-lake-surface-water-temperature"><span class="header-section-number">5.2.1</span> Spatio-temporal Changes of Lake Surface Water Temperature</h3>
-<p>Cloud-based storage system of GEE allow us to do massive analysis with hundreds of images. This can be beneficial if we want to do study about spatio temporal changes because in GEE we can access data from multiple sensor and temporal. Albarqouni <span class="citation" data-cites="albarqouniAssessmentSpatioTemporalChanges2022">(<a href="references.html#ref-albarqouniAssessmentSpatioTemporalChanges2022" role="doc-biblioref">2022</a>)</span>, use GEE to analysis long-term spatio-temporal changes of lake surface water temperature (LSWT). To see change, this study includes 606 images from 2000 to 2021 from Landsat 5 TM and Landsat 8 OLI. 2 image sources were needed because Landsat 5 TM only collect data until 2011; thus we need Landsat 8 OLI to acquire data in 2013-2021. To calculate Water Surface Area Extraction, multispectral bands of these image collections was applied to normalized difference water index (NDWI). To measure LSWT, thermal bands was utilised to calculate Land Surface Emissivity. Then, relationship of LSWT and water surface area will be assessed. Since this analysis was conducted in GEE, the image collection was stored in the cloud. [[Pasted image 20230324044812.png]] This is the analysis flowchart. source: Albarqouni <span class="citation" data-cites="albarqouniAssessmentSpatioTemporalChanges2022">(<a href="references.html#ref-albarqouniAssessmentSpatioTemporalChanges2022" role="doc-biblioref">2022</a>)</span></p>
+<p>Cloud-based storage system of GEE allow us to do massive analysis with hundreds of images. This can be beneficial if we want to do study about spatio temporal changes because in GEE we can access data from multiple sensor and temporal. Albarqouni <span class="citation" data-cites="albarqouniAssessmentSpatioTemporalChanges2022">(<a href="references.html#ref-albarqouniAssessmentSpatioTemporalChanges2022" role="doc-biblioref">2022</a>)</span>, use GEE to analysis long-term spatio-temporal changes of lake surface water temperature (LSWT). To see change, this study includes 606 images from 2000 to 2021 from Landsat 5 TM and Landsat 8 OLI. 2 image sources were needed because Landsat 5 TM only collect data until 2011; thus we need Landsat 8 OLI to acquire data in 2013-2021. To calculate Water Surface Area Extraction, multispectral bands of these image collections was applied to normalized difference water index (NDWI). To measure LSWT, thermal bands was utilised to calculate Land Surface Emissivity. Then, relationship of LSWT and water surface area will be assessed. Since this analysis was conducted in GEE, the image collection was stored in the cloud.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week_05_files/LSWT analysis flowchart.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">LSWT analysis flowchart</figcaption><p></p>
+</figure>
+</div>
+<p>This is the analysis flowchart. source: Albarqouni <span class="citation" data-cites="albarqouniAssessmentSpatioTemporalChanges2022">(<a href="references.html#ref-albarqouniAssessmentSpatioTemporalChanges2022" role="doc-biblioref">2022</a>)</span></p>
 </section>
 <section id="forest-canopy-closure" class="level3" data-number="5.2.2">
 <h3 data-number="5.2.2" class="anchored" data-anchor-id="forest-canopy-closure"><span class="header-section-number">5.2.2</span> Forest Canopy Closure</h3>
-<p><span class="citation" data-cites="xieImprovedForestCanopy2022">(<a href="references.html#ref-xieImprovedForestCanopy2022" role="doc-biblioref">2022</a>)</span> takes advantages of GEE to monitoring forest changes. This study determining vegetation and bare soil endmember the normalized differences vegetation index (NDVI), modified bare soil index (MBSI), and bare soil index (BSI). This study also utilising GEE’s abilities of conducting massive analysis and providing data from various satellite. To help handle big dataset, this studyproduce image composite by reducing topographic-corrected cloudless using median reducer to pick median value in each band, in each pixel, overtime. Using image composite helps the analysis process becase it summarise the image collection into 1 image composite. This study tested the proposed methods using Landsat 8 and Sentinel-2 data. The result show that the proposed method is robust and replicatable using different sensor but with similar wavebands. To help handling.</p>
-<p>[[Pasted image 20230324053931.png]] source: Albarqouni <span class="citation" data-cites="albarqouniAssessmentSpatioTemporalChanges2022">(<a href="references.html#ref-albarqouniAssessmentSpatioTemporalChanges2022" role="doc-biblioref">2022</a>)</span></p>
+<p><span class="citation" data-cites="xieImprovedForestCanopy2022">(<a href="references.html#ref-xieImprovedForestCanopy2022" role="doc-biblioref">2022</a>)</span> takes advantages of GEE to monitoring forest changes. This study determining vegetation and bare soil endmember the normalized differences vegetation index (NDVI), modified bare soil index (MBSI), and bare soil index (BSI). This study also utilising GEE’s abilities of conducting massive analysis and providing data from various satellite. To help handle big dataset, this studyproduce image composite by reducing topographic-corrected cloudless using median reducer to pick median value in each band, in each pixel, overtime. Using image composite helps the analysis process becase it summarise the image collection into 1 image composite. This study tested the proposed methods using Landsat 8 and Sentinel-2 data. The result show that the proposed method is robust and reproducible using different sensor but with similar wavebands.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week_05_files/forest canopy closure.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Forest Canopy Closure Change</figcaption><p></p>
+</figure>
+</div>
+<p>source: Albarqouni <span class="citation" data-cites="albarqouniAssessmentSpatioTemporalChanges2022">(<a href="references.html#ref-albarqouniAssessmentSpatioTemporalChanges2022" role="doc-biblioref">2022</a>)</span></p>
 <p>What we can learn from this application is, various satellite data given by GEE can be combined into one analysis like what we see in LSWT research. Also, it can be treated as different input to compare the model like what we see in Forest Canopy Closure. in GEE it will be easy to access data from different tima and sensor. Although we can get image collection easily, we have to be critical to image that we get. For example, do our images require atmospheric correction? Especially regarding this example, estevezGaussianProcessesRetrieval2022, succesfully avoided atmospheric correction by assessing top-of-atmspher (TOA)</p>
 </section>
 </section>

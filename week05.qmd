@@ -14,7 +14,9 @@ In this week we are going to learn about Google Earth Engine (GEE). We will disc
 
 ### Google Earth Engine Interface
 Interface of Google Earth Engine will look like this:
-![[Pasted image 20230318152345.png]]
+
+![GEE Interface](week_05_files/GEE Interface.png){width="100%"}
+
 - **Assets** is where we upload our data- **Documentation** is documantation 
 - **Code editor** is where we put our script
 - **Tools** is tools helping navigating maps
@@ -24,7 +26,9 @@ Interface of Google Earth Engine will look like this:
 Before we go further to talk about any processes we can do in Google Earth Engine, it's better to know how GEE works. Unlike previous week and term when we use R and python, GEE is using **javascript**. Thus, we can not do looping like what we usually do, instead in javascript we use **mapping**. Mapping is making function and save it into an variable (or object) and  applied to the entire collection. But, what is variable and object? in Javascript variables are container of data value written as `var`. Object is also variables but can contain many data values. Go check [w3schools](https://www.w3schools.com/js/js_objects.asp#:~:text=You%20have%20already%20learned%20that%20JavaScript%20variables%20are%20containers%20for%20data%20values.&text=Objects%20are%20variables%20too.,objects%20can%20contain%20many%20values.&text=The%20values%20are%20written%20as,value%20separated%20by%20a%20colon) explanation on object and variable. 
 
 In GEE, there are 9 types or classes of objects which are shown in the image below:
-![[Pasted image 20230319003026.png]]
+
+![GEE object class](week_05_files/GEE object class.png){width="100%"}
+
 source: [Objects in Google Earth Engine](https://developers.google.com/earth-engine/guides/objects_methods_overview)
 
 It's good to be familiar with object terminology in GEE because in the next section and next week we will use these terminology a lot. individual Landsat or satellite scene, which is a raster, is known as **Image**. 
@@ -62,7 +66,9 @@ There are some reduction methods we can do which are:
 
 #### Reduce by Median
 The case to use this technic is if we have lots of collection images but we only want to classify 1 **image composite**. Typically what GEE will do is take the **median value** of each pixel to make an Image composite.  For instance, we want to analyse a study area in january 2023, we have image collection from several dates in January. GEE will check value of each pixel from different date and find the middle value. Afterwards, GEE will compose a new image from those median value. The median value of composed image might come from different date. 
-![[Screenshot 2023-03-19 at 12.32.24 (1).png]]
+
+![Reduce by median Step](week_05_files/Reduce by median.png){width="100%"}
+
 Although this methods commonly used (even by the lecturer, Andy), *(Citation Hansen)* argue to this methods of image reduction because if we only take median value it is possible to loss a lot of information. Thus, instead of using meding, he suggest to use decile.
 
 #### Reduce by Region
@@ -75,16 +81,20 @@ Reduce by region can be done for one study area or many study area (many polygon
 
 #### Reduce by Neigbourhood
 Instead of using region boundary, we can use Kernel neighbourhood to reduce the image. In this reducing methods is kind of similar to filtering and texture enhancement that we learnt in Chapter 3. Basically, the methods is we ask GEE to summarize the image by calculating either mean, median, min, or max value of the neighbour. Neighbourhood means, window pixels surround the central pixel. Thus, to get a value of a pixel, GEE will calculate window pixels surround it like shown in the image below. The function for reducing by neighbourhood is `.reduceNeighbourhood()`
-![[Pasted image 20230318174849.png]]
+
+![Reduce by neirbourhood](week_05_files/Reducer Neighbourhood.png){width="100%"}
 
 GEE will compose a new image from the calculation result. The Image on the left is the previous  satellite image and image on the right is the composite image after reducing by neighbourhood.
- ![[Pasted image 20230318175307.png]]
+
+ ![Reduce by neirbour Result Example](week_05_files/result reduce by neighbour.png){width="100%"}
+ 
  source: [GEE |  Google Earth Engine  |  Google Developers](https://developers.google.com/earth-engine/guides/reducers_reduce_region)
 
 
 #### Reduce using Linear Regression
 Biggest benefit of GEE is we can look out data from different time so we can see how pixel values change overtime. in GEE, we can do **single linear regression** by using `linearFit()` function if we want to see the change overtime in pixel values. the function takes 2 bands which is one for dependent variable and the other is the independent variable. ***The observation is often time.*** For example, we have an image collection in January and going to see temperature change overtime. The GEE will run regression pixel by pixel with time and give us output value of the regression slope. The continues values of the slope will be mapped into new image composite. therefore, this regression technic also considered as a reduce image methods because we are reducing all the stacked data into an images. The image below is the result of linear regression. The blue color show positive slope which means the band value increase overtime. Meanwhile, the red colour show negative slope that means the value decrease overtime. 
-![[Pasted image 20230318195410.png]]
+
+![Linear Regression Mapping](week_05_files/Linear Regression Map.png){width="100%"}
 
 Other then single linear regression, GEE can also do do **Multivariate Multiple Linear Regression** (MMLR) that using multiple dependent variables and independent variables.  **Multivariate Multiple Linear Regression** is a statistical test used for **more than one outcome variables** using **one or more independent variables** [@MultivariateMultipleLinear]. The methods is similar to single linear regression that it will run pixel by pixel but for all dependent variables. The only difference is MMLR will calculate covariance matrix. 
 
@@ -97,15 +107,18 @@ That was all the summary of this week material about Google Earth Engine and one
 
 ### Spatio-temporal Changes of Lake Surface Water Temperature
 Cloud-based storage system of GEE allow us to do massive analysis with hundreds of images. This can be beneficial if we want to do study about spatio temporal changes because in GEE we can access data from multiple sensor and temporal. Albarqouni [-@albarqouniAssessmentSpatioTemporalChanges2022], use GEE to analysis long-term spatio-temporal changes of lake  surface water temperature (LSWT). To see change, this study includes 606 images from 2000 to 2021 from Landsat 5 TM and Landsat 8 OLI. 2 image sources were needed because Landsat 5 TM only collect data until 2011; thus we need Landsat 8 OLI to acquire data in 2013-2021. To calculate Water Surface Area Extraction, multispectral bands of these image collections was applied to normalized difference water index (NDWI). To measure LSWT, thermal bands was utilised to calculate Land Surface Emissivity. Then, relationship of LSWT and water surface area will be assessed. Since this analysis was conducted in GEE, the image collection was stored in the cloud.
-![[Pasted image 20230324044812.png]]
+
+![LSWT analysis flowchart](week_05_files/LSWT analysis flowchart.png){width="100%"}
+
 This is the analysis flowchart. source: Albarqouni [-@albarqouniAssessmentSpatioTemporalChanges2022] 
 
 
 ### Forest Canopy Closure
 
-[-@xieImprovedForestCanopy2022] takes advantages of GEE to monitoring forest changes. This study determining vegetation and bare soil endmember the normalized differences vegetation index (NDVI), modified bare soil index (MBSI), and bare soil index (BSI). This study also utilising GEE's abilities of conducting massive analysis and providing data from various satellite. To help handle big dataset, this studyproduce image composite  by reducing topographic-corrected cloudless using median reducer to pick median value in each band, in each pixel, overtime. Using image composite helps the analysis process becase it summarise the image collection into 1 image composite. This study tested the proposed methods using Landsat 8 and Sentinel-2 data. The result show  that the proposed method is robust and replicatable using different sensor but with similar wavebands. To help handling.
+[-@xieImprovedForestCanopy2022] takes advantages of GEE to monitoring forest changes. This study determining vegetation and bare soil endmember the normalized differences vegetation index (NDVI), modified bare soil index (MBSI), and bare soil index (BSI). This study also utilising GEE's abilities of conducting massive analysis and providing data from various satellite. To help handle big dataset, this studyproduce image composite  by reducing topographic-corrected cloudless using median reducer to pick median value in each band, in each pixel, overtime. Using image composite helps the analysis process becase it summarise the image collection into 1 image composite. This study tested the proposed methods using Landsat 8 and Sentinel-2 data. The result show  that the proposed method is robust and reproducible using different sensor but with similar wavebands. 
 
-![[Pasted image 20230324053931.png]]
+![Forest Canopy Closure Change](week_05_files/forest canopy closure.png){width="100%"}
+
 source: Albarqouni [-@albarqouniAssessmentSpatioTemporalChanges2022]
 
 What we can learn from this application is, various satellite data given by GEE can be combined into one analysis like what we see in LSWT research. Also, it can be treated as different input to compare the model like what we see in Forest Canopy Closure. in GEE it will be easy to access data from different tima and sensor. Although we can get image collection easily, we have to be critical to image that we get. For example, do our images require atmospheric correction? Especially regarding this example,  estevezGaussianProcessesRetrieval2022, succesfully avoided atmospheric correction by assessing top-of-atmspher (TOA)

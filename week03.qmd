@@ -19,7 +19,9 @@ Not every imagery data required all these 3 steps, it depends on the data we get
 ## Correction
 - Pre-processings are required (occasionally) because imagery data can contain flaws or errors from the sensor, atmosphere, terrain and more
 - **Scan Line Correction (SLC)** is pair of mirror to compansate the forward movement of satellite so the resulting scan are shown paralel
-	- ![[Pasted image 20230124131421.png]]
+	- ![GEE Interface](week_03_files/SLC.png){width="100%"}
+	
+	
 	- Failed scan line landsat is on Landsat 7, because it moves in a zig zag, and the corrector made the image normal
 	- Imagery was still distributed but it is hard to use with methods developed to estimates the gaps, termed gap filling.
 ### 1. Geometric Correction
@@ -27,7 +29,7 @@ Not every imagery data required all these 3 steps, it depends on the data we get
 - Satelite image has CRS (Coordinate Reference System)
 - Image distortions can be introduce due to:
 	- View angle (off-nadir)* - [Nadir means directly down](https://space.stackexchange.com/questions/19727/in-spacecraft-talk-is-nadir-just-a-fancy-word-for-down)
-		- ![[Pasted image 20230220161521.png]]
+		- ![View Angle](week_05_files/view angle.png){width="100%"}
 		- if the satelite off nadir, it will cause shadowing  and we have to correct it
 	-   Topography (e.g. hills not flat ground)
 	-   Wind (if from a plane)

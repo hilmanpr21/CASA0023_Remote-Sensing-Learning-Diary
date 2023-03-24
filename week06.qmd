@@ -130,7 +130,7 @@ Other than SVM, this study has tried to use bivariate and multivariate methods. 
 #### Drought
 not only for flood, supervised classification also had been used to assess other natural disaster. Ghasempour [-@ghasempourDroughtVulnerabilityAssessment2022] made Drought vulnerability maps northwest part of Iran. The study used SVM on 17 geo-environmental parameters including  temperature and soil condition which are not included by Mojaddadi [-@mojaddadiEnsembleMachinelearningbasedGeospatial2017] and Youssef [-@youssefFloodVulnerabilityMapping2023a] in their researches. 
 
-![Drought vulnerable map example](week_06_files/Drought.png){width="100%"}
+![Drought vulnerable map](week_06_files/Drought.png){width="100%"}
 
 source: Youssef[-@ghasempourDroughtVulnerabilityAssessment2022] 
 Drought Vulnerability Map of Northwest Iran
