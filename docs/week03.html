@@ -181,24 +181,14 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">4</span>  Summary</a>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">3.1</span>  Summary</a>
   <ul class="collapse">
-  <li><a href="#correction" id="toc-correction" class="nav-link" data-scroll-target="#correction"><span class="toc-section-number">4.1</span>  Correction</a>
-  <ul class="collapse">
-  <li><a href="#atmospheric-correction" id="toc-atmospheric-correction" class="nav-link" data-scroll-target="#atmospheric-correction"><span class="toc-section-number">4.1.1</span>  2. Atmospheric Correction</a></li>
-  <li><a href="#topography-correction-orthorectification-correction" id="toc-topography-correction-orthorectification-correction" class="nav-link" data-scroll-target="#topography-correction-orthorectification-correction"><span class="toc-section-number">4.1.2</span>  3. Topography Correction/ Orthorectification Correction</a></li>
-  <li><a href="#radiometric-calibration" id="toc-radiometric-calibration" class="nav-link" data-scroll-target="#radiometric-calibration"><span class="toc-section-number">4.1.3</span>  4. Radiometric Calibration</a></li>
+  <li><a href="#correction" id="toc-correction" class="nav-link" data-scroll-target="#correction"><span class="toc-section-number">3.1.1</span>  Correction</a></li>
+  <li><a href="#joining-datasetsenhancement" id="toc-joining-datasetsenhancement" class="nav-link" data-scroll-target="#joining-datasetsenhancement"><span class="toc-section-number">3.1.2</span>  Joining Datasets/Enhancement</a></li>
+  <li><a href="#image-enhancement" id="toc-image-enhancement" class="nav-link" data-scroll-target="#image-enhancement"><span class="toc-section-number">3.1.3</span>  Image Enhancement</a></li>
   </ul></li>
-  <li><a href="#joining-datasetsenhancement" id="toc-joining-datasetsenhancement" class="nav-link" data-scroll-target="#joining-datasetsenhancement"><span class="toc-section-number">4.2</span>  Joining Datasets/Enhancement</a>
-  <ul class="collapse">
-  <li><a href="#ratio-enhancement" id="toc-ratio-enhancement" class="nav-link" data-scroll-target="#ratio-enhancement"><span class="toc-section-number">4.2.1</span>  Ratio enhancement</a></li>
-  <li><a href="#filtering" id="toc-filtering" class="nav-link" data-scroll-target="#filtering"><span class="toc-section-number">4.2.2</span>  Filtering</a></li>
-  <li><a href="#texture-enhancement" id="toc-texture-enhancement" class="nav-link" data-scroll-target="#texture-enhancement"><span class="toc-section-number">4.2.3</span>  Texture Enhancement</a></li>
-  <li><a href="#data-fusion-enhancement" id="toc-data-fusion-enhancement" class="nav-link" data-scroll-target="#data-fusion-enhancement"><span class="toc-section-number">4.2.4</span>  Data Fusion enhancement</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="toc-section-number">5</span>  Application</a></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">6</span>  Reflection</a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="toc-section-number">3.2</span>  Application</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">3.3</span>  Reflection</a></li>
   </ul>
 </nav>
     </div>
@@ -222,13 +212,13 @@ div.csl-indent {
 
 </header>
 
-<section id="summary" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Summary</h1>
+<section id="summary" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">3.1</span> Summary</h2>
 <p>In this week we learn about history of Landsat data and pre-processing of imagery satellite data.</p>
 <p>We have to thank Virginia Wood for the landsat data we have nowadays because previously NASA wanted to use analogue system (RBV camera - TV camera with Green, Red and NIR spectrum) for their sensor. This is the spectral that catch by the Landsat RBV, and then cutted into only 4 bands, green, red, red-near IR, and near-IR. Then, Virginia Norwood suggested to use <strong>Multispectal Camera (MSS)</strong> which allows us to have 7 bands image. This became standar for the following landsat. Since then she is known as “the Mother of Landsat”</p>
 <p>Preprocessing step is a step we do to make our imagery data ready to be processed (classified) or analysed. It can be seen on the mind map that preprocessing steps we can do 3 thing, which are: 1. Correction 2. Data Joining 3. Enhancement Not every imagery data required all these 3 steps, it depends on the data we get and what we are going to do. Check this mind map to understand the outline of pre-processing steps.</p>
-<section id="correction" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="correction"><span class="header-section-number">4.1</span> Correction</h2>
+<section id="correction" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="correction"><span class="header-section-number">3.1.1</span> Correction</h3>
 <ul>
 <li>Pre-processings are required (occasionally) because imagery data can contain flaws or errors from the sensor, atmosphere, terrain and more</li>
 <li><strong>Scan Line Correction (SLC)</strong> is pair of mirror to compansate the forward movement of satellite so the resulting scan are shown paralel
@@ -240,32 +230,45 @@ div.csl-indent {
 </figure>
 </div></li>
 <li><p>Failed scan line landsat is on Landsat 7, because it moves in a zig zag, and the corrector made the image normal</p></li>
-<li><p>Imagery was still distributed but it is hard to use with methods developed to estimates the gaps, termed gap filling. ### 1. Geometric Correction</p></li>
+<li><p>Imagery was still distributed but it is hard to use with methods developed to estimates the gaps, termed gap filling.</p></li>
 </ul></li>
-<li>Means geometry on how the image located on earth.</li>
-<li>Satelite image has CRS (Coordinate Reference System)</li>
-<li>Image distortions can be introduce due to:
+</ul>
+<section id="geometric-correction" class="level4" data-number="3.1.1.1">
+<h4 data-number="3.1.1.1" class="anchored" data-anchor-id="geometric-correction"><span class="header-section-number">3.1.1.1</span> 1. Geometric Correction</h4>
 <ul>
-<li>View angle (off-nadir)* -&nbsp;<a href="https://space.stackexchange.com/questions/19727/in-spacecraft-talk-is-nadir-just-a-fancy-word-for-down">Nadir means directly down</a>
+<li><p>Means geometry on how the image located on earth.</p></li>
+<li><p>Satelite image has CRS (Coordinate Reference System)</p></li>
+<li><p>Image distortions can be introduce due to:</p>
 <ul>
-<li><div class="quarto-figure quarto-figure-center">
+<li>View angle (off-nadir)* - <a href="https://space.stackexchange.com/questions/19727/in-spacecraft-talk-is-nadir-just-a-fancy-word-for-down">Nadir means directly down</a></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="week_05_files/view angle.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="week_03_files/view angle.png" class="img-fluid figure-img" style="width:100.0%"></p>
 <p></p><figcaption class="figure-caption">View Angle</figcaption><p></p>
 </figure>
-</div></li>
-<li><p>if the satelite off nadir, it will cause shadowing and we have to correct it</p></li>
-</ul></li>
+</div>
+<pre><code>  - if the satelite off nadir, it will cause shadowing  and we have to correct it</code></pre>
+<ul>
 <li>Topography (e.g.&nbsp;hills not flat ground)</li>
 <li>Wind (if from a plane)</li>
 <li>Rotation of the earth (from satellite)
 <ul>
 <li>because of the earth rotation, the image produced will be off grid, so it has to be aligned</li>
-<li>[[Pasted image 20230222070839.png]] #### Geometric Correction Solution</li>
+<li><img src="week_03_files/satellite rotation.png" title="fig:" class="img-fluid" style="width:100.0%" alt="satellite rotation"></li>
 </ul></li>
 </ul></li>
-<li>[[Pasted image 20230220161558.png]]</li>
-<li><strong>Steps</strong>:
+</ul>
+<section id="geometric-correction-solution" class="level5" data-number="3.1.1.1.1">
+<h5 data-number="3.1.1.1.1" class="anchored" data-anchor-id="geometric-correction-solution"><span class="header-section-number">3.1.1.1.1</span> Geometric Correction Solution</h5>
+<ul>
+<li><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week_03_files/Geometric correction solution.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Geometric correction solution</figcaption><p></p>
+</figure>
+</div></li>
+<li><p><strong>Steps</strong>:</p>
 <ol type="1">
 <li>identify Ground Control Points (GCP) to match known points in the image and a reference dataset
 <ul>
@@ -286,35 +289,57 @@ div.csl-indent {
 <li>Transform the GCP coordinates to the right one using linear regressrion</li>
 <li>plot these and try to minimise the RMSE</li>
 </ol></li>
-<li><strong>Modelling</strong>
+<li><p><strong>Modelling</strong></p>
 <ul>
 <li><strong>Forward mapping</strong>
 <ul>
-<li>predicting corrected image with uncorrected image</li>
-<li>[[Pasted image 20230228102446.png]]</li>
-<li>&nbsp;<em>x</em>&nbsp;and&nbsp;<em>y</em>&nbsp;are positions in the corrected map</li>
-<li>But the issue is that we are modelling the rectified&nbsp;<em>x</em>&nbsp;and&nbsp;<em>y</em>&nbsp;which could fall anywhere on the gold standard map (e.g.&nbsp;not on a grid square or at a floating point)</li>
-<li>forward mapping isn’t the most common one to use</li>
-<li>[[Pasted image 20230220165826.png]]</li>
+<li><p>predicting corrected image with uncorrected image</p></li>
+<li><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week_03_files/forward mapping formula.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Forward Mapping formula</figcaption><p></p>
+</figure>
+</div></li>
+<li><p>&nbsp;<em>x</em>&nbsp;and&nbsp;<em>y</em>&nbsp;are positions in the corrected map</p></li>
+<li><p>But the issue is that we are modelling the rectified&nbsp;<em>x</em>&nbsp;and&nbsp;<em>y</em>&nbsp;which could fall anywhere on the gold standard map (e.g.&nbsp;not on a grid square or at a floating point)</p></li>
+<li><p>forward mapping isn’t the most common one to use</p></li>
+<li><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week_03_files/forward mapping.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Forward Mapping</figcaption><p></p>
+</figure>
+</div></li>
 </ul></li>
 <li><strong>Backward Mapping</strong>
 <ul>
-<li>Predicting the uncorrected image with the corrected image</li>
-<li>[[Pasted image 20230228102853.png]]</li>
-<li>Every value in the output (corrected image) pixel will have value in the original input (uncorrected) image.</li>
-<li>the images are distorted so might not completely overlap. The goal is to match distorted image with gold standard image, so we want the pixel to line up</li>
-<li>[[Pasted image 20230220165951.png]]</li>
+<li><p>Predicting the uncorrected image with the corrected image</p></li>
+<li><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week_03_files/backward mapping formula.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Backward Mapping</figcaption><p></p>
+</figure>
+</div></li>
+<li><p>Every value in the output (corrected image) pixel will have value in the original input (uncorrected) image.</p></li>
+<li><p>the images are distorted so might not completely overlap. The goal is to match distorted image with gold standard image, so we want the pixel to line up</p></li>
+<li><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week_03_files/backward mapping.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Backward Mapping</figcaption><p></p>
+</figure>
+</div></li>
 </ul></li>
 </ul></li>
-<li><strong>Resampling</strong>
+<li><p><strong>Resampling</strong></p>
 <ul>
 <li>resampling is transforming from grid to another grid</li>
 <li>we need to do re-sampling because the image data we get might slightly shifted. ANd is can be useful if the image has different grid size (or different band that has different resolution, like in the 1st week practical)</li>
-<li>[[Pasted image 20230228104428.png]]</li>
+<li><img src="week_03_files/resampling.png" title="fig:" class="img-fluid" style="width:80.0%" alt="resampling"></li>
 </ul></li>
 </ul>
-<section id="atmospheric-correction" class="level3" data-number="4.1.1">
-<h3 data-number="4.1.1" class="anchored" data-anchor-id="atmospheric-correction"><span class="header-section-number">4.1.1</span> 2. Atmospheric Correction</h3>
+</section>
+</section>
+<section id="atmospheric-correction" class="level4" data-number="3.1.1.2">
+<h4 data-number="3.1.1.2" class="anchored" data-anchor-id="atmospheric-correction"><span class="header-section-number">3.1.1.2</span> 2. Atmospheric Correction</h4>
 <ul>
 <li>Atmospheric correction is the influence of atmospher on our data:
 <ul>
@@ -336,8 +361,8 @@ div.csl-indent {
 <li><strong>Scattering</strong> create haze that reduce the contrast pf the image</li>
 <li>bright reflective material, eg, concrete, asphalt. karena terlalu terang jadi bocor ke sekitarnya</li>
 </ul>
-<section id="atmospheric-correction-solution" class="level4" data-number="4.1.1.1">
-<h4 data-number="4.1.1.1" class="anchored" data-anchor-id="atmospheric-correction-solution"><span class="header-section-number">4.1.1.1</span> Atmospheric Correction Solution</h4>
+<section id="atmospheric-correction-solution" class="level5" data-number="3.1.1.2.1">
+<h5 data-number="3.1.1.2.1" class="anchored" data-anchor-id="atmospheric-correction-solution"><span class="header-section-number">3.1.1.2.1</span> Atmospheric Correction Solution</h5>
 <ul>
 <li><strong>Relative</strong>
 <ul>
@@ -351,7 +376,7 @@ div.csl-indent {
 <li><strong>Psuedo-invariant Features (PIFs)</strong>
 <ul>
 <li>this used when we have may images. We pick 1 image as based image. Determine feature that don’t change. Make regression model with Y is the based image. Adjust the ijmage based on regression model</li>
-<li>[[Pasted image 20230228111657.png]]</li>
+<li><img src="week_03_files/Pseudo invariant feature.png" class="img-fluid" style="width:70.0%" alt="Pseudo invariant feature"> Pseudo invariant feature</li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -363,22 +388,27 @@ div.csl-indent {
 </ul>
 </section>
 </section>
-<section id="topography-correction-orthorectification-correction" class="level3" data-number="4.1.2">
-<h3 data-number="4.1.2" class="anchored" data-anchor-id="topography-correction-orthorectification-correction"><span class="header-section-number">4.1.2</span> 3. Topography Correction/ Orthorectification Correction</h3>
+<section id="topography-correction-orthorectification-correction" class="level4" data-number="3.1.1.3">
+<h4 data-number="3.1.1.3" class="anchored" data-anchor-id="topography-correction-orthorectification-correction"><span class="header-section-number">3.1.1.3</span> 3. Topography Correction/ Orthorectification Correction</h4>
 <ul>
-<li>it means when we are not looking straight down (nadir), so the image distorted.</li>
-<li><strong>orthorectification</strong> means removing distortion by making the pixel viewed at nadir</li>
-<li>for orthorectification we need sun zenith and azimut angle, and orientation of the slope from DEM.</li>
-<li>[[Pasted image 20230228113746.png]]
+<li><p>it means when we are not looking straight down (nadir), so the image distorted.</p></li>
+<li><p><strong>orthorectification</strong> means removing distortion by making the pixel viewed at nadir</p></li>
+<li><p>for orthorectification we need sun zenith and azimut angle, and orientation of the slope from DEM.</p></li>
+<li><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week_03_files/zenith azimut.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<p></p><figcaption class="figure-caption">Zenith Azimut ilustration</figcaption><p></p>
+</figure>
+</div>
 <ul>
 <li>Zenith meas directly up while nadir means directly down</li>
 <li>Azimut is position of sun to north, south, east, west</li>
 </ul></li>
-<li><strong>Atmospheric typically happen before topographic correction</strong></li>
+<li><p><strong>Atmospheric typically happen before topographic correction</strong></p></li>
 </ul>
 </section>
-<section id="radiometric-calibration" class="level3" data-number="4.1.3">
-<h3 data-number="4.1.3" class="anchored" data-anchor-id="radiometric-calibration"><span class="header-section-number">4.1.3</span> 4. Radiometric Calibration</h3>
+<section id="radiometric-calibration" class="level4" data-number="3.1.1.4">
+<h4 data-number="3.1.1.4" class="anchored" data-anchor-id="radiometric-calibration"><span class="header-section-number">3.1.1.4</span> 4. Radiometric Calibration</h4>
 <ul>
 <li>Sensor capture image as Digital Number with no units. Spectral Radiance is the amount of light within a &nbsp;band from a sensor in the field of view</li>
 <li><strong>Radiometric Calibration</strong>: Calibrate the data (digital Number) into radiance and convert to specific unit
@@ -386,78 +416,109 @@ div.csl-indent {
 <li><strong>Radiance</strong> refers to any <strong>radiation leaving the Earth</strong> (i.e.&nbsp;upwelling, toward the sensor</li>
 </ul></li>
 <li>basically, before sending sensor to the space, calibaration was done to check whether sensors performing correctly or not. We then use the calibration measurements to adjust the data captured by the sensor</li>
-<li>[[Pasted image 20230228115429.png]]</li>
+<li><img src="week_03_files/Radiometric Calibration.png" title="fig:" class="img-fluid" style="width:70.0%" alt="Radiometric Calibration"></li>
 </ul>
 </section>
 </section>
-<section id="joining-datasetsenhancement" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="joining-datasetsenhancement"><span class="header-section-number">4.2</span> Joining Datasets/Enhancement</h2>
+<section id="joining-datasetsenhancement" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="joining-datasetsenhancement"><span class="header-section-number">3.1.2</span> Joining Datasets/Enhancement</h3>
 <ul>
 <li>the ideas is joining or merging or mosaicking or feathering images into one seamless image</li>
 <li>This process was done by taking few pixel from each image at the same location and overlaping those pixels. Then, blending these to image on the ovelaped pixels</li>
 <li>Those image are ovelapping by 20-30%</li>
-<li>[[Pasted image 20230228153010.png]] source <a href="https://www.l3harrisgeospatial.com/docs/mosaicseamless.html">Seamless Mosaic (l3harrisgeospatial.com)</a></li>
-<li>[[Pasted image 20230228153057.png]] source <a href="https://gis.stackexchange.com/questions/127310/how-to-create-a-mosaic-in-qgis-with-cutline-and-feathering-for-landsat-8-imagery">gdal - How to create a mosaic in QGIS with cutline and feathering for Landsat-8 imagery - Geographic Information Systems Stack Exchange</a></li>
-<li>However the challenge is the image we get might coming from different day and lighting condition or even different satellite. It can cause different band value thus those image have to undergo standarisation and normalisation
+<li><img src="week_03_files/Data Join.png" class="img-fluid" style="width:75.0%" alt="Data Join"> source <a href="https://www.l3harrisgeospatial.com/docs/mosaicseamless.html">Seamless Mosaic (l3harrisgeospatial.com)</a></li>
+<li><img src="week_03_files/Data Join result.png" title="fig:" class="img-fluid" style="width:100.0%" alt="Data Join result"></li>
+</ul>
+<p>source <a href="https://gis.stackexchange.com/questions/127310/how-to-create-a-mosaic-in-qgis-with-cutline-and-feathering-for-landsat-8-imagery">gdal - How to create a mosaic in QGIS with cutline and feathering for Landsat-8 imagery - Geographic Information Systems Stack Exchange</a> - However the challenge is the image we get might coming from different day and lighting condition or even different satellite. It can cause different band value thus those image have to undergo standarisation and normalisation - <strong>Standarisation</strong> by dividing the SR value by a maximum value per band - <strong>normalisation</strong> by divide the standarised value by the sum of values across all bands</p>
+</section>
+<section id="image-enhancement" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="image-enhancement"><span class="header-section-number">3.1.3</span> Image Enhancement</h3>
 <ul>
-<li><strong>Standarisation</strong> by dividing the SR value by a maximum value per band</li>
-<li><strong>normalisation</strong> by divide the standarised value by the sum of values across all bands ## Image Enhancement</li>
-</ul></li>
-<li>it doesn’t alter the value of the data, merely changing how it explains and visual appearance ### Contrast Enhancement</li>
-<li>[[Pasted image 20230228153934.png]]</li>
-<li>done by:
+<li>it doesn’t alter the value of the data, merely changing how it explains and visual appearance</li>
+</ul>
+<section id="contrast-enhancement" class="level4" data-number="3.1.3.1">
+<h4 data-number="3.1.3.1" class="anchored" data-anchor-id="contrast-enhancement"><span class="header-section-number">3.1.3.1</span> Contrast Enhancement</h4>
+<ul>
+<li><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week_03_files/contrast enhancement.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<p></p><figcaption class="figure-caption">contrats enhancemenct</figcaption><p></p>
+</figure>
+</div></li>
+<li><p>done by:</p>
 <ul>
 <li>stretching min max value</li>
 <li>percentage Linear and Standar Deviation</li>
 <li>Piecewise Linear Contrast Stretch</li>
 </ul></li>
-<li>it doesn’t alter the value of the data, merely changing how it explains and visual appearance</li>
+<li><p>it doesn’t alter the value of the data, merely changing how it explains and visual appearance</p></li>
 </ul>
-<section id="ratio-enhancement" class="level3" data-number="4.2.1">
-<h3 data-number="4.2.1" class="anchored" data-anchor-id="ratio-enhancement"><span class="header-section-number">4.2.1</span> Ratio enhancement</h3>
+</section>
+<section id="ratio-enhancement" class="level4" data-number="3.1.3.2">
+<h4 data-number="3.1.3.2" class="anchored" data-anchor-id="ratio-enhancement"><span class="header-section-number">3.1.3.2</span> Ratio enhancement</h4>
 <ul>
 <li>band ratioing means dividing bands by each other</li>
 <li>eg: Normalize Burn Ratio
 <ul>
-<li>[[Pasted image 20230228154641.png]]</li>
-<li>source: <a href="https://www.usgs.gov/landsat-missions/landsat-normalized-burn-ratio">Landsat Normalized Burn Ratio | U.S. Geological Survey (usgs.gov)</a></li>
+<li><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week_03_files/ratio enhancement.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<p></p><figcaption class="figure-caption">ratio enhancement</figcaption><p></p>
+</figure>
+</div></li>
+<li><p>source: <a href="https://www.usgs.gov/landsat-missions/landsat-normalized-burn-ratio">Landsat Normalized Burn Ratio | U.S. Geological Survey (usgs.gov)</a></p></li>
 </ul></li>
 </ul>
 </section>
-<section id="filtering" class="level3" data-number="4.2.2">
-<h3 data-number="4.2.2" class="anchored" data-anchor-id="filtering"><span class="header-section-number">4.2.2</span> Filtering</h3>
+<section id="filtering" class="level4" data-number="3.1.3.3">
+<h4 data-number="3.1.3.3" class="anchored" data-anchor-id="filtering"><span class="header-section-number">3.1.3.3</span> Filtering</h4>
 <ul>
 <li>means taking an image an having a moving window to see aggregation of the image. Calculate surround pixel and put the average value as the middle pixel’ value</li>
 <li>Low Pass or low frequency is average of the surrounding pixels</li>
 <li>High pass or high frequency is enhance local vatiations</li>
-<li>[[Pasted image 20230228154958.png]] ### Principal Component Analysis</li>
+<li><img src="week_03_files/filtering.png" title="fig:" class="img-fluid" style="width:75.0%" alt="Filtering"></li>
+</ul>
+</section>
+<section id="principal-component-analysis" class="level4" data-number="3.1.3.4">
+<h4 data-number="3.1.3.4" class="anchored" data-anchor-id="principal-component-analysis"><span class="header-section-number">3.1.3.4</span> Principal Component Analysis</h4>
+<ul>
 <li>Using PCA we can make our data smaller and maximise variation between our data</li>
 <li>PCA will transforming multi-spectral data into uncorrelated and smaller data set</li>
 <li>Reduce dimensionality</li>
 <li>Example:
 <ul>
-<li>multi-temporal PCA bands from both time points are combined into one image, then PCA</li>
-<li>[[Pasted image 20230228191626.png]]</li>
-<li>so initially there are 2 or 3 images from different time stamps. It was stacked together and did PCA. From the PCA,they classify land use changes. Then maximise the variation.</li>
+<li><p>multi-temporal PCA bands from both time points are combined into one image, then PCA</p></li>
+<li><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week_03_files/PCA.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<p></p><figcaption class="figure-caption">PCA</figcaption><p></p>
+</figure>
+</div></li>
+<li><p>so initially there are 2 or 3 images from different time stamps. It was stacked together and did PCA. From the PCA,they classify land use changes. Then maximise the variation.</p></li>
 </ul></li>
 </ul>
 </section>
-<section id="texture-enhancement" class="level3" data-number="4.2.3">
-<h3 data-number="4.2.3" class="anchored" data-anchor-id="texture-enhancement"><span class="header-section-number">4.2.3</span> Texture Enhancement</h3>
+<section id="texture-enhancement" class="level4" data-number="3.1.3.5">
+<h4 data-number="3.1.3.5" class="anchored" data-anchor-id="texture-enhancement"><span class="header-section-number">3.1.3.5</span> Texture Enhancement</h4>
 <ul>
 <li>Textture is spatial variation of gray value</li>
 <li>usually used for medical detection</li>
 <li>Texture analysis looks at the tonal feature of the image by looking at the surrounding values. So there’s a moving window with 3x3 grid and it will calculate the value of a pixel with variance and probability of surrounding (within the window) value</li>
 <li>Texture variance result
 <ul>
-<li>[[Pasted image 20230228193044.png]]</li>
-<li>sisi yang terang adalah pinggir2 gedung karena tepi texture has high variance value</li>
+<li><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week_03_files/texture enhancement.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<p></p><figcaption class="figure-caption">Texture Enhancement</figcaption><p></p>
+</figure>
+</div></li>
+<li><p>sisi yang terang adalah pinggir2 gedung karena tepi texture has high variance value</p></li>
 </ul></li>
 <li>Texture is beneficial to give additional information to our model as it oppose to just relying on spectral reflectance. Thus we can improve our classification model.</li>
 </ul>
 </section>
-<section id="data-fusion-enhancement" class="level3" data-number="4.2.4">
-<h3 data-number="4.2.4" class="anchored" data-anchor-id="data-fusion-enhancement"><span class="header-section-number">4.2.4</span> Data Fusion enhancement</h3>
+<section id="data-fusion-enhancement" class="level4" data-number="3.1.3.6">
+<h4 data-number="3.1.3.6" class="anchored" data-anchor-id="data-fusion-enhancement"><span class="header-section-number">3.1.3.6</span> Data Fusion enhancement</h4>
 <ul>
 <li>stack of multiband data fused with PCA or texture or other enhancement.</li>
 <li>Image fusion can alse be from different sensor. eg. Sentinel fused with Landsat</li>
@@ -466,20 +527,28 @@ div.csl-indent {
 </section>
 </section>
 </section>
-<section id="application" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Application</h1>
-<p>Learning about image enhancement in pre-processing step are really beneficial especially when we are dealing with huge datasets, such as hyperspectral and multi-temporal imagery <span class="citation" data-cites="rodarmelPrincipalComponentAnalysis2002">(<a href="references.html#ref-rodarmelPrincipalComponentAnalysis2002" role="doc-biblioref">Rodarmel and Shan, 2002</a>)</span>. Principal Component Analysis enhancement is a tools to reducing dimensionality if we are detecting land-use change from time to time using stacked multi-date data like what Deng <span class="citation" data-cites="dengPCABasedLand2008">(<a href="references.html#ref-dengPCABasedLand2008" role="doc-biblioref">2008</a>)</span> in their paper. In detecting land-use change in Hangzhou City, China, they also use data from various sensors which are aerial photograph, SPOT-5 and Landsat-7. [[Pasted image 20230315165944.png]] The image above shows one example of land use change from cropland to urban land. These image shows:</p>
+<section id="application" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="application"><span class="header-section-number">3.2</span> Application</h2>
+<p>Learning about image enhancement in pre-processing step are really beneficial especially when we are dealing with huge datasets, such as hyperspectral and multi-temporal imagery <span class="citation" data-cites="rodarmelPrincipalComponentAnalysis2002">(<a href="references.html#ref-rodarmelPrincipalComponentAnalysis2002" role="doc-biblioref">Rodarmel and Shan, 2002</a>)</span>. Principal Component Analysis enhancement is a tools to reducing dimensionality if we are detecting land-use change from time to time using stacked multi-date data like what Deng <span class="citation" data-cites="dengPCABasedLand2008">(<a href="references.html#ref-dengPCABasedLand2008" role="doc-biblioref">2008</a>)</span> in their paper. In detecting land-use change in Hangzhou City, China, they also use data from various sensors which are aerial photograph, SPOT-5 and Landsat-7. !<img src="week_03_files/PCA 1.png" class="img-fluid" style="width:100.0%"></p>
+<p>The image above shows one example of land use change from cropland to urban land. These image shows:</p>
 <p><em>a</em> ETM in 2000</p>
 <p><em>b</em> aerial photograph in 2000</p>
 <p><em>c</em> SPOT-5 in 2003</p>
 <p><em>d</em> Ikonos in 2003</p>
 <p><em>e-h</em> are the principal component.</p>
 <p>source: Deng <span class="citation" data-cites="dengPCABasedLand2008">(<a href="references.html#ref-dengPCABasedLand2008" role="doc-biblioref">2008</a>)</span> Using PCA wil make it easier to see detect the change because it will produce a new image (Principal component) that intensify the change <span class="citation" data-cites="ingebritsenPrincipalComponentsAnalysis1985">(<a href="references.html#ref-ingebritsenPrincipalComponentsAnalysis1985" role="doc-biblioref">Ingebritsen and Lyon, 1985</a>)</span>. In Deng’s paper, PCA was used to combining image band that taken from two different times into one new image. Changed area will have high correlation between two image, meanwhile unchanged are will have low correlation. Afterwards Deng classified and labelled the correlation value to detect changing area.</p>
-<p>In this analysis the usage of PCA on multitemporal and multisensor data shows high accuracy value which is 89.54%. Other application of PCA in hyperspectral done by Rodarmel <span class="citation" data-cites="rodarmelPrincipalComponentAnalysis2002">(<a href="references.html#ref-rodarmelPrincipalComponentAnalysis2002" role="doc-biblioref">2002</a>)</span>, also shows satisfying result with 70% correct classification rate. Rodarmel and Shan, use hyperspectral data to detect component of land cover, such as, vegetation, mineral and soil type. They stacked band 1-5, 1-10 and 1-25 from HYDICE image and use PCA to generate 4 different PC images. Afterwards they classified the result of each PCA image and compared with original image PCA. The result shows PCA from band 1-5 is contain most information, while bands beyond 10 only contain noise. [[Pasted image 20230315180749.png]] source: Principal Component Analysis for Hyperspectral Image Classification</p>
+<p>In this analysis the usage of PCA on multitemporal and multisensor data shows high accuracy value which is 89.54%. Other application of PCA in hyperspectral done by Rodarmel <span class="citation" data-cites="rodarmelPrincipalComponentAnalysis2002">(<a href="references.html#ref-rodarmelPrincipalComponentAnalysis2002" role="doc-biblioref">2002</a>)</span>, also shows satisfying result with 70% correct classification rate. Rodarmel and Shan, use hyperspectral data to detect component of land cover, such as, vegetation, mineral and soil type. They stacked band 1-5, 1-10 and 1-25 from HYDICE image and use PCA to generate 4 different PC images. Afterwards they classified the result of each PCA image and compared with original image PCA. The result shows PCA from band 1-5 is contain most information, while bands beyond 10 only contain noise.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week_03_files/PCA 2.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Flood in Semarang</figcaption><p></p>
+</figure>
+</div>
+<p>source: Principal Component Analysis for Hyperspectral Image Classification</p>
 <p>Although, PCA helps reducing image dimensionality, the output does not give much information. It has to be processed using image classification, as shown in the 2 paper I discussed above <span class="citation" data-cites="licciardiLinearNonlinearPCA2012">(<a href="references.html#ref-licciardiLinearNonlinearPCA2012" role="doc-biblioref">Licciardi <em>et al.</em>, 2012</a>)</span>. We can say that output of PCA is input for other analysis. Thus, to do a robust analysis, we also need to learn about methods other than image enhancement.</p>
 </section>
-<section id="reflection" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Reflection</h1>
+<section id="reflection" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">3.3</span> Reflection</h2>
 <p>This week content about image correction, data joining and enhancement are really interesting because it is beneficial in practical and academical context. Imagery data that we get from sensor is not always perfect, it might have some error that come from the atmospher or the sensor itself. Especially in some region with high degree of moist, acquiring clear image is a challenge due to the existance of cloud <span class="citation" data-cites="dengPCABasedLand2008">(<a href="references.html#ref-dengPCABasedLand2008" role="doc-biblioref">Deng <em>et al.</em>, 2008</a>)</span>. This can be tackled by atmospheric correction or if we use multitemporal data we can do PCA. Not only from external factors, but image error can also happend because the radiometric calibration of the sensor. Thus, to conduct an accurate and robust analysis we have to reduce the error by doing corrections.</p>
 <p>Image enhancement helps to handle huge data set from multi-temporal, multispectral, and multi-sensor images. This is beneficial to see the change of land use. For developing countries, where development happen organically, a lot of residential built without permission so the government does not have the data about land usage in the city. By using remote sensing to detect the land-use changing will help government to be aware of the informal residential and observe where informal development tend to happen over time.</p>
 <p>However, we cannot just stop at learning about image enhancement because it only give us input for further analysis. We should also learn about image classification to detect land use and land coverage. For classification methods you can go to chapter 6 and 7.</p>

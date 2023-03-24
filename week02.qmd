@@ -2,7 +2,7 @@
 title: "week02 - Sensor Satellite Presentation"
 ---
 
-In this week we learn about one of the sensor. But instead of having it in normal diary format, we want to try idfferent format, Xaringan presentation.
+In this week we learn about one of the sensor. But instead of having it in normal diary format, we want to try different format, Xaringan presentation.
 
 ```{r, echo = FALSE, out.width='40%'}
 xaringanExtra::embed_xaringan(
