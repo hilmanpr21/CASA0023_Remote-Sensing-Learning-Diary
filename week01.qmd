@@ -54,18 +54,21 @@ Check the mind map to understand the outline of this week's topic
 -   Detect reflected energy from the sun that has different wavelength to detect different colour spectrum
 -   Such as:
     -   sentinel
-    -   landsat 
-    ![Passive Sensor](week_01_files/mediabag/Passive sensor.png) 
-    
+    -   landsat ![Passive Sensor](week_01_files/mediabag/Passive%20sensor.png)
+
 #### Active Sensor
+
 -   Have an energy source for Illumination
+
 -   Actively emits electromagnetics wave and then wait to rceive
+
 -   Such as:
+
     -   Synthetic-aperture Radar (SAR),
     -   X-ray,
-    -   LiDAR 
-    
-    ![Active Sensor](week_01_files/mediabag/active sensor.png)
+    -   LiDAR
+
+    ![Active Sensor](week_01_files/mediabag/active%20sensor.png)
 
 ### Electro Magnetic waves
 
@@ -74,15 +77,15 @@ Check the mind map to understand the outline of this week's topic
 -   Perpendicular electric and magnetic field
 -   different wavelength causes different colour spectrum. That's why we can see colourful image
 
-![Electromagnetive Wave](week_01_files/mediabag/electromagnetive wave.png) 
+![Electromagnetive Wave](week_01_files/mediabag/electromagnetive%20wave.png)
 
-#### Terms 
-- Electromagnetic radiation (EMR) = Waves of an electromagnetic field, travel through space and carry radiant energy 
-- Radiant Energy = energy carried by EMR Waves 
-- Radian flux = Energy per unit of time 
-- Exitance emittance (per unit time 
-- flux) = energy leaving a surface per unit area per unit time - Flux = time
+#### Terms
 
+-   Electromagnetic radiation (EMR) = Waves of an electromagnetic field, travel through space and carry radiant energy
+-   Radiant Energy = energy carried by EMR Waves
+-   Radian flux = Energy per unit of time
+-   Exitance emittance (per unit time
+-   flux) = energy leaving a surface per unit area per unit time - Flux = time
 
 #### Electromagnetric Radiaton (EMR) interaction
 
@@ -95,13 +98,11 @@ Check the mind map to understand the outline of this week's topic
 
 ##### Atmospheric Scattering
 
--   Electromagnetic waves are scatters by particles on the atmosphere 
-![Electromagnetive Wave](week_01_files/mediabag/wavelength reflection.png)
+-   Electromagnetic waves are scatters by particles on the atmosphere ![Electromagnetive Wave](week_01_files/mediabag/wavelength%20reflection.png)
 
 -   Smaller wavelengths scatter easier
 
--   Blue has the smallest wavelength 
-![RGB Wavelength](week_01_files/mediabag/wavelength.png)
+-   Blue has the smallest wavelength ![RGB Wavelength](week_01_files/mediabag/wavelength.png)
 
 -   type of scattering:
 
@@ -115,95 +116,93 @@ Check the mind map to understand the outline of this week's topic
 ##### Bidirectional Documented Surface Interaction (BDRF)
 
 -   happens because sensor and illumination (sun) angles can change.
+
 -   It can cause
+
     -   **backscattering** (left): sun behind the sensor, bright region at sensor and sun side
-    -   **forwards scattering** (right): sun opposite satelite, shadow region at sensor side 
-    
+    -   **forwards scattering** (right): sun opposite satelite, shadow region at sensor side
+
     ![Back Scattering and Forward Scattering](week_01_files/mediabag/scattering.png)
-    
+
 > **"There are many interaction that influence the data being created because it's not merely say that energy from sun is reflected by earth to sensor (but there are may factor such as scattering and interaction with surface)"**
 
 ### Types of orbit
-- **Geosynchronous Orbit (GSO)**
-	- satelite matches the earth's rotation, usually for sensor
-- **Geostationary Orbit**
-	- satelite holds same position, usually only for communication
-	
-	![Orbit type](week_01_files/mediabag/orbit_type.png)
+
+-   **Geosynchronous Orbit (GSO)**
+
+    -   satelite matches the earth's rotation, usually for sensor
+
+-   **Geostationary Orbit**
+
+    -   satelite holds same position, usually only for communication
+
+    ![Orbit type](week_01_files/mediabag/orbit_type.png)
 
 ### Data
-#### Raster Format
-- Satellite sensor produces **raster imagery data**. Raster image is a graphic repesented as a rectangular matrix or grid of square pixels. 
 
-![Raster Grid](week_01_files/mediabag/raster image.png)
+#### Raster Format
+
+-   Satellite sensor produces **raster imagery data**. Raster image is a graphic repesented as a rectangular matrix or grid of square pixels.
+
+![Raster Grid](week_01_files/mediabag/raster%20image.png)
 
 #### Four Data Resolution
+
 ##### Spatial
-- Spatial resolution is the size of the raster  grid per pixel. The smaller the grid means the higher the resolution be so the clearer the image be
-	- smallest grid is 10cm
+
+-   Spatial resolution is the size of the raster grid per pixel. The smaller the grid means the higher the resolution be so the clearer the image be
+    -   smallest grid is 10cm
 
 ##### Temporal
-- Temporal resolution is showing how often the data being updated
+
+-   Temporal resolution is showing how often the data being updated
 
 ##### Radiometric
-- **Radiometric** is identified differences in light or reflectance, in  practice this is the range of possible values. or the ability od a sensor to identify and show small difference in energy.
-- The higher the bit, the more sensitive and the more information 
-- however, the lower the radiometric resolution, the higher possibility to differentiate features
+
+-   **Radiometric** is identified differences in light or reflectance, in practice this is the range of possible values. or the ability od a sensor to identify and show small difference in energy.
+-   The higher the bit, the more sensitive and the more information
+-   however, the lower the radiometric resolution, the higher possibility to differentiate features
 
 ##### Spectral
-- this concept similar to pixel concept in digital camera where different colour (called band) is stacked together so it makes a new colour combination. 
-	
-![pixel band system](week_01_files/mediabag/pixel band system.png){width=70%}
 
+-   this concept similar to pixel concept in digital camera where different colour (called band) is stacked together so it makes a new colour combination.
 
-source:  [The hype in spectral imaging | Spectroscopy Europe/World](https://www.spectroscopyeurope.com/article/hype-spectral-imaging)
+![pixel band system](week_01_files/mediabag/pixel%20band%20system.png){width="70%"}
 
-- spectral resolution based on number of bands being observed
+source: [The hype in spectral imaging \| Spectroscopy Europe/World](https://www.spectroscopyeurope.com/article/hype-spectral-imaging)
 
-![band list](week_01_files/mediabag/band list.png)
-- We can take values for each wavelength (or a band of several wavelengths) across the electromagnetic spectrum to create a **spectral signature**. different feature on earth has different spectral signature, it will be used to identify different object.  **spectral signature** can be **discrete** (eg. multispectral) or **continuous** (eg. hyperspectral)
-![Spectral Signature](week_01_files/mediabag/spectral.png)
-- This spectral signature are used to differentiate object in the image. In earth observation we use this for identifying land cover in earth surface using **Normalized Difference Vegetation Index (NDVI), Normalized Difference Building Index (NDBI)**
-  -  for example in this week practical we identify the landcover by making scatter plot with band 4 (red, vegetation absorb) and band 8 (Near-Infrared, NIR, that vegetation strongly reflect). high values of NIR and low values of red represents dense vegetation. Meanwhile low values of red and NIR represent dense vegetation
-  ![Scatter Plot band 4 and band 8](week_01_files/mediabag/scatter plot.png)
+-   spectral resolution based on number of bands being observed
 
+![band list](week_01_files/mediabag/band%20list.png) - We can take values for each wavelength (or a band of several wavelengths) across the electromagnetic spectrum to create a **spectral signature**. different feature on earth has different spectral signature, it will be used to identify different object. **spectral signature** can be **discrete** (eg. multispectral) or **continuous** (eg. hyperspectral) ![Spectral Signature](week_01_files/mediabag/spectral.png) - This spectral signature are used to differentiate object in the image. In earth observation we use this for identifying land cover in earth surface using **Normalized Difference Vegetation Index (NDVI), Normalized Difference Building Index (NDBI)** - for example in this week practical we identify the landcover by making scatter plot with band 4 (red, vegetation absorb) and band 8 (Near-Infrared, NIR, that vegetation strongly reflect). high values of NIR and low values of red represents dense vegetation. Meanwhile low values of red and NIR represent dense vegetation ![Scatter Plot band 4 and band 8](week_01_files/mediabag/scatter%20plot.png)
 
 ## Application
 
-The increasing satellite remote sensing data on earth observation in the last two decades, allows new approaches on understanding urban setting [@millerCitiesSpacePotential2003]. Satellite remote sensing data offers some advantages, such as:
-	- broader spatial coverage, 
-	- ability for routine update, 
-	- consistent measurement
+The increasing satellite remote sensing data on earth observation in the last two decades, allows new approaches on understanding urban setting [@millerCitiesSpacePotential2003]. Satellite remote sensing data offers some advantages, such as: - broader spatial coverage, - ability for routine update, - consistent measurement
 
 Combination of remote sensing data with census data or other government data can provide us useful information such as, urban growth, urban heat island, and socioeconomic activities. We will discuss some application examples of remote sensing data, classified based on sensor type.
 
 ### Active Sensor
+
 #### Population Size estimation using Synthetic Aperture Radar (SAR)
-Different from passive sensor, Synthetic Aperture Radar (SAR) is an active sensor that can see through cloud and the backscatter radar wave can determine physical properties such as density and surface texture [@hendersonSARApplicationsHuman1997]. The ability of SAR to detect horizontal and vertical structure allows to detect settlement based on texture, materials geometry and density. The result of settlement detection can be used for estimating city population by multiplying with number of occupants per dwelling. Harris [-@harrisSIRAImageryTunisia1985] used this methods for estimating population in Tunisia. 
+
+Different from passive sensor, Synthetic Aperture Radar (SAR) is an active sensor that can see through cloud and the backscatter radar wave can determine physical properties such as density and surface texture [@hendersonSARApplicationsHuman1997]. The ability of SAR to detect horizontal and vertical structure allows to detect settlement based on texture, materials geometry and density. The result of settlement detection can be used for estimating city population by multiplying with number of occupants per dwelling. Harris [-@harrisSIRAImageryTunisia1985] used this methods for estimating population in Tunisia.
 
 This methods is beneficial for developing countries because they have more informal types of dwellings. Radar Data is really helpful because population census happens only once in 10 years [@hendersonSARApplicationsHuman1997] which could not keep up the rapid urban growth.
 
-
 ### Passive Sensor
-#### Evaluating Poverty using Nighttime Light (NTL) Satellite
-Nighttime Light Satellite is a passive sensor launched by nasa to collect data of night light emission [@earthsciencedatasystemsNighttimeLights2021]. The data from this satellite provide unique perspective that can be beneficial for detecting global conflict, human night behaviour, ecological impact of artificial night light and so on. 
 
-One of the benefit of nighttime light data is to track socioeconomic inequality and poverty. Yu [-@yuPovertyEvaluationUsing2015] evaluated poverty rate in 2856 counties in china. The research compare the average light index from Visible Infrared day-night band with integrated poverty index. It used linear regression and comparison of class to check how accurate  the remote sensing data to evaluate poverty. The result shows that day-night band data can be useful to evaluate poverty in china
+#### Evaluating Poverty using Nighttime Light (NTL) Satellite
+
+Nighttime Light Satellite is a passive sensor launched by nasa to collect data of night light emission [@earthsciencedatasystemsNighttimeLights2021]. The data from this satellite provide unique perspective that can be beneficial for detecting global conflict, human night behaviour, ecological impact of artificial night light and so on.
+
+One of the benefit of nighttime light data is to track socioeconomic inequality and poverty. Yu [-@yuPovertyEvaluationUsing2015] evaluated poverty rate in 2856 counties in china. The research compare the average light index from Visible Infrared day-night band with integrated poverty index. It used linear regression and comparison of class to check how accurate the remote sensing data to evaluate poverty. The result shows that day-night band data can be useful to evaluate poverty in china
 
 ## Reflection
-- The increase of remote sensing data on earth observation helps researcher, policy makers, and local government to understand the urban context better. Special characteristic of remote sensing data allows us to have broader perspectives and collect spatial improvement from time to time which could not be provided by tradisional population census data.
 
-- In the application we can combine the remote sensing data with census data to have more robust analysis.
+-   The increase of remote sensing data on earth observation helps researcher, policy makers, and local government to understand the urban context better. Special characteristic of remote sensing data allows us to have broader perspectives and collect spatial improvement from time to time which could not be provided by tradisional population census data.
 
-- Although, using remote sensing data looks more fancy, in some cases and context we can get the similar data that are more efficient and cost effective from governmental source [@millerCitiesSpacePotential2003]. For example we can use building permission data rather than satellite data to identify land use. 
+-   In the application we can combine the remote sensing data with census data to have more robust analysis.
 
-- Moreover, managing remote sensing data require higher skill than traditional data. It can be an obstacle for cities that has limited resources
+-   Although, using remote sensing data looks more fancy, in some cases and context we can get the similar data that are more efficient and cost effective from governmental source [@millerCitiesSpacePotential2003]. For example we can use building permission data rather than satellite data to identify land use.
 
-
-
-
-
-
-
-
-
+-   Moreover, managing remote sensing data require higher skill than traditional data. It can be an obstacle for cities that has limited resources
