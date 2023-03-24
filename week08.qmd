@@ -7,7 +7,8 @@ csl: Remote Sensing References/harvard-cite-them-right.csl
 ## Summary 
 
  In this week we will discuss about Urban heat Island and how city handle this issue. A phenomena when urban area is significantly hotter than rural area on its surrounding is called Urban Heat Island (UHI) [@takebayashiChapterBackgroundPurpose2020]. 
- ![[Pasted image 20230322235111.png]]
+
+![Urban Heat Island](week_08_files/UHI.png){width="100%"}
 source: [Earth.Org](https://earth.org/data_visualization/urban-heat-islands/)
 
 Urban heat island are caused by many factors:
@@ -31,14 +32,14 @@ Urban Heat Island happens globally. A lot of global policy has implicitly and  e
 #### Beat the heat handbook
 Moreover, United Nation Environment Program has released **Beat the Heat handbook**. The hand book gives guideline and framework for planner to help cooling their cities.  it gives systemic approach to address urban cooling.
 
-![[Pasted image 20230323010332.png]]
+![Beat the Heat Roadmap](week_08_files/UHI_Flow.png){width="80%"}
 
 source: [Beating the Heat: A Sustainable Cooling Handbook for Cities | NDC Action Project (unep.org)](https://www.unep.org/ndc/resources/report/beating-heat-sustainable-cooling-handbook-cities)
 
 
 It also has matrix of city interventions for sustainable urban cooling like shown in the image below
 
-![[Pasted image 20230323010142.png]]
+![Intervention Matrix](week_08_files/UHI_matix.png){width="80%"}
 Source:  [Beating the Heat: A Sustainable Cooling Handbook for Cities (https://www.unep.org/resources/report/beating-heat-sustainable-cooling-handbook-cities)
 
 Although this handbook presents various intervention alternative with over 20 cities as case study and examples,  it is not easy for local government to follow because different cities has different heat temperature and different context. As mentioned earlier that geography can cause different heat in urban context. Dissimilar context and issue should have different policy and planning to solve Urban Heat Island issue.  Therefore, assessment on existing environmetal condition has to be done with right method and right approach to uderstand specific solution that the city needs.
@@ -52,9 +53,10 @@ Thus, in the application part we will discuss some previous research that have u
 
 ## Application
 
+### Urban Heat Vulnerability
 To help decision makers and cityplanners mitigating UHI phenomena, a reliable UHI vulnerability map is required. UHI vulnerability maps tells us which area in the city that are at risk of UHI.  Sidiqui, [-@sidiquiUrbanHeatIsland2022] used high-resolution spatial data, advanced geospatial tools, and socio-demographic data to make UHI vulnerabilty map ofthe City of Greater Geelong, Australia. It utilise airborne thermal data from Landsat and aerial imagery data to make UHI index maps which then indicated significant hotspot on high building density, inductrial areas, and constructed sites. The UHI index maps, then combined with 20 input indicators of heat exposure, population sensitity, and mobility/adaptive capacity to make Urban Heat Vulnerability (UHV) maps. 
 
-![[Pasted image 20230323032502.png]]
+![Urban Heat Vulnerability Map](week_08_files/UHI_vulnerability.png){width="80%"}
 
 source: [@sidiquiUrbanHeatIsland2022]
 
