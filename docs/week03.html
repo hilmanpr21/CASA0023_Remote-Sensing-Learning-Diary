@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>RS_Learning_diary - 3&nbsp; week03</title>
+<title>RS_Learning_diary - 3&nbsp; week03 - Remote Sensing Data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -89,7 +89,7 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">week03</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">week03 - Remote Sensing Data</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -129,7 +129,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week03.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">week03</span></a>
+  <a href="./week03.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">week03 - Remote Sensing Data</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -207,7 +207,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">week03</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">week03 - Remote Sensing Data</span></h1>
 </div>
 
 
@@ -458,14 +458,14 @@ div.csl-indent {
 </section>
 <section id="application" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Application</h1>
-<p>Learning about image enhancement in pre-processing step are really beneficial especially when we are dealing with huge datasets, such as hyperspectral and multi-temporal imagery <span class="citation" data-cites="rodarmelPrincipalComponentAnalysis2002">(<a href="references.html#ref-rodarmelPrincipalComponentAnalysis2002" role="doc-biblioref">Rodarmel and Shan, 2002</a>)</span>. Principal Component Analysis enhancement is a tools to reducing dimensionality if we are detecting land-use change from time to time using stacked multi-date data like what Deng, <span class="citation" data-cites="dengPCABasedLand2008">(<a href="references.html#ref-dengPCABasedLand2008" role="doc-biblioref">2008</a>)</span> in their paper. In detecting land-use change in Hangzhou City, China, they also use data from various sensors which are aerial photograph, SPOT-5 and Landsat-7. [[Pasted image 20230315165944.png]] The image above shows one example of land use change from cropland to urban land. These image shows:</p>
+<p>Learning about image enhancement in pre-processing step are really beneficial especially when we are dealing with huge datasets, such as hyperspectral and multi-temporal imagery <span class="citation" data-cites="rodarmelPrincipalComponentAnalysis2002">(<a href="references.html#ref-rodarmelPrincipalComponentAnalysis2002" role="doc-biblioref">Rodarmel and Shan, 2002</a>)</span>. Principal Component Analysis enhancement is a tools to reducing dimensionality if we are detecting land-use change from time to time using stacked multi-date data like what Deng <span class="citation" data-cites="dengPCABasedLand2008">(<a href="references.html#ref-dengPCABasedLand2008" role="doc-biblioref">2008</a>)</span> in their paper. In detecting land-use change in Hangzhou City, China, they also use data from various sensors which are aerial photograph, SPOT-5 and Landsat-7. [[Pasted image 20230315165944.png]] The image above shows one example of land use change from cropland to urban land. These image shows:</p>
 <p><em>a</em> ETM in 2000</p>
 <p><em>b</em> aerial photograph in 2000</p>
 <p><em>c</em> SPOT-5 in 2003</p>
 <p><em>d</em> Ikonos in 2003</p>
 <p><em>e-h</em> are the principal component.</p>
-<p>source: Deng, <span class="citation" data-cites="dengPCABasedLand2008">(<a href="references.html#ref-dengPCABasedLand2008" role="doc-biblioref">2008</a>)</span> Using PCA wil make it easier to see detect the change because it will produce a new image (Principal component) that intensify the change <span class="citation" data-cites="ingebritsenPrincipalComponentsAnalysis1985">(<a href="references.html#ref-ingebritsenPrincipalComponentsAnalysis1985" role="doc-biblioref">Ingebritsen and Lyon, 1985</a>)</span>. In Deng’s paper, PCA was used to combining image band that taken from two different times into one new image. Changed area will have high correlation between two image, meanwhile unchanged are will have low correlation. Afterwards Deng classified and labelled the correaltion value to detect changing area.</p>
-<p>In this analysis the usage of PCA on multitemporal and multisensor data shows high accuracy value which is 89.54%. Other application of PCA in hyperspectral done by Rodarmel, <span class="citation" data-cites="rodarmelPrincipalComponentAnalysis2002">(<a href="references.html#ref-rodarmelPrincipalComponentAnalysis2002" role="doc-biblioref">2002</a>)</span> also shows satisfying result with 70% correct classification rate. Rodarmel and Shan, use hyperspectral data to detect conponent of land cover, such as, vegetation, mineral and soil type. They stacked band 1-5, 1-10 and 1-25 from HYDICE image and use PCA to generate 4 different PC images. Afterwards they classified the result of each PCA image and compared with original image PCA. The result shows PCA from band 1-5 is contain most information, while bands beyond 10 only contain noise. [[Pasted image 20230315180749.png]] source: Principal Component Analysis for Hyperspectral Image Classification</p>
+<p>source: Deng <span class="citation" data-cites="dengPCABasedLand2008">(<a href="references.html#ref-dengPCABasedLand2008" role="doc-biblioref">2008</a>)</span> Using PCA wil make it easier to see detect the change because it will produce a new image (Principal component) that intensify the change <span class="citation" data-cites="ingebritsenPrincipalComponentsAnalysis1985">(<a href="references.html#ref-ingebritsenPrincipalComponentsAnalysis1985" role="doc-biblioref">Ingebritsen and Lyon, 1985</a>)</span>. In Deng’s paper, PCA was used to combining image band that taken from two different times into one new image. Changed area will have high correlation between two image, meanwhile unchanged are will have low correlation. Afterwards Deng classified and labelled the correlation value to detect changing area.</p>
+<p>In this analysis the usage of PCA on multitemporal and multisensor data shows high accuracy value which is 89.54%. Other application of PCA in hyperspectral done by Rodarmel <span class="citation" data-cites="rodarmelPrincipalComponentAnalysis2002">(<a href="references.html#ref-rodarmelPrincipalComponentAnalysis2002" role="doc-biblioref">2002</a>)</span>, also shows satisfying result with 70% correct classification rate. Rodarmel and Shan, use hyperspectral data to detect component of land cover, such as, vegetation, mineral and soil type. They stacked band 1-5, 1-10 and 1-25 from HYDICE image and use PCA to generate 4 different PC images. Afterwards they classified the result of each PCA image and compared with original image PCA. The result shows PCA from band 1-5 is contain most information, while bands beyond 10 only contain noise. [[Pasted image 20230315180749.png]] source: Principal Component Analysis for Hyperspectral Image Classification</p>
 <p>Although, PCA helps reducing image dimensionality, the output does not give much information. It has to be processed using image classification, as shown in the 2 paper I discussed above <span class="citation" data-cites="licciardiLinearNonlinearPCA2012">(<a href="references.html#ref-licciardiLinearNonlinearPCA2012" role="doc-biblioref">Licciardi <em>et al.</em>, 2012</a>)</span>. We can say that output of PCA is input for other analysis. Thus, to do a robust analysis, we also need to learn about methods other than image enhancement.</p>
 </section>
 <section id="reflection" class="level1" data-number="6">

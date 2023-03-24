@@ -1,5 +1,5 @@
 ---
-title: "week03"
+title: "week03 - Remote Sensing Data"
 bibliography: Remote Sensing References/Week_03 Learning Diary.bib
 csl: Remote Sensing References/harvard-cite-them-right.csl
 ---
@@ -164,7 +164,7 @@ Not every imagery data required all these 3 steps, it depends on the data we get
 - usually it take the median value of each pixel of each band.
 
 # Application
-Learning about image enhancement in pre-processing  step are really beneficial especially when we are dealing with huge datasets, such as hyperspectral and multi-temporal imagery [@rodarmelPrincipalComponentAnalysis2002]. Principal Component Analysis enhancement is a tools to reducing dimensionality if we are detecting land-use change from time to time using stacked multi-date data like what Deng, [-@dengPCABasedLand2008] in their paper. In detecting land-use change in Hangzhou City, China, they also use data from various sensors which are aerial photograph, SPOT-5 and Landsat-7. 
+Learning about image enhancement in pre-processing  step are really beneficial especially when we are dealing with huge datasets, such as hyperspectral and multi-temporal imagery [@rodarmelPrincipalComponentAnalysis2002]. Principal Component Analysis enhancement is a tools to reducing dimensionality if we are detecting land-use change from time to time using stacked multi-date data like what Deng [-@dengPCABasedLand2008] in their paper. In detecting land-use change in Hangzhou City, China, they also use data from various sensors which are aerial photograph, SPOT-5 and Landsat-7. 
 ![[Pasted image 20230315165944.png]]
 The image above shows one example of land use change from cropland to urban land. These image shows:
 
@@ -178,10 +178,10 @@ The image above shows one example of land use change from cropland to urban land
 
 *e-h* are the principal component. 
 
-source: Deng, [-@dengPCABasedLand2008]
-Using PCA wil make it easier to see detect the change because it will produce a new image (Principal component) that intensify the change [@ingebritsenPrincipalComponentsAnalysis1985]. In Deng's paper, PCA was used to combining image band that taken from two different times into one new image. Changed area will have high correlation between two image, meanwhile unchanged are will have low correlation. Afterwards Deng classified and labelled the correaltion value to detect changing area.
+source: Deng [-@dengPCABasedLand2008]
+Using PCA wil make it easier to see detect the change because it will produce a new image (Principal component) that intensify the change [@ingebritsenPrincipalComponentsAnalysis1985]. In Deng's paper, PCA was used to combining image band that taken from two different times into one new image. Changed area will have high correlation between two image, meanwhile unchanged are will have low correlation. Afterwards Deng classified and labelled the correlation value to detect changing area.
 
-In this analysis the usage of PCA on multitemporal and multisensor data shows high accuracy value which is 89.54%. Other application of PCA in hyperspectral done by Rodarmel, [-@rodarmelPrincipalComponentAnalysis2002] also shows satisfying result with 70% correct classification rate. Rodarmel and Shan, use hyperspectral data to detect conponent of land cover, such as, vegetation, mineral and soil type. They stacked band 1-5, 1-10 and 1-25 from HYDICE image and use PCA to generate 4 different PC images. Afterwards they classified the result of each PCA image and compared with original image PCA. The result shows PCA from band 1-5 is contain most information, while bands beyond 10 only contain noise. 
+In this analysis the usage of PCA on multitemporal and multisensor data shows high accuracy value which is 89.54%. Other application of PCA in hyperspectral done by Rodarmel [-@rodarmelPrincipalComponentAnalysis2002], also shows satisfying result with 70% correct classification rate. Rodarmel and Shan, use hyperspectral data to detect component of land cover, such as, vegetation, mineral and soil type. They stacked band 1-5, 1-10 and 1-25 from HYDICE image and use PCA to generate 4 different PC images. Afterwards they classified the result of each PCA image and compared with original image PCA. The result shows PCA from band 1-5 is contain most information, while bands beyond 10 only contain noise. 
 ![[Pasted image 20230315180749.png]]
 source:  Principal Component Analysis for Hyperspectral Image Classification
 
