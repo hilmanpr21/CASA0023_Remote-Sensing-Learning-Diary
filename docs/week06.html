@@ -159,12 +159,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Introduction</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Summary</span></a>
+  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Summary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -219,11 +214,14 @@ div.csl-indent {
 <h2 data-number="6.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">6.1</span> Summary</h2>
 <p>In this week we learn about Classification, this week topic is related to module CASA0006 Data Science for Spatial System. As we know remote sensing collect imagery satellite data, but what we can do to identify information in the imagery data? how to identify what happening in the image? What is land use and land cover of the given image? is it forest are or urban are?</p>
 <p>We can identify the information using <strong>Image classification methods</strong>. The image classifiation is done computationally. If we see an imagery data we can identify or classify the object within the image by judging based on our experience or called <strong>Inductive Learning</strong>. Using that idea, now we train the computer system to have human knowledge to solve problem called <strong>Machine Learning</strong>. We can train computer system to learn on how to identifying satellite imagery data using <strong>classification methods</strong>.</p>
+<blockquote class="blockquote">
+<p>In this week, actually we also learn about Classification and Regression Tree (CART). However, it has been covered in module CASA0006 - Data Science for Spatial System. Thus, instead of discussing about it, I will discuss something new that I learnt which are <strong>Supervised</strong> and <strong>Unsupervised Learning</strong></p>
+</blockquote>
 <p>in Statistic, <strong>classification</strong> ideas is basically <strong>assigning our data into certain categories</strong>. Image Classification is basically turn every pixel on the image into one categorical classification. for example our pixel can be identified as forest or residential, high or low level forest combustion and so on. There are 2 types of image classification which are Supervised and unsupervised. Image classification has been being used since 1970. It was started with unsupervised in 1970s, to supervised classification in 1975s and now mostly we have been using Object-Based Image Analysis since 1995s. But what is supervised and unsupervised classification? Check this table for general idea of those 2 classification. But I will tell further in the explanation later.</p>
 <table class="table">
 <colgroup>
-<col style="width: 61%">
-<col style="width: 38%">
+<col style="width: 59%">
+<col style="width: 40%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -246,17 +244,17 @@ div.csl-indent {
 <section id="unsupervised-learning" class="level3" data-number="6.1.1">
 <h3 data-number="6.1.1" class="anchored" data-anchor-id="unsupervised-learning"><span class="header-section-number">6.1.1</span> Unsupervised Learning</h3>
 <p><a href="https://www.ibm.com/uk-en/topics/unsupervised-learning#:~:text=Pak%20for%20Data-,What%20is%20unsupervised%20learning%3F,the%20need%20for%20human%20intervention.">Unsupervised Learning</a> is using machine to analyse or cluster our data. So what usually will happen is we give our data, then we ask it to be cluster the dat into certain number of cluster. The machine will return with cluster of data ask we requested. In the context of imagery satellite data, the given data is value of band for each pixel.</p>
-<p>Unsupervised learning usually refered to <strong>clustering/k-means</strong>. In clustering, we have spectral feature space by plotting 2 or more bands value against each other. If we only have 2 bands values, the pixel value will be plotted in 2 dimension feature space. As we add more band value, the dimension will be added as well. After we give our data, we have to set some rules to tell the machine how the data should be clustered. The machine then will start random center point of cluster with radius that has been set. Pixels value within same radius are in the same cluster. machine will start moving it’s center point until all pixels has been alocated to a cluster.</p>
-<p>Detail steps of clustering: 1. Give data 2. Then set series of rules, such as: - the radius in spectral feature to define where new cluster started - spectral distance measure - number of pixels to be considered before merging - max number of cluster 3. It will repeat until no pixel alocated again</p>
+<p>Unsupervised learning usually referred to <strong>clustering/k-means</strong>. In clustering, we have spectral feature space by plotting 2 or more bands value against each other. If we only have 2 bands values, the pixel value will be plotted in 2 dimension feature space. As we add more band value, the dimension will be added as well. After we give our data, we have to set some rules to tell the machine how the data should be clustered. The machine then will start random center point of cluster with radius that has been set. Pixels value within same radius are in the same cluster. machine will start moving it’s center point until all pixels has been allocated to a cluster.</p>
+<p>Detail steps of clustering: 1. Give data 2. Then set series of rules, such as: - the radius in spectral feature to define where new cluster started - spectral distance measure - number of pixels to be considered before merging - max number of cluster 3. It will repeat until no pixel allocated again</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="week_06_files/k-mean clustering.png" class="img-fluid figure-img" style="width:100.0%"></p>
 <p></p><figcaption class="figure-caption">K-mean Clustering</figcaption><p></p>
 </figure>
 </div>
-<p>source: citation <strong>Evolutionary Computation Theory for Remote Sensing Image Clustering: A Survey</strong></p>
-<p>Other methods of unsuervised learning is <strong>ISODATA</strong>. This methods is specifically for earth observation data. This methods is similar to K-means clustering but with some additional rules, which are: - Any clusters have so few pixels = meaningless - Clusters are so close they can be merged - Clusters can be split - elongated clusters in feature space</p>
-<p>Although learning using <strong>ISODATA</strong> is beneficial because it’s sepcifically used for EO data, this methods has a drawback which is can create a lots of clusters and difficult to assign meaning. For example it can cause two types of landcover in a pixel. To tackle this drawbacks we can do <strong>Cluster busting</strong> which is basically mask cluster that incorrect and label to new one.</p>
+<p>source: Wan<span class="citation" data-cites="wanEvolutionaryComputationTheory2017">(<a href="references.html#ref-wanEvolutionaryComputationTheory2017" role="doc-biblioref">2017</a>)</span></p>
+<p>Other methods of unsupervised learning is <strong>ISODATA</strong>. This methods is specifically for earth observation data. This methods is similar to K-means clustering but with some additional rules, which are: - Any clusters have so few pixels = meaningless - Clusters are so close they can be merged - Clusters can be split - elongated clusters in feature space</p>
+<p>Although learning using <strong>ISODATA</strong> is beneficial because it’s specifically used for EO data, this methods has a drawback which is can create a lots of clusters and difficult to assign meaning. For example it can cause two types of land cover in a pixel. To tackle this drawbacks we can do <strong>Cluster busting</strong> which is basically mask cluster that incorrect and label to new one.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="week_06_files/isodata.png" class="img-fluid figure-img" style="width:80.0%"></p>
@@ -268,15 +266,36 @@ div.csl-indent {
 <h3 data-number="6.1.2" class="anchored" data-anchor-id="supervised-learning"><span class="header-section-number">6.1.2</span> Supervised Learning</h3>
 <p>Different from unsupervised learning, supervised learning <strong>uses labelled training data</strong>. Training data is dataset that being used to train the model, so the model can classify the data for us. Other than training data, we have testing data. Testing data is dataset that being used to assess our model. Training and testing data has to be mutually exclusive.</p>
 <p>Generally <strong>steps of supervised learning</strong> are: 1. Class Definition 2. Pre-processing 3. Training 4. Pixel Assignment 5. Accuracy assignment</p>
-<p>Methods on supervised learning are categorized into 2: 1. <strong>Parametric</strong> - parametric use data that are normally distributed - Methods in parametric: - Maximum likelihood 1. <strong>Non-parametric</strong> - Non-parametric use data that are not normally distributed - Methods in parametric: - Density slicing - Parallelpiped - Minimum distance to mean - Nearest neighbor - Neural networks - Machine learning / expert systems* (eg. Support Vector Machine, Neural Networks)</p>
+<p>Methods on supervised learning are categorized into 2:</p>
+<ol type="1">
+<li><strong>Parametric,</strong> use data that are normally distributed
+<ul>
+<li>Methods in parametric:
+<ul>
+<li>Maximum likelihood</li>
+</ul></li>
+</ul></li>
+<li><strong>Non-parametric</strong>, uses data that are not normally distributed
+<ul>
+<li>Methods in parametric:
+<ul>
+<li>Density slicing</li>
+<li>Parallelpiped</li>
+<li>Minimum distance to mean</li>
+<li>Nearest neighbor</li>
+<li>Neural networks</li>
+<li>Machine learning / expert systems (eg. Support Vector Machine, Neural Networks)</li>
+</ul></li>
+</ul></li>
+</ol>
 <p>It is quiet rare to have normally distributed data in earth observation image. Moreover, recently most works uses machine learning/expert systems or spectral mixture analysis.</p>
 </section>
 <section id="be-aware" class="level3" data-number="6.1.3">
 <h3 data-number="6.1.3" class="anchored" data-anchor-id="be-aware"><span class="header-section-number">6.1.3</span> Be Aware</h3>
-<p>Even though, image classifiction will be done by machine, as researcher or the one who assign the machine we have to be aware of several things:</p>
+<p>Even though, image classification will be done by machine, as researcher or the one who assign the machine we have to be aware of several things:</p>
 <section id="hard-classification-or-fuzzy-classification" class="level4" data-number="6.1.3.1">
 <h4 data-number="6.1.3.1" class="anchored" data-anchor-id="hard-classification-or-fuzzy-classification"><span class="header-section-number">6.1.3.1</span> Hard Classification or Fuzzy Classification?</h4>
-<p>First we have to be aware, are we going to do hard classification or fuzzy classification. Hard classification means there will be a define catergory like water or land in our image. Fuzzy classification means we have to classify into fuzzy continuous value.</p>
+<p>First we have to be aware, are we going to do hard classification or fuzzy classification. Hard classification means there will be a define category like water or land in our image. Fuzzy classification means we have to classify into fuzzy continuous value.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="week_06_files/fuzzy vs hard.png" class="img-fluid figure-img" style="width:100.0%"></p>
@@ -286,7 +305,7 @@ div.csl-indent {
 </section>
 <section id="hows-the-pixel-content" class="level4" data-number="6.1.3.2">
 <h4 data-number="6.1.3.2" class="anchored" data-anchor-id="hows-the-pixel-content"><span class="header-section-number">6.1.3.2</span> How’s the pixel content?</h4>
-<p>second, we have to be careful whether we are going to see sub pixel value, whole general pixel value, or some pixel value. It is important te be a concern because it’s quiet rare to have a completely homogenous pixel. Sometimes we have to find the majority value of the pixel.</p>
+<p>second, we have to be careful whether we are going to see sub pixel value, whole general pixel value, or some pixel value. It is important te be a concern because it’s quiet rare to have a completely homogeneous pixel. Sometimes we have to find the majority value of the pixel.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="week_06_files/sub pixel.png" class="img-fluid figure-img" style="width:80.0%"></p>
@@ -297,7 +316,7 @@ div.csl-indent {
 </section>
 <section id="pixel-or-object" class="level4" data-number="6.1.3.3">
 <h4 data-number="6.1.3.3" class="anchored" data-anchor-id="pixel-or-object"><span class="header-section-number">6.1.3.3</span> Pixel or Object?</h4>
-<p>Last, we have to consider are we going to look at pixel or object on the image data. Example of pixel are shon in image on the left, while example of object shown on the right image. It is important because our data observation will be different between pixel or object.</p>
+<p>Last, we have to consider are we going to look at pixel or object on the image data. Example of pixel are shown in image on the left, while example of object shown on the right image. It is important because our data observation will be different between pixel or object.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="week_06_files/pixel vs object.png" class="img-fluid figure-img" style="width:100.0%"></p>
@@ -305,8 +324,8 @@ div.csl-indent {
 </figure>
 </div>
 <p>source: <a href="https://jakubnowosad.com/supercells/articles/rgb_vars.html">Superpixels supercells</a></p>
-<p>It is important to define this constraint before we do classificatio because we are the one who will select the propriate methods and ask the machine.</p>
-<p>After considering those constrain we should select the propriate methods for our classification. Working with machine, make us temped to work with complicated model. However, not every condition are required complicated methods. <strong>Complicated methods might have higher accuracy but it will be harder to interprate</strong>. I present this illustration to show the trade off between accuracy and interpretability.</p>
+<p>It is important to define this constraint before we do classification because we are the one who will select the appropriate methods and ask the machine.</p>
+<p>After considering those constrain we should select the appropriate methods for our classification. Working with machine, make us temped to work with complicated model. However, not every condition are required complicated methods. <strong>Complicated methods might have higher accuracy but it will be harder to interprate</strong>. I present this illustration to show the trade off between accuracy and interpretability.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="week_06_files/trade off accuracy and interpretability.png" class="img-fluid figure-img" style="width:100.0%"></p>
@@ -324,14 +343,14 @@ div.csl-indent {
 <h3 data-number="6.2.1" class="anchored" data-anchor-id="natural-disaster-vulnerability-map-using-support-vector-machine-svm"><span class="header-section-number">6.2.1</span> Natural Disaster Vulnerability map using Support Vector Machine (SVM)</h3>
 <section id="flood" class="level4" data-number="6.2.1.1">
 <h4 data-number="6.2.1.1" class="anchored" data-anchor-id="flood"><span class="header-section-number">6.2.1.1</span> Flood</h4>
-<p>Natural disaster can cause devastating impact on economy, social, and environment. Flood is one of the most destructive disaster that happen frequently in some areas in the world. It force local community and government to manage the disaster and be resilience towards it. Therefore, recognizing flood-prone areas is essential initial step in planning flood management and resilience strategy. Flood is a dynamic and complex disaster that is caused by a lot of factors. To assessing flood vlunerable area, we have to put many things into account such as, rainfall data, land cover, topography, and so on. One of supervised learning’s benefit is effective in high dimension <span class="citation" data-cites="SupportVectorMachines">(<a href="references.html#ref-SupportVectorMachines" role="doc-biblioref"><em>1.4. <span>Support Vector Machines</span></em>, no date</a>)</span>. Youssef <span class="citation" data-cites="youssefFloodVulnerabilityMapping2023a">(<a href="references.html#ref-youssefFloodVulnerabilityMapping2023a" role="doc-biblioref">2023</a>)</span> used this advantage to assess flood phenomena in Taif in Saudi Arabia. The study showed combination 13 parameters, including remote sensing data, and Support Vector Machine (SVM), can make a vulnerability maps like shown in the image below.</p>
+<p>Natural disaster can cause devastating impact on economy, social, and environment. Flood is one of the most destructive disaster that happen frequently in some areas in the world. It force local community and government to manage the disaster and be resilience towards it. Therefore, recognizing flood-prone areas is essential initial step in planning flood management and resilience strategy. Flood is a dynamic and complex disaster that is caused by a lot of factors. To assessing flood vulnerable area, we have to put many things into account such as, rainfall data, land cover, topography, and so on. One of supervised learning’s benefit is effective in high dimension <span class="citation" data-cites="SupportVectorMachines">(<a href="references.html#ref-SupportVectorMachines" role="doc-biblioref"><em>1.4. <span>Support Vector Machines</span></em>, no date</a>)</span>. Youssef <span class="citation" data-cites="youssefFloodVulnerabilityMapping2023a">(<a href="references.html#ref-youssefFloodVulnerabilityMapping2023a" role="doc-biblioref">2023</a>)</span> used this advantage to assess flood phenomena in Taif in Saudi Arabia. The study showed combination 13 parameters, including remote sensing data, and Support Vector Machine (SVM), can make a vulnerability maps like shown in the image below.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="week_06_files/flood vulnerable map.png" class="img-fluid figure-img" style="width:100.0%"></p>
 <p></p><figcaption class="figure-caption">Flood vulnerable map</figcaption><p></p>
 </figure>
 </div>
-<p>This vulnerability map can be used by policy maker to pointed action plan to prevent and mitigate flooding. Different class in this vulnerabiliity map guides planner to understand which area are highly effected by flood.</p>
+<p>This vulnerability map can be used by policy maker to pointed action plan to prevent and mitigate flooding. Different class in this vulnerability map guides planner to understand which area are highly effected by flood.</p>
 <p>Other than SVM, this study has tried to use bivariate and multivariate methods. Apparently, SVM model performed best with 96.2% accuracy. Earlier, Mojaddadi <span class="citation" data-cites="mojaddadiEnsembleMachinelearningbasedGeospatial2017">(<a href="references.html#ref-mojaddadiEnsembleMachinelearningbasedGeospatial2017" role="doc-biblioref">2017</a>)</span> made flood vulnerability map using SVM as well for Damansara, Malaysia. The result also indicates high classification accuracy with 84.07%. Although in the summary SVM were shown has low interpretability, this study show that using the right data and combination of methods we can get high accuracy and easy to understand result.</p>
 </section>
 <section id="drought" class="level4" data-number="6.2.1.2">
@@ -369,6 +388,9 @@ Ghasempour, R., Aalami, M. T. and Roushangar, K. (2022) <span>“Drought <span>V
 </div>
 <div id="ref-mojaddadiEnsembleMachinelearningbasedGeospatial2017" class="csl-entry" role="doc-biblioentry">
 Mojaddadi, H. <em>et al.</em> (2017) <span>“Ensemble machine-learning-based geospatial approach for flood risk assessment using multi-sensor remote-sensing data and <span>GIS</span>,”</span> <em>Geomatics, Natural Hazards and Risk</em>, 8(2), pp. 1080–1102. doi: <a href="https://doi.org/10.1080/19475705.2017.1294113">10.1080/19475705.2017.1294113</a>.
+</div>
+<div id="ref-wanEvolutionaryComputationTheory2017" class="csl-entry" role="doc-biblioentry">
+Wan, Y. <em>et al.</em> (2017) <span>“Evolutionary <span>Computation Theory</span> for <span>Remote Sensing Image Clustering</span>: <span>A Survey</span>,”</span> in, pp. 528–539. doi: <a href="https://doi.org/10.1007/978-3-319-68759-9_43">10.1007/978-3-319-68759-9_43</a>.
 </div>
 <div id="ref-youssefFloodVulnerabilityMapping2023a" class="csl-entry" role="doc-biblioentry">
 Youssef, A. M. <em>et al.</em> (2023) <span>“Flood vulnerability mapping and urban sprawl suitability using <span>FR</span>, <span>LR</span>, and <span>SVM</span> models,”</span> <em>Environmental Science and Pollution Research</em>, 30(6), pp. 16081–16105. doi: <a href="https://doi.org/10.1007/s11356-022-23140-3">10.1007/s11356-022-23140-3</a>.
